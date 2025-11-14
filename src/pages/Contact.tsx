@@ -87,6 +87,22 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
+      {/* Hero Section with Background Image */}
+      <section className="relative min-h-[70vh] px-4 py-20 overflow-hidden" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1920&q=80)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="absolute inset-0 bg-gradient-to-r from-background/98 via-background/95 to-background/85"></div>
+        
+        <div className="container mx-auto max-w-6xl relative z-10 min-h-[60vh] flex items-center">
+          <div className="max-w-2xl space-y-6 bg-background/90 backdrop-blur-md p-10 rounded-lg shadow-xl border-2 border-primary/20">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
+              Let's Connect
+            </h1>
+            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+              Ready to bring calm and clarity to your workload? I'd love to hear about what you're working on.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-5xl">
@@ -94,34 +110,25 @@ const Contact = () => {
             {/* Left Side - Text Content */}
             <div className="space-y-8">
               <div>
-                <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">
-                  Let's Connect
-                </h1>
-                <p className="text-xl text-muted-foreground leading-relaxed">
-                  Ready to bring calm and clarity to your workload? I'd love to hear about what you're working on and explore how I can support you.
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+                  Get In Touch
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                  Fill out the form and I'll get back to you within 24 hours. Or email me directly at:
                 </p>
+                <a 
+                  href="mailto:valentina@rellatech.io" 
+                  className="text-2xl font-semibold text-primary hover:underline"
+                >
+                  valentina@rellatech.io
+                </a>
               </div>
 
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-2xl font-bold mb-3 text-foreground">Get In Touch</h3>
-                  <p className="text-lg text-muted-foreground mb-4">
-                    Fill out the form and I'll get back to you within 24 hours. Or email me directly at:
-                  </p>
-                  <a 
-                    href="mailto:valentina@rellatech.io" 
-                    className="text-2xl font-semibold text-primary hover:underline"
-                  >
-                    valentina@rellatech.io
-                  </a>
-                </div>
-
-                <div className="pt-6 border-t border-border">
-                  <h3 className="text-xl font-bold mb-3 text-foreground">Based in Canada</h3>
-                  <p className="text-muted-foreground">
-                    Serving clients locally and internationally through virtual support.
-                  </p>
-                </div>
+              <div className="pt-6 border-t border-border">
+                <h3 className="text-xl font-bold mb-3 text-foreground">Based in Canada</h3>
+                <p className="text-muted-foreground">
+                  Serving clients locally and internationally through virtual support.
+                </p>
               </div>
             </div>
 
