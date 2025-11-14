@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Calendar, FileText, Megaphone, Settings, Globe, GraduationCap, Film, BookOpen, BarChart, Palette, Presentation, Smartphone } from "lucide-react";
+import { Calendar, FileText, Megaphone, Settings, Globe, GraduationCap, BookOpen, BarChart, Palette, Presentation } from "lucide-react";
 import { Link } from "react-router-dom";
 import servicesHero from "@/assets/services-hero.jpg";
 
@@ -50,18 +50,11 @@ const Services = () => {
       color: "from-teal-500 to-teal-600"
     },
     {
-      icon: Film,
-      title: "Animation Support",
-      description: "Access to creative animation for storytelling, training, or promotional content.",
-      details: "Bring your ideas to life with professional animation support. Perfect for storytelling, training materials, promotional content, and explainer videos. Creative coordination that bridges your vision with polished animated content that engages your audience.",
-      color: "from-primary to-primary/80"
-    },
-    {
       icon: BookOpen,
       title: "eBook Design",
       description: "Clean formatting and layout so your writing becomes a polished digital book.",
       details: "Transform your manuscript into a beautifully formatted digital book. Professional layout design, clean formatting, proper structure, and polished presentation. Your expertise deserves professional presentation—from concept to finished eBook ready for publication.",
-      color: "from-accent to-accent/80"
+      color: "from-primary to-primary/80"
     },
     {
       icon: BarChart,
@@ -75,20 +68,13 @@ const Services = () => {
       title: "Graphic and Print Design",
       description: "Brand visuals, signage, packaging, and creative materials that elevate your presence.",
       details: "Professional design that elevates your brand presence. From business cards to signage, packaging to promotional materials—creative design that captures your essence and communicates your values. Visual identity that makes lasting impressions.",
-      color: "from-primary to-primary/80"
+      color: "from-accent to-accent/80"
     },
     {
       icon: Presentation,
       title: "Pitch Decks",
       description: "Compelling, organised presentations that help you communicate your ideas with confidence.",
       details: "Present your ideas with confidence through professionally designed pitch decks. Compelling visuals, clear messaging, and organized flow that captures attention and communicates your vision effectively. Presentations that open doors and create opportunities.",
-      color: "from-accent to-accent/80"
-    },
-    {
-      icon: Smartphone,
-      title: "App Guidance",
-      description: "Direction and coordination for clients developing web or mobile apps.",
-      details: "Navigate app development with expert guidance and coordination. Whether web or mobile, receive direction through planning, development coordination, and project management. Bridge the gap between vision and technical execution with professional support.",
       color: "from-teal-500 to-teal-600"
     }
   ];

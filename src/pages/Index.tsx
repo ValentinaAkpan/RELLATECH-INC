@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
-import { Mail, Calendar, FileText, TrendingUp, Megaphone, Settings, Globe, GraduationCap, Film, BookOpen, BarChart, Smartphone, Palette, Presentation } from "lucide-react";
+import { Mail, Calendar, FileText, TrendingUp, Megaphone, Settings, Globe, GraduationCap, BookOpen, BarChart, Palette, Presentation } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroWorkspace from "@/assets/hero-calm-workspace.jpg";
 import valentinaProfile from "@/assets/valentina-profile.png";
@@ -40,11 +40,6 @@ const Index = () => {
       description: "Setup and support for Kajabi, LearnDash, Kartra, and ThriveCart to bring your programs to life."
     },
     {
-      icon: Film,
-      title: "Animation Support",
-      description: "Access to creative animation for storytelling, training, or promotional content."
-    },
-    {
       icon: BookOpen,
       title: "eBook Design",
       description: "Clean formatting and layout so your writing becomes a polished digital book."
@@ -63,11 +58,6 @@ const Index = () => {
       icon: Presentation,
       title: "Pitch Decks",
       description: "Compelling, organised presentations that help you communicate your ideas with confidence."
-    },
-    {
-      icon: Smartphone,
-      title: "App Guidance",
-      description: "Direction and coordination for clients developing web or mobile apps."
     }
   ];
 
