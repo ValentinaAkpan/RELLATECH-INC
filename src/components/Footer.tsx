@@ -109,12 +109,21 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="border-t border-primary-foreground/20 pt-8">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-center">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2 bg-accent/20 px-4 py-2 rounded-full">
                 <span className="text-sm font-semibold text-accent-foreground">Made in Canada</span>
                 <img src={flagCanada} alt="Canada flag" className="h-6 rounded-sm shadow-md" />
               </div>
+            </div>
+            <div className="flex gap-4 text-sm opacity-75">
+              <a href="/terms" className="hover:opacity-100 transition-opacity">
+                Terms of Service
+              </a>
+              <span>•</span>
+              <a href="/privacy" className="hover:opacity-100 transition-opacity">
+                Privacy Policy
+              </a>
             </div>
             <p className="text-sm opacity-75">
               © 2025 Rellatech Inc. All rights reserved.
