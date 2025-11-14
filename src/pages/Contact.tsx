@@ -75,6 +75,7 @@ const Contact = () => {
       toast({
         title: "Thank you for reaching out",
         description: "Your message has been received and I will reply as soon as I can. Take a moment to breathe and know that support is on the way.",
+        duration: 6000,
       });
 
       // Reset form
@@ -131,13 +132,13 @@ const Contact = () => {
                   Get In Touch
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                  Fill out the form and I'll get back to you within 24 hours. Or email me directly at:
+                  Fill out the form and I'll get back to you as soon as possible. Or email me directly at:
                 </p>
                 <a 
-                  href="mailto:valentina@rellatech.io" 
+                  href="mailto:hello@rellatech.io" 
                   className="text-2xl font-semibold text-primary hover:underline"
                 >
-                  valentina@rellatech.io
+                  hello@rellatech.io
                 </a>
               </div>
 
@@ -152,6 +153,8 @@ const Contact = () => {
             {/* Right Side - Contact Form */}
             <div className="bg-muted/30 p-8 rounded-lg border border-border">
               <h3 className="text-2xl font-bold mb-6 text-foreground">Send a Message</h3>
+              
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="firstName" className="text-base">First Name *</Label>
@@ -208,7 +211,10 @@ const Contact = () => {
 
                 <div className="space-y-2">
                   <Label htmlFor="supportType" className="text-base">What kind of support are you looking for?</Label>
-                  <Select value={formData.supportType} onValueChange={(value) => setFormData({ ...formData, supportType: value })}>
+                  <Select
+                    value={formData.supportType}
+                    onValueChange={(value) => setFormData({ ...formData, supportType: value })}
+                  >
                     <SelectTrigger id="supportType" className="h-12 bg-background">
                       <SelectValue placeholder="Select support type" />
                     </SelectTrigger>
@@ -227,7 +233,10 @@ const Contact = () => {
 
                 <div className="space-y-2">
                   <Label htmlFor="timeline" className="text-base">How soon do you need support?</Label>
-                  <Select value={formData.timeline} onValueChange={(value) => setFormData({ ...formData, timeline: value })}>
+                  <Select
+                    value={formData.timeline}
+                    onValueChange={(value) => setFormData({ ...formData, timeline: value })}
+                  >
                     <SelectTrigger id="timeline" className="h-12 bg-background">
                       <SelectValue placeholder="Select timeline" />
                     </SelectTrigger>
@@ -246,19 +255,37 @@ const Contact = () => {
                     id="message"
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Tell me about your needs and how I can help..."
+                    placeholder="Share what's on your mind..."
                     required
-                    maxLength={1000}
                     rows={6}
+                    maxLength={2000}
                     className="resize-none"
                   />
+                  <p className="text-xs text-muted-foreground">
+                    {formData.message.length}/2000 characters
+                  </p>
                 </div>
 
-                <Button 
-                  type="submit" 
-                  size="lg" 
+                <div className="flex items-start space-x-3 pt-2">
+                  <Checkbox
+                    id="consent"
+                    checked={formData.consent}
+                    onCheckedChange={(checked) => setFormData({ ...formData, consent: checked as boolean })}
+                    required
+                  />
+                  <label
+                    htmlFor="consent"
+                    className="text-sm text-muted-foreground leading-relaxed cursor-pointer"
+                  >
+                    I agree to be contacted by Rellatech regarding my inquiry. *
+                  </label>
+                </div>
+
+                <Button
+                  type="submit"
+                  size="lg"
+                  className="w-full h-12 text-base"
                   disabled={isSubmitting}
-                  className="w-full text-lg h-12"
                 >
                   {isSubmitting ? (
                     <>
@@ -266,9 +293,13 @@ const Contact = () => {
                       Sending...
                     </>
                   ) : (
-                    'Send Message'
+                    "Send Message"
                   )}
                 </Button>
+
+                <p className="text-xs text-muted-foreground text-center">
+                  Your information is held with care and will never be shared.
+                </p>
               </form>
             </div>
           </div>
