@@ -52,7 +52,7 @@ const AdministrativeSupport = () => {
             What's Included
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Professional administrative support that keeps your business running smoothly. From document preparation to task management, planning coordination to daily organizational needs—everything handled with care and attention to detail. Focus on your core work while the administrative foundation stays solid.
+            Professional administrative support that keeps your business running smoothly. From document preparation to task management, planning coordination to daily organizational needs, everything handled with care and attention to detail. Focus on your core work while the administrative foundation stays solid.
           </p>
 
           <div className="grid md:grid-cols-2 gap-6 pt-8">

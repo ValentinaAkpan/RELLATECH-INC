@@ -52,7 +52,7 @@ const EbookDesign = () => {
             What's Included
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Transform your manuscript into a beautifully formatted digital book. Professional layout design, clean formatting, proper structure, and polished presentation. Your expertise deserves professional presentation—from concept to finished eBook ready for publication.
+            Transform your manuscript into a beautifully formatted digital book. Professional layout design, clean formatting, proper structure, and polished presentation. Your expertise deserves professional presentation, from concept to finished eBook ready for publication.
           </p>
 
           <div className="grid md:grid-cols-2 gap-6 pt-8">

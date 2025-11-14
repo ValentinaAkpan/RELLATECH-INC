@@ -43,13 +43,13 @@ const About = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">My Approach</h2>
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
-              In a world where business owners often feel stretched too thin, Rellatech offers a different kind of support. I provide more than task completion—I bring calm, clarity, and a steady hand to the behind-the-scenes work that keeps your business running smoothly. My services are thoughtfully crafted for clients who value reliability, personalised attention, and genuine care in every interaction.
+              In a world where business owners often feel stretched too thin, Rellatech offers a different kind of support. I provide more than task completion. I bring calm, clarity, and a steady hand to the behind-the-scenes work that keeps your business running smoothly. My services are thoughtfully crafted for clients who value reliability, personalised attention, and genuine care in every interaction.
             </p>
             <p>
-              I believe in a collaborative approach—taking time to understand your rhythm, your priorities, and the way you work. There are no cookie-cutter packages here. Every plan is shaped around your unique needs, your business goals, and the areas where you need support most. Whether you are managing daily operations, navigating seasonal demands, or building systems that scale, I tailor my services to fit your reality.
+              I believe in a collaborative approach, taking time to understand your rhythm, your priorities, and the way you work. There are no cookie-cutter packages here. Every plan is shaped around your unique needs, your business goals, and the areas where you need support most. Whether you are managing daily operations, navigating seasonal demands, or building systems that scale, I tailor my services to fit your reality.
             </p>
             <p className="text-xl font-semibold text-foreground">
-              I don't work for you; <em>I work with you</em>—becoming a trusted extension of your team and a steady partner in your business journey.
+              I don't work for you; <em>I work with you</em>, becoming a trusted extension of your team and a steady partner in your business journey.
             </p>
             <p>
               My approach is both holistic and precise. I look at the full picture while focusing on the specific actions that move the needle. This allows me to provide support that is efficient, effective, and aligned with the elevated standard you expect. When your operations flow smoothly, you gain space to think clearly, lead confidently, and focus on the work only you can do.
@@ -76,7 +76,7 @@ const About = () => {
               <h3 className="text-xl md:text-2xl font-semibold text-primary">Founder and Principal</h3>
               <div className="space-y-4 text-base md:text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Valentina's journey into virtual assistance is rooted in meaningful collaboration with individuals, teams, and businesses across Canada and beyond. With experience supporting clients in diverse industries—from technology and creative services to professional consulting and small business operations—she founded Rellatech to bring a more human, thoughtful approach to business support.
+                  Valentina's journey into virtual assistance is rooted in meaningful collaboration with individuals, teams, and businesses across Canada and beyond. With experience supporting clients in diverse industries, from technology and creative services to professional consulting and small business operations, she founded Rellatech to bring a more human, thoughtful approach to business support.
                 </p>
                 <p>
                   Valentina believes that great support is built on listening, adapting, and treating every client's workload with the same care they would give it themselves. Her vision offers clients dependable service that feels personal, professional, and refreshingly straightforward. She values balance and believes that when your business operations are organised, your mind feels clearer and your days feel lighter.
@@ -154,10 +154,10 @@ const About = () => {
               At Rellatech, collaboration means more than checking boxes. It means building a partnership where you feel heard, supported, and confident that your work is in capable hands. I bring a steady presence to your operations, handling the administrative, organisational, and technical tasks that free you to focus on strategy, creativity, and growth.
             </p>
             <p>
-              My network includes trusted specialists in areas such as web services, marketing support, automation setup, and creative design. When your project requires specialised expertise, I coordinate seamlessly with skilled professionals to ensure you receive comprehensive, high-quality service. Every collaboration is chosen carefully—not just for skill, but for the ability to integrate thoughtfully with your goals and deliver work that aligns with your standards.
+              My network includes trusted specialists in areas such as web services, marketing support, automation setup, and creative design. When your project requires specialised expertise, I coordinate seamlessly with skilled professionals to ensure you receive comprehensive, high-quality service. Every collaboration is chosen carefully, not just for skill, but for the ability to integrate thoughtfully with your goals and deliver work that aligns with your standards.
             </p>
             <p>
-              Whether you need ongoing administrative support, help with a specific project, or guidance setting up systems that scale, Rellatech is equipped to provide a level of service that exceeds expectations. My approach is not about doing more—it's about doing what matters, with care, precision, and a genuine commitment to your success.
+              Whether you need ongoing administrative support, help with a specific project, or guidance setting up systems that scale, Rellatech is equipped to provide a level of service that exceeds expectations. My approach is not about doing more. It's about doing what matters, with care, precision, and a genuine commitment to your success.
             </p>
           </div>
         </div>
