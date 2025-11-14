@@ -16,7 +16,7 @@ const TermsOfService = () => {
             <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">1. Agreement to Terms</h2>
             <p>
               By accessing and using Rellatech Virtual Assistant Services, you agree to be bound by these Terms of Service. 
-              If you do not agree to these terms, please do not use our services.
+              If you do not agree to these terms, please do not use my services.
             </p>
           </section>
 
@@ -46,7 +46,7 @@ const TermsOfService = () => {
               <li>Respond to communications in a timely manner</li>
               <li>Provide necessary access to accounts, tools, and platforms required for work</li>
               <li>Make timely payments as agreed upon</li>
-              <li>Treat our team with respect and professionalism</li>
+              <li>Treat me with respect and professionalism</li>
             </ul>
           </section>
 
@@ -66,7 +66,7 @@ const TermsOfService = () => {
           <section>
             <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">5. Confidentiality</h2>
             <p>
-              We understand the sensitive nature of the information you may share with us. Rellatech commits to:
+              I understand the sensitive nature of the information you may share with me. Rellatech commits to:
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Maintaining the confidentiality of all client information</li>
@@ -83,8 +83,8 @@ const TermsOfService = () => {
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Work created for clients becomes the property of the client upon full payment</li>
-              <li>Clients retain ownership of all materials and content provided to us</li>
-              <li>Rellatech retains the right to use completed work in our portfolio unless otherwise agreed</li>
+              <li>Clients retain ownership of all materials and content provided to me</li>
+              <li>Rellatech retains the right to use completed work in my portfolio unless otherwise agreed</li>
             </ul>
           </section>
 
@@ -97,7 +97,7 @@ const TermsOfService = () => {
               <li>Minimum 14 days notice for termination of ongoing retainer agreements</li>
               <li>Immediate termination in cases of breach of terms</li>
               <li>All outstanding invoices must be paid upon termination</li>
-              <li>We reserve the right to modify services or these terms with reasonable notice</li>
+              <li>I reserve the right to modify services or these terms with reasonable notice</li>
             </ul>
           </section>
 
@@ -107,16 +107,16 @@ const TermsOfService = () => {
               Rellatech strives for excellence in all work, however:
             </p>
             <ul className="list-disc pl-6 space-y-2">
-              <li>We are not liable for indirect, incidental, or consequential damages</li>
-              <li>Our liability is limited to the amount paid for services in the relevant period</li>
-              <li>We are not responsible for third-party platform outages or technical issues beyond our control</li>
+              <li>I am not liable for indirect, incidental, or consequential damages</li>
+              <li>My liability is limited to the amount paid for services in the relevant period</li>
+              <li>I am not responsible for third-party platform outages or technical issues beyond my control</li>
             </ul>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">9. Communication</h2>
             <p>
-              By using our services, you agree to receive communications from Rellatech regarding:
+              By using my services, you agree to receive communications from Rellatech regarding:
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Service updates and project-related matters</li>
@@ -136,7 +136,7 @@ const TermsOfService = () => {
           <section>
             <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">11. Changes to Terms</h2>
             <p>
-              We reserve the right to update these terms at any time. Significant changes will be communicated 
+              I reserve the right to update these terms at any time. Significant changes will be communicated 
               to active clients. Continued use of services after changes constitutes acceptance of the new terms.
             </p>
           </section>
@@ -146,7 +146,7 @@ const TermsOfService = () => {
               Last Updated: November 2025
             </p>
             <p className="text-sm text-muted-foreground mt-4">
-              If you have questions about these Terms of Service, please contact us at{" "}
+              If you have questions about these Terms of Service, please contact me at{" "}
               <a href="mailto:valentina@rellatech.io" className="text-primary hover:underline">
                 valentina@rellatech.io
               </a>

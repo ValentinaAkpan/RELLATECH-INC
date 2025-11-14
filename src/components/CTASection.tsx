@@ -11,7 +11,7 @@ interface CTASectionProps {
 
 const CTASection = ({ 
   title = "Trusted by businesses across industries",
-  buttonText = "Work With Us",
+  buttonText = "Work With Me",
   buttonLink = "/contact"
 }: CTASectionProps) => {
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -23,7 +23,7 @@ const CTASection = ({
       value: 50,
       suffix: "+",
       label: "Companies Served",
-      description: "Businesses trust us with their operations"
+      description: "Businesses trust me with their operations"
     },
     {
       icon: Award,

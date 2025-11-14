@@ -101,7 +101,7 @@ const Blog = () => {
 
       <CTASection 
         title="Ready to transform your workday?"
-        buttonText="See Our Services"
+        buttonText="See My Services"
         buttonLink="/services"
       />
 

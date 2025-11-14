@@ -133,7 +133,7 @@ const WorkdayTooHeavy = () => {
               </div>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Before we reorganize anything, we start with awareness.
+                  Before I reorganize anything, I start with awareness.
                 </p>
                 <p className="text-lg font-semibold text-foreground">
                   Ask yourself:
@@ -186,7 +186,7 @@ const WorkdayTooHeavy = () => {
                   </p>
                 </div>
                 <p>
-                  When I work with clients, this is one of the first steps we take. The simple act of naming everything creates a shift. Suddenly the chaos is no longer swirling inside you. It is laid out calmly, ready to be handled.
+                  When I work with clients, this is one of the first steps I take. The simple act of naming everything creates a shift. Suddenly the chaos is no longer swirling inside you. It is laid out calmly, ready to be handled.
                 </p>
               </div>
             </div>
@@ -365,7 +365,7 @@ const WorkdayTooHeavy = () => {
 
       <CTASection 
         title="Ready to lighten your workload?"
-        buttonText="Discover How We Can Help"
+        buttonText="Discover How I Can Help"
         buttonLink="/services"
       />
 
