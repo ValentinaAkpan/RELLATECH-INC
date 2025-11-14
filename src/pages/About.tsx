@@ -151,13 +151,13 @@ const About = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">Working Together</h2>
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
-              At Rellatech, collaboration means more than checking boxes. It means building a partnership where you feel heard, supported, and confident that your work is in capable hands. I bring a steady presence to your operations, handling the administrative, organisational, and technical tasks that free you to focus on strategy, creativity, and growth.
+              At Rellatech, collaboration is simple and sincere. You are not passed from one person to another. You work directly with me. I bring a steady presence to your operations, carrying the administrative, organisational, and technical tasks that give you room to focus on strategy, creativity, and leadership. My goal is to make your work feel lighter and more manageable, without ever losing the personal connection that matters so much.
             </p>
             <p>
-              My network includes trusted specialists in areas such as web services, marketing support, automation setup, and creative design. When your project requires specialised expertise, I coordinate seamlessly with skilled professionals to ensure you receive comprehensive, high-quality service. Every collaboration is chosen carefully, not just for skill, but for the ability to integrate thoughtfully with your goals and deliver work that aligns with your standards.
+              When a project calls for support beyond my own skill set, I reach into a small circle of trusted specialists I have built relationships with over time. These are people whose work I know well and whose values align with mine. I coordinate everything quietly in the background so you never feel the weight of managing multiple hands. You continue to work with me as your point of contact while receiving the benefit of extended expertise only when it truly strengthens your outcome.
             </p>
             <p>
-              Whether you need ongoing administrative support, help with a specific project, or guidance setting up systems that scale, Rellatech is equipped to provide a level of service that exceeds expectations. My approach is not about doing more. It's about doing what matters, with care, precision, and a genuine commitment to your success.
+              This approach allows you to stay grounded and supported without the noise of a large team. Whether you need ongoing administrative care, help with a specific project, or guidance setting up systems that grow with you, Rellatech offers service shaped with intention, precision, and genuine commitment. The focus is not on doing more. The focus is on doing what matters, with clarity and care.
             </p>
           </div>
         </div>
