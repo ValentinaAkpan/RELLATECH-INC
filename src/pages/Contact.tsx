@@ -93,7 +93,7 @@ const Contact = () => {
       console.error('Form submission error:', error);
       toast({
         title: "Error",
-        description: "Something went wrong. Please try emailing hello@rellatech.io directly.",
+        description: "Something went wrong. Please try emailing valentina@rellatech.io directly.",
         variant: "destructive",
       });
     } finally {
@@ -107,7 +107,7 @@ const Contact = () => {
 
       {/* Hero Section with Background Image */}
       <section className="relative min-h-[70vh] px-4 py-20 overflow-hidden" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1920&q=80)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        <div className="absolute inset-0 bg-gradient-to-r from-background/98 via-background/95 to-background/85"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-background/98 via-background/98 to-background/90"></div>
         
         <div className="container mx-auto max-w-6xl relative z-10 min-h-[60vh] flex items-center">
           <div className="max-w-2xl space-y-6 bg-primary/5 dark:bg-primary/10 backdrop-blur-xl p-10 rounded-2xl shadow-2xl border border-primary/20">
@@ -135,10 +135,10 @@ const Contact = () => {
                   Fill out the form and I'll get back to you as soon as possible. Or email me directly at:
                 </p>
                 <a 
-                  href="mailto:hello@rellatech.io" 
+                  href="mailto:valentina@rellatech.io" 
                   className="text-2xl font-semibold text-primary hover:underline"
                 >
-                  hello@rellatech.io
+                  valentina@rellatech.io
                 </a>
               </div>
 

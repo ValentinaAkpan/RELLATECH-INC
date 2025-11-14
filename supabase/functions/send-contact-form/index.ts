@@ -1,5 +1,5 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
-import { Resend } from "npm:resend@4.0.0";
+import { Resend } from "npm:resend@2.0.0";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
@@ -49,11 +49,11 @@ const handler = async (req: Request): Promise<Response> => {
     const dateStr = currentDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
     const timeStr = currentDate.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
 
-    // Send notification email to hello@rellatech.io
+    // Send notification email to valentina@rellatech.io
     const notificationResponse = await resend.emails.send({
       from: "Rellatech Contact Form <onboarding@resend.dev>",
       replyTo: formData.email,
-      to: ["hello@rellatech.io"],
+      to: ["valentina@rellatech.io"],
       subject: `New Rellatech Inquiry from ${formData.firstName} ${formData.lastName}, ${dateStr} at ${timeStr}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
