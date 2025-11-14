@@ -11,6 +11,14 @@ import { Link } from "react-router-dom";
 const Blog = () => {
   const posts = [
     {
+      title: "How I Helped Austin Bryant Consulting Bring Order Back to Google Drive",
+      excerpt: "A gentle behind-the-scenes look at solving digital clutter with care and clarity. Discover how custom automation and thoughtful organisation transformed a chaotic Google Drive into a clean, reliable system.",
+      date: "November 14, 2025",
+      category: "Case Study",
+      slug: "google-drive-organization",
+      image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80"
+    },
+    {
       title: "How a Virtual Assistant Helps You Get Your Time Back",
       excerpt: "Find clarity, calm, and steady support in the moments you need it most. Discover how a virtual assistant changes the rhythm of your day.",
       date: "November 14, 2025",
