@@ -52,8 +52,14 @@ export const WorkbookOfferDialog = () => {
 
       toast.success("Thank you! Your workbook is downloading now.");
       
-      // Open the PDF in a new tab
-      window.open("/The-Clarity-Reset-Workbook.pdf", "_blank");
+      // Create a download link that works on mobile
+      const link = document.createElement('a');
+      link.href = "/The-Clarity-Reset-Workbook.pdf";
+      link.download = "The-Clarity-Reset-Workbook.pdf";
+      link.target = "_blank";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
       
       handleClose();
     } catch (error) {
