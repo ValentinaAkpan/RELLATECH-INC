@@ -65,8 +65,8 @@ const WorkdayTooHeavy = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] px-4 py-20 overflow-hidden" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1920&q=80)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        <div className="absolute inset-0 bg-gradient-to-br from-secondary/95 via-accent/90 to-primary/85"></div>
+      <section className="relative min-h-[70vh] px-4 py-20 overflow-hidden" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1920&q=80)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/90 to-secondary/85"></div>
         
         <div className="container mx-auto max-w-6xl relative z-10 min-h-[60vh] flex items-center">
           <div className="max-w-2xl space-y-6 bg-background/95 backdrop-blur-md p-10 rounded-2xl shadow-2xl border-2 border-secondary/30">
