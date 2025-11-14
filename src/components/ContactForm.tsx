@@ -82,9 +82,9 @@ const ContactForm = () => {
   return (
     <Card className="border-border w-full max-w-2xl mx-auto">
       <CardHeader>
-        <CardTitle className="text-2xl">Get Your Free Guide</CardTitle>
+        <CardTitle className="text-2xl">Get In Touch</CardTitle>
         <CardDescription className="text-base">
-          Fill out the form below and I'll send you a free guide to help you get back in the CEO seat!
+          Fill out the form below and I'll get back to you shortly.
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -172,7 +172,7 @@ const ContactForm = () => {
                 Submitting...
               </>
             ) : (
-              "Send My Free Guide"
+              "Send Message"
             )}
           </Button>
 

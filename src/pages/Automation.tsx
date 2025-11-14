@@ -61,24 +61,28 @@ const Automation = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-primary/5 to-background">
-        <div className="container mx-auto text-center max-w-4xl">
-          <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full mb-6">
-            <Zap className="w-4 h-4" />
-            <span className="text-sm font-semibold">Automation Solutions</span>
+      {/* Hero Section with Background Image */}
+      <section className="relative min-h-[70vh] px-4 py-20 overflow-hidden" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1551434678-e076c223a692?w=1920&q=80)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="absolute inset-0 bg-gradient-to-r from-background/98 via-background/95 to-background/85"></div>
+        
+        <div className="container mx-auto max-w-6xl relative z-10 min-h-[60vh] flex items-center">
+          <div className="max-w-2xl space-y-6 bg-background/90 backdrop-blur-md p-10 rounded-lg shadow-xl border-2 border-primary/20">
+            <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full mb-2">
+              <Zap className="w-4 h-4" />
+              <span className="text-sm font-semibold">Automation Solutions</span>
+            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
+              Automate Your Business, Amplify Your Growth
+            </h1>
+            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+              Save time, reduce errors, and scale efficiently with intelligent automation solutions
+            </p>
+            <Button asChild size="lg" className="text-lg">
+              <a href="mailto:valentina@rellatech.io?subject=Automation Inquiry">
+                Start Automating <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
+            </Button>
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">
-            Automate Your Business, Amplify Your Growth
-          </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-            Save time, reduce errors, and scale efficiently with intelligent automation solutions
-          </p>
-          <Button asChild size="lg" className="text-lg">
-            <a href="mailto:valentina@rellatech.io?subject=Automation Inquiry">
-              Start Automating <ArrowRight className="ml-2 w-5 h-5" />
-            </a>
-          </Button>
         </div>
       </section>
 

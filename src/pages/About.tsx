@@ -16,23 +16,17 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative min-h-[50vh] md:min-h-[70vh] px-4 py-12 md:py-20 overflow-hidden">
-        {/* Background Image with Overlay */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=1920&q=80)` }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-background/98 via-background/92 to-background/80"></div>
-        </div>
+      {/* Hero Section with Background Image */}
+      <section className="relative min-h-[70vh] px-4 py-20 overflow-hidden" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=1920&q=80)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="absolute inset-0 bg-gradient-to-r from-background/98 via-background/95 to-background/85"></div>
         
-        <div className="container mx-auto max-w-6xl relative z-10 min-h-[40vh] md:min-h-[55vh] flex items-center">
-          <div className="max-w-3xl space-y-4 md:space-y-6 bg-background/95 backdrop-blur-md p-6 md:p-8 rounded-lg shadow-lg">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
+        <div className="container mx-auto max-w-6xl relative z-10 min-h-[60vh] flex items-center">
+          <div className="max-w-3xl space-y-6 bg-background/90 backdrop-blur-md p-10 rounded-lg shadow-xl border-2 border-primary/20">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
               About Rellatech
             </h1>
             
-            <p className="text-lg md:text-xl text-foreground leading-relaxed">
+            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
               Personal, steady support for individuals, teams, and businesses who want their workload to feel lighter.
             </p>
           </div>
