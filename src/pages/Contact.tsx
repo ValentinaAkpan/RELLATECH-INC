@@ -110,7 +110,7 @@ const Contact = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-background/98 via-background/95 to-background/85"></div>
         
         <div className="container mx-auto max-w-6xl relative z-10 min-h-[60vh] flex items-center">
-          <div className="max-w-2xl space-y-6 bg-white/70 dark:bg-background/70 backdrop-blur-xl p-10 rounded-2xl shadow-2xl">
+          <div className="max-w-2xl space-y-6 bg-primary/5 dark:bg-primary/10 backdrop-blur-xl p-10 rounded-2xl shadow-2xl border border-primary/20">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
               Let's Connect
             </h1>
@@ -151,7 +151,7 @@ const Contact = () => {
             </div>
 
             {/* Right Side - Contact Form */}
-            <div className="bg-muted/30 p-8 rounded-lg border border-border">
+            <div className="bg-primary/5 dark:bg-primary/10 p-8 rounded-lg border border-primary/20">
               <h3 className="text-2xl font-bold mb-6 text-foreground">Send a Message</h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">

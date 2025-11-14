@@ -23,6 +23,8 @@ import Testimonials from "./pages/Testimonials";
 import Blog from "./pages/Blog";
 import FAQ from "./pages/FAQ";
 import VirtualAssistantTimeBack from "./pages/blog/VirtualAssistantTimeBack";
+import TermsOfService from "./pages/TermsOfService";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -54,6 +56,8 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/virtual-assistant-time-back" element={<VirtualAssistantTimeBack />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/terms" element={<TermsOfService />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
