@@ -107,14 +107,14 @@ const Contact = () => {
 
       {/* Hero Section with Background Image */}
       <section className="relative min-h-[70vh] px-4 py-20 overflow-hidden" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1920&q=80)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        <div className="absolute inset-0 bg-background/95"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/85 to-background/70"></div>
         
         <div className="container mx-auto max-w-6xl relative z-10 min-h-[60vh] flex items-center">
-          <div className="max-w-2xl space-y-6 bg-background/95 backdrop-blur-xl p-10 rounded-2xl shadow-2xl border border-border">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
+          <div className="max-w-2xl space-y-6 bg-background/90 backdrop-blur-sm p-10 rounded-2xl shadow-2xl border border-border">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground drop-shadow-sm">
               Let's Connect
             </h1>
-            <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed">
+            <p className="text-xl md:text-2xl text-foreground/90 leading-relaxed drop-shadow-sm">
               Reaching out for support should feel simple and welcoming. If you are carrying a heavy workload or you are not sure where to start, I am here to listen. Share a little about what you need, and I will guide you through the next steps with clarity and calm. Your message will come directly to me and will be held with care.
             </p>
           </div>
