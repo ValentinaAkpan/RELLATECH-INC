@@ -23,8 +23,8 @@ export const ServiceCard = ({ icon: Icon, title, description, detailedDescriptio
           <div className={`w-16 h-16 rounded-full ${colorClass} flex items-center justify-center shadow-lg`}>
             <Icon className="w-8 h-8 text-white" />
           </div>
-          <h3 className="text-xl font-semibold text-foreground">{title}</h3>
-          <p className="text-sm text-foreground/80 leading-relaxed">{description}</p>
+          <h3 className="text-xl font-semibold text-white">{title}</h3>
+          <p className="text-sm text-white/90 leading-relaxed">{description}</p>
         </div>
         
         {/* Back of card */}
@@ -33,8 +33,8 @@ export const ServiceCard = ({ icon: Icon, title, description, detailedDescriptio
             <div className={`w-12 h-12 rounded-full ${colorClass} flex items-center justify-center mx-auto shadow-md`}>
               <Icon className="w-6 h-6 text-white" />
             </div>
-            <h3 className="text-lg font-semibold text-foreground text-center">{title}</h3>
-            <p className="text-sm text-foreground/80 leading-relaxed text-center">{detailedDescription}</p>
+            <h3 className="text-lg font-semibold text-white text-center">{title}</h3>
+            <p className="text-sm text-white/90 leading-relaxed text-center">{detailedDescription}</p>
           </div>
         </div>
       </div>
