@@ -1,11 +1,35 @@
 import { Button } from "@/components/ui/button";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 import { Link } from "react-router-dom";
-import { Menu } from "lucide-react";
+import { Menu, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import rellatechLogo from "@/assets/rellatech-logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+
+  const services = [
+    { name: "Administrative Support", slug: "administrative-support" },
+    { name: "Inbox and Calendar Management", slug: "inbox-calendar" },
+    { name: "Social Media and Marketing", slug: "social-media-marketing" },
+    { name: "CRMs and Automation", slug: "crms-automation" },
+    { name: "Web Services", slug: "web-services" },
+    { name: "LMS and Online Courses", slug: "lms-courses" },
+    { name: "Animation Support", slug: "animation" },
+    { name: "eBook Design", slug: "ebook-design" },
+    { name: "Business Reports", slug: "business-reports" },
+    { name: "Graphic and Print Design", slug: "graphic-design" },
+    { name: "Pitch Decks", slug: "pitch-decks" },
+    { name: "App Guidance", slug: "app-guidance" }
+  ];
 
   return (
     <nav className="border-b border-border bg-card/95 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
@@ -24,9 +48,35 @@ const Navigation = () => {
             <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
               About
             </Link>
-            <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">
-              Services
-            </Link>
+            
+            {/* Services Dropdown */}
+            <div className="relative group">
+              <button className="flex items-center gap-1 text-muted-foreground hover:text-primary transition-colors">
+                Services
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-64 bg-card border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="p-2 max-h-96 overflow-y-auto">
+                  <Link
+                    to="/services"
+                    className="block px-4 py-2 text-sm text-muted-foreground hover:text-primary hover:bg-muted rounded transition-colors"
+                  >
+                    All Services
+                  </Link>
+                  <div className="border-t border-border my-2"></div>
+                  {services.map((service) => (
+                    <Link
+                      key={service.slug}
+                      to={`/services/${service.slug}`}
+                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-primary hover:bg-muted rounded transition-colors"
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
             <Link to="/faq" className="text-muted-foreground hover:text-primary transition-colors">
               FAQ
             </Link>
@@ -71,13 +121,39 @@ const Navigation = () => {
             >
               About
             </Link>
-            <Link
-              to="/services"
-              className="text-muted-foreground hover:text-primary transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              Services
-            </Link>
+            
+            {/* Services Mobile Accordion */}
+            <div>
+              <button
+                onClick={() => setServicesOpen(!servicesOpen)}
+                className="flex items-center justify-between w-full text-muted-foreground hover:text-primary transition-colors"
+              >
+                Services
+                <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {servicesOpen && (
+                <div className="ml-4 mt-2 space-y-2">
+                  <Link
+                    to="/services"
+                    className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    All Services
+                  </Link>
+                  {services.map((service) => (
+                    <Link
+                      key={service.slug}
+                      to={`/services/${service.slug}`}
+                      className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <Link
               to="/faq"
               className="text-muted-foreground hover:text-primary transition-colors"
