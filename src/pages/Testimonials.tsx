@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import FAQ from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import hraiLogo from "@/assets/hrai-logo.png";
@@ -114,6 +115,8 @@ const Testimonials = () => {
           </div>
         </div>
       </section>
+
+      <FAQ />
 
       <Footer />
     </div>

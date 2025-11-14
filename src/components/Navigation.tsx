@@ -30,27 +30,26 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="border-b border-border bg-card/95 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
-      <div className="container mx-auto px-4 py-3">
+    <nav className="bg-primary sticky top-0 z-50 shadow-md">
+      <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3">
             <img src={rellatechLogo} alt="Rellatech" className="h-12 w-12" />
-            <span className="text-xl font-bold text-foreground">Rellatech</span>
           </Link>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex gap-6 items-center">
-            <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
-              Home
+          <div className="hidden md:flex gap-8 items-center">
+            <Link to="/" className="text-primary-foreground hover:text-accent transition-colors font-medium">
+              HOME
             </Link>
-            <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
-              About
+            <Link to="/about" className="text-primary-foreground hover:text-accent transition-colors font-medium">
+              ABOUT
             </Link>
             
             {/* Services Dropdown */}
             <div className="relative group">
-              <button className="flex items-center gap-1 text-muted-foreground hover:text-primary transition-colors">
-                Services
+              <button className="flex items-center gap-1 text-primary-foreground hover:text-accent transition-colors font-medium">
+                SERVICES
                 <ChevronDown className="w-4 h-4" />
               </button>
               <div className="absolute top-full left-0 mt-2 w-64 bg-card border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
@@ -75,20 +74,19 @@ const Navigation = () => {
               </div>
             </div>
 
-            <Link to="/faq" className="text-muted-foreground hover:text-primary transition-colors">
+            <Link to="/testimonials" className="text-primary-foreground hover:text-accent transition-colors font-medium">
+              TESTIMONIALS
+            </Link>
+            <Link to="/blog" className="text-primary-foreground hover:text-accent transition-colors font-medium">
+              BLOG
+            </Link>
+            <Link to="/faq" className="text-primary-foreground hover:text-accent transition-colors font-medium">
               FAQ
             </Link>
-            <Link to="/testimonials" className="text-muted-foreground hover:text-primary transition-colors">
-              Testimonials
-            </Link>
-            <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">
-              Blog
-            </Link>
-            <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
-              Contact
-            </Link>
-            <Button asChild variant="default">
-              <a href="mailto:valentina@rellatech.io">Get Started</a>
+            <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold px-6">
+              <Link to="/contact">
+                CONTACT US
+              </Link>
             </Button>
           </div>
 

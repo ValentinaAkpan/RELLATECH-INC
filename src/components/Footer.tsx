@@ -1,6 +1,8 @@
 import { Mail, MapPin, ArrowUp, Instagram, Linkedin } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
+import flagCanada from "@/assets/flag-canada.png";
+import flagNigeria from "@/assets/flag-nigeria.png";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -100,9 +102,11 @@ const Footer = () => {
           <p className="text-sm opacity-75 flex items-center justify-center gap-2 flex-wrap">
             © 2023-2025 RELLATECH. Website by
             <a href="https://rellatech.io" className="hover:opacity-100 transition-opacity uppercase font-semibold">
-              LARKSPUR CREATIVE
+              RELLATECH INC
             </a>
-            . Made in Canada 🇨🇦 🇳🇬
+            . Made in
+            <img src={flagCanada} alt="Canada" className="h-4 inline" />
+            <img src={flagNigeria} alt="Nigeria" className="h-4 inline" />
           </p>
         </div>
       </div>

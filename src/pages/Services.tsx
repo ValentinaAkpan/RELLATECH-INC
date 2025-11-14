@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import FAQ from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
 import { Calendar, FileText, Megaphone, Settings, Globe, GraduationCap, BookOpen, BarChart, Palette, Presentation } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -167,6 +168,8 @@ const Services = () => {
           </Button>
         </div>
       </section>
+
+      <FAQ />
 
       <Footer />
     </div>
