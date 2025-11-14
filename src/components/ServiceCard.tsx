@@ -36,7 +36,6 @@ export const ServiceCard = ({ icon: Icon, title, description, detailedDescriptio
             </div>
             <h3 className="text-lg font-semibold text-foreground text-center">{title}</h3>
             <p className="text-sm text-muted-foreground leading-relaxed text-center">{detailedDescription}</p>
-            <p className="text-xs text-primary font-medium text-center mt-2">Click to flip back</p>
           </div>
         </div>
       </div>
