@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, Clock, CheckCircle, TrendingUp, Shield, Users, Briefcase, Puzzle, Handshake, LineChart } from "lucide-react";
+import { Mail, FileText, TrendingUp, Megaphone, Settings, Globe, GraduationCap, Film, BookOpen, BarChart, Smartphone, Palette, Presentation } from "lucide-react";
 import { Link } from "react-router-dom";
 import rellatechLogo from "@/assets/rellatech-logo.png";
 
@@ -11,7 +11,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      {/* Hero Section with Gradient Background */}
+      {/* Hero Section */}
       <section className="relative min-h-[85vh] px-4 py-20 bg-gradient-to-br from-primary/90 via-primary to-primary/80 overflow-hidden">
         {/* Decorative circles */}
         <div className="absolute top-20 left-10 w-24 h-24 rounded-full bg-accent/20 blur-xl"></div>
@@ -22,22 +22,25 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[70vh]">
             {/* Text Content */}
             <div className="space-y-8 text-primary-foreground">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight uppercase">
-                Welcome to<br />Rellatech
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+                Rellatech Virtual Assistant Services
               </h1>
               
-              <h2 className="text-2xl md:text-3xl font-semibold uppercase leading-tight">
-                Fractional Operations, Business Management and Virtual Executive Assistance
-              </h2>
+              <p className="text-xl md:text-2xl leading-relaxed">
+                Support that brings calm, clarity and structure back into your work.
+              </p>
               
-              <p className="text-lg md:text-xl italic opacity-90 max-w-lg">
-                Experience the synergy of organization and growth - where your vision gets the powerhouse support it deserves. Serving Canadian businesses coast to coast.
+              <p className="text-lg md:text-xl opacity-90">
+                Whether you are across the street or across the world, your days can feel lighter and more organised.
               </p>
 
-              <div className="pt-4">
+              <div className="pt-4 space-y-4">
                 <Button size="lg" asChild className="text-lg px-8 py-6 h-auto bg-accent hover:bg-accent/90 text-accent-foreground">
-                  <Link to="/contact">Book a Call Today</Link>
+                  <Link to="/contact">Book a Consultation</Link>
                 </Button>
+                <p className="text-sm opacity-80">
+                  Based in Canada and serving clients virtually everywhere.
+                </p>
               </div>
             </div>
 
@@ -45,163 +48,24 @@ const Index = () => {
             <div className="flex justify-center items-center">
               <img
                 src={rellatechLogo}
-                alt="Rellatech - Smart Support, Real Result"
+                alt="Rellatech Virtual Assistant Services"
                 className="w-full max-w-md lg:max-w-lg drop-shadow-2xl"
               />
             </div>
           </div>
-
-          {/* Testimonial Quote */}
-          <div className="mt-12 text-center">
-            <p className="text-primary-foreground text-xl md:text-2xl italic opacity-90">
-              "Rellatech is largely becoming my secret ingredient in my business!"
-            </p>
-          </div>
         </div>
       </section>
 
-      {/* Values Section */}
+      {/* Welcome Text */}
       <section className="py-20 px-4 bg-background">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center space-y-4">
-              <div className="w-20 h-20 rounded-full bg-accent mx-auto flex items-center justify-center">
-                <Briefcase className="w-10 h-10 text-accent-foreground" />
-              </div>
-              <h3 className="text-xl font-bold text-foreground uppercase">Professional</h3>
-              <p className="text-muted-foreground">Expert support tailored to your business needs</p>
-            </div>
-
-            <div className="text-center space-y-4">
-              <div className="w-20 h-20 rounded-full bg-accent mx-auto flex items-center justify-center">
-                <Puzzle className="w-10 h-10 text-accent-foreground" />
-              </div>
-              <h3 className="text-xl font-bold text-foreground uppercase">Holistic</h3>
-              <p className="text-muted-foreground">Comprehensive solutions for every aspect of your operations</p>
-            </div>
-
-            <div className="text-center space-y-4">
-              <div className="w-20 h-20 rounded-full bg-accent mx-auto flex items-center justify-center">
-                <Handshake className="w-10 h-10 text-accent-foreground" />
-              </div>
-              <h3 className="text-xl font-bold text-foreground uppercase">Authentic</h3>
-              <p className="text-muted-foreground">Genuine partnership and trusted collaboration</p>
-            </div>
-
-            <div className="text-center space-y-4">
-              <div className="w-20 h-20 rounded-full bg-accent mx-auto flex items-center justify-center">
-                <LineChart className="w-10 h-10 text-accent-foreground" />
-              </div>
-              <h3 className="text-xl font-bold text-foreground uppercase">Progressive</h3>
-              <p className="text-muted-foreground">Forward-thinking strategies for sustainable growth</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Supporting Message */}
-      <section className="py-16 px-4 bg-muted/30">
-        <div className="container mx-auto text-center max-w-3xl">
-          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-            Whether you're a <span className="text-primary font-semibold">solo entrepreneur</span>, a <span className="text-primary font-semibold">small team</span>, or <span className="text-primary font-semibold">scaling fast</span> across Canada, Rellatech provides the fractional support you need to focus on what truly matters.
-          </p>
-        </div>
-      </section>
-
-      {/* About Features Section */}
-      <section id="about" className="py-16 px-4 bg-muted/30">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Supporting Canadian Businesses Coast to Coast</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              From solo entrepreneurs to growing teams, I help Canadian businesses reclaim their time with calm, clarity, and expert fractional support tailored to your needs.
+        <div className="container mx-auto max-w-4xl">
+          <div className="space-y-6 text-center">
+            <p className="text-xl md:text-2xl text-foreground leading-relaxed">
+              Work becomes easier when you do not carry everything alone. Rellatech is here to support individuals, teams and businesses who want their days to feel more focused and more under control.
             </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <Card className="border-border">
-              <CardHeader>
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <CheckCircle className="w-6 h-6 text-primary" />
-                </div>
-                <CardTitle>Calm from Chaos</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  I organize, automate, and streamline your operations for peace of mind.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="border-border">
-              <CardHeader>
-                <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
-                  <Mail className="w-6 h-6 text-accent" />
-                </div>
-                <CardTitle>Inbox Mastery</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  I tame your inbox and set up workflows to save you hours each week.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="border-border">
-              <CardHeader>
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <Users className="w-6 h-6 text-primary" />
-                </div>
-                <CardTitle>Trusted Partner</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  I work alongside you, so you never feel alone in your business journey.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="border-border">
-              <CardHeader>
-                <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
-                  <Shield className="w-6 h-6 text-accent" />
-                </div>
-                <CardTitle>Clarity & Care</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  I bring clarity to your priorities and care deeply about your success.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="border-border">
-              <CardHeader>
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <TrendingUp className="w-6 h-6 text-primary" />
-                </div>
-                <CardTitle>Smart Growth</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  I help you scale sustainably with systems that grow with you.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="border-border">
-              <CardHeader>
-                <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
-                  <Clock className="w-6 h-6 text-accent" />
-                </div>
-                <CardTitle>Time Savings</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  Cut costs and reclaim your time by reducing hiring overhead by up to 90%.
-                </CardDescription>
-              </CardContent>
-            </Card>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              I bring a steady presence, thoughtful communication and a traditional sense of care to the work behind the scenes. You receive help that respects your time and strengthens the foundation of your business or personal workload. When your operations flow smoothly, you can lead with a clearer mind and a calmer heart.
+            </p>
           </div>
         </div>
       </section>
@@ -288,16 +152,48 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-16 px-4 bg-muted/30">
-        <div className="container mx-auto text-center max-w-2xl">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Ready to Take Back Your Time?</h2>
-          <p className="text-xl text-muted-foreground mb-8">
-            Grab your guide and get relief today. Serving small teams and large teams across Canada.
+      {/* Why Clients Choose Rellatech */}
+      <section className="py-20 px-4 bg-background">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center space-y-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground">Why Clients Choose Rellatech</h2>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              People come to Rellatech because they want support that feels dependable, thoughtful and human. They want someone who listens, understands their rhythm and treats their workload with the same care they would give it themselves.
+            </p>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              I become an extension of your team. I help carry the details so you can focus on the future you are building. When your operations are organised, your confidence rises and your days feel more grounded.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* How We Begin */}
+      <section className="py-20 px-4 bg-muted/30">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">How We Begin</h2>
+          <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
+            Your first step is easy. Book a consultation and share what you need. Together we will shape a plan that lifts the weight from your shoulders and brings steady order to your days.
           </p>
-          <Button size="lg" asChild className="text-lg">
-            <Link to="/contact">Get Your Free Guide</Link>
-          </Button>
+          <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
+            You do not have to do everything alone. Let your work feel clear. Let your path feel calm.
+          </p>
+          <div className="space-y-4">
+            <Button size="lg" asChild className="text-lg px-8 py-6 h-auto">
+              <Link to="/contact">Book a Consultation</Link>
+            </Button>
+            <p className="text-muted-foreground">
+              Email: <a href="mailto:hello@rellatech.io" className="text-primary hover:underline">hello@rellatech.io</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* SEO Closing Section */}
+      <section className="py-16 px-4 bg-background">
+        <div className="container mx-auto max-w-5xl text-center">
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            Rellatech provides virtual assistant services, administrative support, workflow organisation, marketing assistance, technical setup and creative services for individuals, teams and businesses across many industries. Based in Canada and supporting clients virtually worldwide, Rellatech offers reliable help that brings clarity and calm back into your work.
+          </p>
         </div>
       </section>
 
