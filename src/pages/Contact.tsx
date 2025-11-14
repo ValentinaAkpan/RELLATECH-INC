@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import FAQ from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -231,6 +232,8 @@ const Contact = () => {
           </div>
         </div>
       </section>
+
+      <FAQ />
 
       <Footer />
     </div>
