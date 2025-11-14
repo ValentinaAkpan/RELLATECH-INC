@@ -5,6 +5,7 @@ import CTASection from "@/components/CTASection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Palette, CheckCircle } from "lucide-react";
+import portfolioImage from "@/assets/portfolio-graphic-design.jpg";
 
 const GraphicDesign = () => {
   const benefits = [
@@ -87,7 +88,7 @@ const GraphicDesign = () => {
               Design Portfolio
             </h2>
             <p className="text-lg text-muted-foreground">
-              View examples of our graphic and print design work
+              View examples of my graphic and print design work
             </p>
           </div>
 
@@ -96,16 +97,20 @@ const GraphicDesign = () => {
             onClick={handlePortfolioClick}
             className="group block relative overflow-hidden rounded-xl bg-card border-2 border-border hover:border-teal-500 transition-all duration-300 hover:shadow-xl"
           >
-            <div className="aspect-[16/9] bg-gradient-to-br from-teal-500/20 to-teal-600/20 flex items-center justify-center overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-teal-600/30" />
-              <Palette className="w-32 h-32 text-teal-500/40 group-hover:scale-110 transition-transform duration-300" />
+            <div className="aspect-[16/9] overflow-hidden relative">
+              <img 
+                src={portfolioImage} 
+                alt="Graphic Design Portfolio - Google Ads Research" 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
             <div className="p-8 text-center space-y-3 bg-card/50 backdrop-blur-sm">
               <h3 className="text-2xl font-bold text-foreground group-hover:text-teal-600 transition-colors">
-                View Our Design Work
+                View My Design Work
               </h3>
               <p className="text-muted-foreground">
-                Click to explore our portfolio and get in touch about your project
+                Click to explore my portfolio and get in touch about your project
               </p>
               <div className="pt-2">
                 <span className="text-teal-600 font-medium group-hover:underline">
