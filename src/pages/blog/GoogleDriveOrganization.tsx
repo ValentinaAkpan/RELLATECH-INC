@@ -251,26 +251,34 @@ const GoogleDriveOrganization = () => {
       {/* Related Topics Section */}
       <section className="py-16 px-4 bg-muted/30">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-2xl font-bold mb-6">Related Topics</h2>
-          <div className="flex flex-wrap gap-3">
-            <Link to="/services/crms-automation" className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-full transition-colors">
-              #Automation
-            </Link>
-            <Link to="/services" className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-full transition-colors">
-              #DigitalOrganization
-            </Link>
-            <Link to="/services/administrative-support" className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-full transition-colors">
-              #GoogleDrive
-            </Link>
-            <Link to="/blog" className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-full transition-colors">
-              #VirtualAssistant
-            </Link>
-            <Link to="/blog" className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-full transition-colors">
-              #WorkflowOptimization
-            </Link>
-            <Link to="/services" className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-full transition-colors">
-              #SystemsThinking
-            </Link>
+          <div className="bg-background/50 backdrop-blur-sm rounded-3xl p-12 border-2 border-primary/20">
+            <div className="space-y-8">
+              <h3 className="text-2xl font-bold mb-6 text-foreground text-center">Related Topics</h3>
+              <div className="flex flex-wrap gap-4 justify-center">
+                {[
+                  '#Automation',
+                  '#DigitalOrganization',
+                  '#GoogleDrive',
+                  '#VirtualAssistant',
+                  '#WorkflowOptimization',
+                  '#SystemsThinking',
+                  '#GoogleAppsScript',
+                  '#RemoteWork',
+                  '#BusinessEfficiency',
+                  '#DigitalCleanup',
+                  '#FileManagement',
+                  '#CloudStorage'
+                ].map((tag, index) => (
+                  <Link
+                    key={index}
+                    to="/contact"
+                    className="px-8 py-4 bg-gradient-to-r from-primary/30 to-secondary/30 hover:from-primary/50 hover:to-secondary/50 text-foreground font-bold rounded-full text-base transition-all duration-300 border-2 border-primary/50 hover:border-primary hover:shadow-xl hover:scale-105"
+                  >
+                    {tag}
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
