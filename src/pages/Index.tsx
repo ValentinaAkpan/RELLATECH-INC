@@ -5,6 +5,7 @@ import ContactForm from "@/components/ContactForm";
 import CTASection from "@/components/CTASection";
 import { WorkbookOfferDialog } from "@/components/WorkbookOfferDialog";
 import { Button } from "@/components/ui/button";
+import { ServiceCard } from "@/components/ServiceCard";
 import { Mail, Calendar, FileText, TrendingUp, Megaphone, Settings, Globe, GraduationCap, BookOpen, BarChart, Palette, Presentation } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroWorkspace from "@/assets/hero-calm-workspace.jpg";
@@ -15,52 +16,62 @@ const Index = () => {
     {
       icon: FileText,
       title: "Administrative Support",
-      description: "Reliable help with documents, tasks, planning, and day-to-day organisation."
+      description: "Reliable help with documents, tasks, planning, and day-to-day organisation.",
+      detailedDescription: "From document management to task coordination, I provide comprehensive administrative support that keeps your business running smoothly. I handle the details so you can focus on what matters most."
     },
     {
       icon: Calendar,
       title: "Inbox and Calendar Management",
-      description: "Clear scheduling, structured communication, and reminders that keep your day steady."
+      description: "Clear scheduling, structured communication, and reminders that keep your day steady.",
+      detailedDescription: "Stay on top of your schedule with organized calendar management and inbox prioritization. I ensure you never miss important meetings and your communications flow effortlessly."
     },
     {
       icon: Megaphone,
       title: "Social Media and Marketing Support",
-      description: "Light content help, posting, basic SEO, email campaigns, and simple promotional guidance."
+      description: "Light content help, posting, basic SEO, email campaigns, and simple promotional guidance.",
+      detailedDescription: "Strengthen your online presence with thoughtful social media management, content scheduling, and email campaign support that connects authentically with your audience."
     },
     {
       icon: Settings,
       title: "CRMs and Automation",
-      description: "Support with tools like HubSpot, Keap, Mailchimp, and Kartra to keep your systems clean and easy to follow."
+      description: "Support with tools like HubSpot, Keap, Mailchimp, and Kartra to keep your systems clean and easy to follow.",
+      detailedDescription: "Optimize your business systems with CRM management and automation setup. I help streamline your workflows, keeping your data organized and your processes efficient."
     },
     {
       icon: Globe,
       title: "Web Services and Platform Migrations",
-      description: "Updates, transitions, and guidance for websites that need refreshing or moving to a better platform."
+      description: "Updates, transitions, and guidance for websites that need refreshing or moving to a better platform.",
+      detailedDescription: "Navigate website updates and platform transitions smoothly. I provide careful guidance and execution for migrations, ensuring your online presence remains strong throughout the process."
     },
     {
       icon: GraduationCap,
       title: "LMS and Online Courses",
-      description: "Setup and support for Kajabi, LearnDash, Kartra, and ThriveCart to bring your programs to life."
+      description: "Setup and support for Kajabi, LearnDash, Kartra, and ThriveCart to bring your programs to life.",
+      detailedDescription: "Launch and manage your online courses with confidence. I provide complete setup and ongoing support for learning management systems, making your educational offerings shine."
     },
     {
       icon: BookOpen,
       title: "eBook Design",
-      description: "Clean formatting and layout so your writing becomes a polished digital book."
+      description: "Clean formatting and layout so your writing becomes a polished digital book.",
+      detailedDescription: "Transform your content into beautifully formatted eBooks. From layout design to final formatting, I ensure your digital publications are professional and reader-friendly."
     },
     {
       icon: BarChart,
       title: "Business Reports",
-      description: "Beautiful, clear reports that reflect your achievements and growth."
+      description: "Beautiful, clear reports that reflect your achievements and growth.",
+      detailedDescription: "Present your data with impact through well-designed business reports. I create clear, visually appealing documents that communicate your success and insights effectively."
     },
     {
       icon: Palette,
       title: "Graphic and Print Design",
-      description: "Brand visuals, signage, packaging, and creative materials that elevate your presence."
+      description: "Brand visuals, signage, packaging, and creative materials that elevate your presence.",
+      detailedDescription: "Elevate your brand with custom graphic design for print and digital. From logos to marketing materials, I create visuals that capture your unique identity and message."
     },
     {
       icon: Presentation,
       title: "Pitch Decks",
-      description: "Compelling, organised presentations that help you communicate your ideas with confidence."
+      description: "Compelling, organised presentations that help you communicate your ideas with confidence.",
+      detailedDescription: "Win over investors and clients with professionally designed pitch decks. I craft presentations that tell your story clearly and persuasively, helping you make memorable impressions."
     }
   ];
 
@@ -159,7 +170,6 @@ const Index = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => {
-              const Icon = service.icon;
               const colors = [
                 'bg-gradient-to-br from-primary to-primary/80',
                 'bg-gradient-to-br from-accent to-accent/80',
@@ -170,22 +180,17 @@ const Index = () => {
                 'bg-gradient-to-br from-primary to-primary/80',
                 'bg-gradient-to-br from-accent to-accent/80',
                 'bg-gradient-to-br from-teal-500 to-teal-600',
-                'bg-gradient-to-br from-primary to-primary/80',
-                'bg-gradient-to-br from-accent to-accent/80',
-                'bg-gradient-to-br from-teal-500 to-teal-600'
+                'bg-gradient-to-br from-primary to-primary/80'
               ];
               return (
-                <div key={index} className="bg-card border-2 border-border rounded-lg p-6 space-y-4 hover:shadow-lg transition-shadow">
-                  <div className={`w-14 h-14 rounded-full ${colors[index]} flex items-center justify-center`}>
-                    <Icon className="w-7 h-7 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-foreground">
-                    {service.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {service.description}
-                  </p>
-                </div>
+                <ServiceCard
+                  key={index}
+                  icon={service.icon}
+                  title={service.title}
+                  description={service.description}
+                  detailedDescription={service.detailedDescription}
+                  colorClass={colors[index]}
+                />
               );
             })}
           </div>
