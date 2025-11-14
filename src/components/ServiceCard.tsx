@@ -19,23 +19,22 @@ export const ServiceCard = ({ icon: Icon, title, description, detailedDescriptio
     >
       <div className={`relative w-full h-full transition-transform duration-700 transform-style-3d ${isFlipped ? 'rotate-y-180' : ''}`}>
         {/* Front of card */}
-        <div className="absolute w-full h-full backface-hidden bg-card border-2 border-border rounded-xl p-6 flex flex-col items-center justify-center text-center space-y-4 shadow-lg hover:shadow-xl transition-shadow">
+        <div className={`absolute w-full h-full backface-hidden ${colorClass} bg-opacity-10 border-2 border-opacity-30 ${colorClass.replace('bg-', 'border-')} rounded-xl p-6 flex flex-col items-center justify-center text-center space-y-4 shadow-lg hover:shadow-xl transition-shadow backdrop-blur-sm`}>
           <div className={`w-16 h-16 rounded-full ${colorClass} flex items-center justify-center shadow-lg`}>
             <Icon className="w-8 h-8 text-white" />
           </div>
           <h3 className="text-xl font-semibold text-foreground">{title}</h3>
-          <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
-          <p className="text-xs text-primary font-medium mt-2">Click to learn more</p>
+          <p className="text-sm text-foreground/80 leading-relaxed">{description}</p>
         </div>
         
         {/* Back of card */}
-        <div className="absolute w-full h-full backface-hidden bg-gradient-to-br from-primary/5 to-accent/5 border-2 border-primary/20 rounded-xl p-6 flex flex-col justify-center rotate-y-180 shadow-lg">
+        <div className={`absolute w-full h-full backface-hidden ${colorClass} bg-opacity-20 border-2 ${colorClass.replace('bg-', 'border-')} border-opacity-40 rounded-xl p-6 flex flex-col justify-center rotate-y-180 shadow-lg backdrop-blur-sm`}>
           <div className="space-y-3">
             <div className={`w-12 h-12 rounded-full ${colorClass} flex items-center justify-center mx-auto shadow-md`}>
               <Icon className="w-6 h-6 text-white" />
             </div>
             <h3 className="text-lg font-semibold text-foreground text-center">{title}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed text-center">{detailedDescription}</p>
+            <p className="text-sm text-foreground/80 leading-relaxed text-center">{detailedDescription}</p>
           </div>
         </div>
       </div>
