@@ -1,6 +1,11 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import testimonialsHero from "@/assets/testimonials-hero.jpg";
+import hraiLogo from "@/assets/hrai-logo.png";
+import spurLogo from "@/assets/spur-logo.png";
 
 const Testimonials = () => {
   const testimonials = [
@@ -8,6 +13,7 @@ const Testimonials = () => {
       quote: "I'm in the imagination business but can't imagine a Virtual Assistant with more initiative, intelligence and instinct than Valentina. Did you notice that her initials are V.A? What more do you need?",
       author: "Lorne Silver",
       role: "HR & AI Professional",
+      logo: hraiLogo,
       rating: 5
     },
     {
@@ -20,18 +26,7 @@ const Testimonials = () => {
       quote: "Valentina is an incredible virtual assistant. She works with me and my team quickly, she's very responsive, and she finds great solutions to the issues I ask for help with. Couldn't recommend her more!",
       author: "Hilary Farson",
       role: "Spur Communications",
-      rating: 5
-    },
-    {
-      quote: "Rellatech Virtual Assistant Services has been an absolute game-changer for me. Their team is professional, efficient, and always delivers top-quality work.",
-      author: "Faith Decent Emezie",
-      role: "Business Professional",
-      rating: 5
-    },
-    {
-      quote: "Top notch services 📌",
-      author: "Azi Embellish",
-      role: "Spur Communications",
+      logo: spurLogo,
       rating: 5
     }
   ];
@@ -40,15 +35,24 @@ const Testimonials = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-primary/10 to-accent/10">
-        <div className="container mx-auto max-w-4xl text-center space-y-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
-            Testimonials
-          </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-            What clients say about working with Rellatech
-          </p>
+      {/* Hero Section with Background Image */}
+      <section className="relative min-h-[70vh] px-4 py-20 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${testimonialsHero})` }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-background/98 via-background/92 to-background/80"></div>
+        </div>
+        
+        <div className="container mx-auto max-w-6xl relative z-10 min-h-[60vh] flex items-center">
+          <div className="max-w-2xl space-y-6 bg-background/40 backdrop-blur-sm p-8 rounded-lg">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
+              Testimonials
+            </h1>
+            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+              What clients say about working with Rellatech
+            </p>
+          </div>
         </div>
       </section>
 
@@ -58,6 +62,11 @@ const Testimonials = () => {
           <div className="grid md:grid-cols-2 gap-8">
             {testimonials.map((testimonial, index) => (
               <Card key={index} className="p-8 space-y-6 flex flex-col">
+                {testimonial.logo && (
+                  <div className="h-12 flex items-center">
+                    <img src={testimonial.logo} alt={`${testimonial.author} company`} className="h-full w-auto object-contain" />
+                  </div>
+                )}
                 <div className="flex gap-1 text-amber-500">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <span key={i} className="text-2xl">★</span>
@@ -72,6 +81,18 @@ const Testimonials = () => {
                 </div>
               </Card>
             ))}
+          </div>
+
+          {/* Google Reviews Link */}
+          <div className="mt-12 text-center">
+            <p className="text-lg text-muted-foreground mb-4">
+              Read more reviews on Google
+            </p>
+            <Button asChild size="lg">
+              <a href="https://g.page/r/CX1l82p_9SZtEAE/review" target="_blank" rel="noopener noreferrer">
+                View Google Reviews
+              </a>
+            </Button>
           </div>
         </div>
       </section>
