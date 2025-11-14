@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { Building2, Award, Users, TrendingUp } from "lucide-react";
 
 interface CTASectionProps {
   title?: string;
@@ -8,32 +9,79 @@ interface CTASectionProps {
 }
 
 const CTASection = ({ 
-  title = "Want to learn how we're closing these gaps?",
-  buttonText = "See How We're Taking Action",
+  title = "Trusted by businesses across industries",
+  buttonText = "Work With Us",
   buttonLink = "/contact"
 }: CTASectionProps) => {
+  const stats = [
+    {
+      icon: Building2,
+      value: "50+",
+      label: "Companies Served",
+      description: "Businesses trust us with their operations"
+    },
+    {
+      icon: Award,
+      value: "98%",
+      label: "Client Satisfaction",
+      description: "Consistently excellent service delivery"
+    },
+    {
+      icon: Users,
+      value: "100+",
+      label: "Projects Completed",
+      description: "Successful outcomes delivered"
+    },
+    {
+      icon: TrendingUp,
+      value: "5+ Years",
+      label: "Experience",
+      description: "Proven expertise in virtual assistance"
+    }
+  ];
+
   return (
-    <section 
-      className="relative min-h-[60vh] px-4 py-20 overflow-hidden flex items-center justify-center"
-      style={{ 
-        backgroundImage: 'url(https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }}
-    >
-      {/* Dark overlay for better text contrast */}
-      <div className="absolute inset-0 bg-black/20"></div>
-      
-      <div className="container mx-auto max-w-4xl relative z-10">
-        <div className="bg-white/85 dark:bg-background/85 backdrop-blur-md p-12 md:p-16 rounded-3xl shadow-2xl text-center space-y-8">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[hsl(var(--primary))] leading-tight">
+    <section className="py-20 px-4 bg-gradient-to-br from-muted/30 via-background to-muted/20">
+      <div className="container mx-auto max-w-6xl">
+        <div className="text-center mb-16 space-y-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
             {title}
           </h2>
-          
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Building lasting partnerships through reliable, professional service
+          </p>
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          {stats.map((stat, index) => {
+            const IconComponent = stat.icon;
+            return (
+              <div 
+                key={index}
+                className="text-center p-6 bg-background border-2 border-border rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              >
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
+                  <IconComponent className="w-8 h-8 text-primary" />
+                </div>
+                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
+                  {stat.value}
+                </div>
+                <div className="text-lg font-semibold text-foreground mb-2">
+                  {stat.label}
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  {stat.description}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="text-center">
           <Link to={buttonLink}>
             <Button 
               size="lg"
-              className="bg-[hsl(var(--primary))] hover:bg-[hsl(var(--primary))]/90 text-primary-foreground px-12 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
             >
               {buttonText}
             </Button>
