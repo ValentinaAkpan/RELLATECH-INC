@@ -79,9 +79,7 @@ const Testimonials = () => {
                   
                   <div className="border-l-4 border-primary pl-6 space-y-4">
                     <p className="text-lg text-muted-foreground leading-relaxed">
-                      {testimonial.quote.split('. ').slice(0, 2).join('. ')}. 
-                      <span className="font-bold text-foreground"> {testimonial.quote.split('. ')[2]}</span>
-                      {testimonial.quote.split('. ').slice(3).join('. ')}
+                      {testimonial.quote}
                     </p>
                   </div>
 
