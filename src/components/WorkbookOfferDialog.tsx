@@ -82,7 +82,7 @@ export const WorkbookOfferDialog = () => {
             <span className="font-semibold text-foreground">
               The Clarity Reset Workbook
             </span>
-            {" "}— a practical guide to help you organize your thoughts and streamline your workflow.
+            {" "}a practical guide to help you organize your thoughts and streamline your workflow.
           </DialogDescription>
         </DialogHeader>
 
@@ -117,7 +117,7 @@ export const WorkbookOfferDialog = () => {
             />
           </div>
 
-          <div className="flex flex-col gap-3 pt-2">
+          <div className="pt-2">
             <Button
               type="submit"
               size="lg"
@@ -132,15 +132,6 @@ export const WorkbookOfferDialog = () => {
                   Get Your Free Workbook
                 </>
               )}
-            </Button>
-            <Button
-              type="button"
-              onClick={handleClose}
-              variant="ghost"
-              size="lg"
-              className="w-full hover:bg-secondary/20"
-            >
-              Maybe Later
             </Button>
           </div>
         </form>
