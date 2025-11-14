@@ -21,15 +21,15 @@ const Footer = () => {
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Location */}
-          <div className="border-l-4 border-accent pl-6">
-            <h3 className="text-2xl font-bold mb-4">
-              Where We Work
+          <div className="border-l-4 border-accent pl-4 sm:pl-6">
+            <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
+              Where I Work
             </h3>
-            <p className="opacity-90 mb-4">
-              Rellatech works with clients locally and internationally.
+            <p className="text-sm sm:text-base opacity-90 mb-3 sm:mb-4">
+              I work with clients locally and internationally.
             </p>
-            <p className="text-sm opacity-75">
-              Based in Canada and serving clients virtually everywhere.
+            <p className="text-xs sm:text-sm opacity-75">
+              Based in Canada and serving entrepreneurs, business owners, teams, coaches, and professionals globally.
             </p>
           </div>
 

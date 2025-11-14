@@ -153,17 +153,17 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-primary/10 to-accent/10">
-        <div className="container mx-auto max-w-4xl text-center space-y-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+      <section className="py-12 sm:py-16 md:py-20 px-4 bg-gradient-to-br from-primary/10 to-accent/10">
+        <div className="container mx-auto max-w-4xl text-center space-y-6 sm:space-y-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground px-4">
             Ready to Get Started?
           </h2>
           
-          <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-            Every partnership begins with a conversation. Share what you need, and together we'll create a plan that brings calm and clarity to your work.
+          <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto px-4">
+            Every partnership begins with a conversation. Share what you need, and I'll create a plan that brings calm and clarity to your work.
           </p>
 
-          <Button size="lg" asChild className="text-lg px-8 py-6 h-auto">
+          <Button size="lg" asChild className="w-full sm:w-auto text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 h-auto mx-4">
             <Link to="/contact">Book a Consultation</Link>
           </Button>
         </div>

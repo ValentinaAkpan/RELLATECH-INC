@@ -67,7 +67,7 @@ const About = () => {
               <div className="w-full max-w-md mx-auto aspect-square rounded-lg overflow-hidden shadow-xl">
                 <img
                   src={valentinaProfile}
-                  alt="Valentina Rella"
+                  alt="Valentina Rella, Founder of Rellatech Virtual Assistant Services in Canada, professional business portrait"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -101,11 +101,12 @@ const About = () => {
           <Card className="border-border shadow-xl overflow-hidden">
             <div className="grid md:grid-cols-2 gap-0">
               {/* Image Side */}
-              <div className="relative h-64 md:h-auto bg-muted/30 flex items-center justify-center p-8">
+              {/* Image Side */}
+              <div className="relative h-64 md:h-auto bg-muted/30 flex items-center justify-center p-6 sm:p-8">
                 <img
                   src={virtualGurusLogo}
-                  alt="Virtual Gurus"
-                  className="max-w-full max-h-48 object-contain"
+                  alt="Virtual Gurus logo - Featured recognition for innovation and exceptional client service"
+                  className="max-w-full max-h-32 sm:max-h-48 object-contain"
                 />
               </div>
               
