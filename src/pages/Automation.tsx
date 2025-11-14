@@ -66,8 +66,8 @@ const Automation = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-background/98 via-background/95 to-background/85"></div>
         
         <div className="container mx-auto max-w-6xl relative z-10 min-h-[60vh] flex items-center">
-          <div className="max-w-2xl space-y-6 bg-background/90 backdrop-blur-md p-10 rounded-lg shadow-xl border-2 border-primary/20">
-            <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full mb-2">
+          <div className="max-w-2xl space-y-6 bg-white/70 dark:bg-background/70 backdrop-blur-xl p-10 rounded-2xl shadow-2xl">
+            <div className="inline-flex items-center gap-2 bg-accent/20 text-accent-foreground px-4 py-2 rounded-full mb-2">
               <Zap className="w-4 h-4" />
               <span className="text-sm font-semibold">Automation Solutions</span>
             </div>

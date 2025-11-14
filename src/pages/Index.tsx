@@ -93,7 +93,7 @@ const Index = () => {
         </div>
         
         <div className="container mx-auto max-w-6xl relative z-10 min-h-[40vh] md:min-h-[70vh] flex items-center">
-          <div className="max-w-3xl space-y-4 md:space-y-6 bg-background/95 backdrop-blur-md p-6 md:p-8 rounded-lg shadow-xl">
+          <div className="max-w-3xl space-y-4 md:space-y-6 bg-white/70 dark:bg-background/70 backdrop-blur-xl p-6 md:p-8 rounded-2xl shadow-2xl">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
               Rellatech
             </h1>
