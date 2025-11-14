@@ -18,7 +18,29 @@ interface ContactFormRequest {
   timeline: string;
   message: string;
   consent: boolean;
+  website?: string; // Honeypot
+  formStartTime: number;
 }
+
+// Simple in-memory rate limiting (resets on function cold start)
+const submissionTracker = new Map<string, number[]>();
+
+const isRateLimited = (ip: string): boolean => {
+  const now = Date.now();
+  const submissions = submissionTracker.get(ip) || [];
+  
+  // Remove submissions older than 1 hour
+  const recentSubmissions = submissions.filter(time => now - time < 3600000);
+  
+  // Allow max 3 submissions per hour
+  if (recentSubmissions.length >= 3) {
+    return true;
+  }
+  
+  recentSubmissions.push(now);
+  submissionTracker.set(ip, recentSubmissions);
+  return false;
+};
 
 const handler = async (req: Request): Promise<Response> => {
   // Handle CORS preflight requests
@@ -29,15 +51,99 @@ const handler = async (req: Request): Promise<Response> => {
   try {
     const formData: ContactFormRequest = await req.json();
     
+    // Get client IP for rate limiting
+    const clientIp = req.headers.get('x-forwarded-for') || 'unknown';
+    
+    // Check rate limiting
+    if (isRateLimited(clientIp)) {
+      console.log("Rate limit exceeded for IP:", clientIp);
+      return new Response(
+        JSON.stringify({ error: "Too many submissions. Please try again later." }),
+        {
+          status: 429,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
+    
     console.log("Received contact form submission:", {
       name: `${formData.firstName} ${formData.lastName}`,
       email: formData.email,
+      ip: clientIp,
     });
+
+    // Honeypot validation - if website field is filled, it's a bot
+    if (formData.website && formData.website.trim() !== "") {
+      console.log("Honeypot triggered - spam detected");
+      return new Response(
+        JSON.stringify({ success: true }), // Fake success to fool bots
+        {
+          status: 200,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
+
+    // Time validation - form should take at least 2 seconds to fill
+    const timeSpent = Date.now() - formData.formStartTime;
+    if (timeSpent < 2000) {
+      console.log("Form submitted too quickly - likely a bot");
+      return new Response(
+        JSON.stringify({ error: "Please take your time to fill out the form" }),
+        {
+          status: 400,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
 
     // Validate required fields
     if (!formData.firstName || !formData.lastName || !formData.email || !formData.message || !formData.consent) {
       return new Response(
         JSON.stringify({ error: "Missing required fields" }),
+        {
+          status: 400,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
+
+    // Validate field lengths
+    if (formData.firstName.length > 50 || formData.lastName.length > 50) {
+      return new Response(
+        JSON.stringify({ error: "Name fields too long" }),
+        {
+          status: 400,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
+
+    if (formData.email.length > 255) {
+      return new Response(
+        JSON.stringify({ error: "Email too long" }),
+        {
+          status: 400,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
+
+    if (formData.message.length > 5000) {
+      return new Response(
+        JSON.stringify({ error: "Message too long" }),
+        {
+          status: 400,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
+
+    // Email format validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      return new Response(
+        JSON.stringify({ error: "Invalid email format" }),
         {
           status: 400,
           headers: { "Content-Type": "application/json", ...corsHeaders },

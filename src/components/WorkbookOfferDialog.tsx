@@ -17,7 +17,9 @@ export const WorkbookOfferDialog = () => {
   const [open, setOpen] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [website, setWebsite] = useState(""); // Honeypot
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formStartTime] = useState(Date.now());
 
   useEffect(() => {
     const hasSeenOffer = localStorage.getItem("hasSeenWorkbookOffer");
@@ -36,6 +38,18 @@ export const WorkbookOfferDialog = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
+    // Honeypot check
+    if (website) {
+      return;
+    }
+
+    // Time check
+    const timeSpent = Date.now() - formStartTime;
+    if (timeSpent < 2000) {
+      toast.error("Please take a moment to review your information");
+      return;
+    }
+    
     if (!name.trim() || !email.trim()) {
       toast.error("Please fill in all fields");
       return;
@@ -45,7 +59,11 @@ export const WorkbookOfferDialog = () => {
 
     try {
       const { error } = await supabase.functions.invoke("send-workbook-lead", {
-        body: { name: name.trim(), email: email.trim() },
+        body: { 
+          name: name.trim(), 
+          email: email.trim(),
+          formStartTime
+        },
       });
 
       if (error) throw error;
@@ -93,6 +111,18 @@ export const WorkbookOfferDialog = () => {
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="space-y-4 pt-2">
+          {/* Honeypot field */}
+          <input
+            type="text"
+            name="website"
+            value={website}
+            onChange={(e) => setWebsite(e.target.value)}
+            style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px' }}
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+          />
+          
           <div className="space-y-2">
             <Label htmlFor="name" className="text-sm font-medium">
               Your Name

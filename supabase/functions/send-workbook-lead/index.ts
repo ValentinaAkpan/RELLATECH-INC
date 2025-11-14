@@ -11,7 +11,26 @@ const corsHeaders = {
 interface WorkbookLeadRequest {
   name: string;
   email: string;
+  formStartTime: number;
 }
+
+// Simple in-memory rate limiting
+const submissionTracker = new Map<string, number[]>();
+
+const isRateLimited = (ip: string): boolean => {
+  const now = Date.now();
+  const submissions = submissionTracker.get(ip) || [];
+  
+  const recentSubmissions = submissions.filter(time => now - time < 3600000);
+  
+  if (recentSubmissions.length >= 5) {
+    return true;
+  }
+  
+  recentSubmissions.push(now);
+  submissionTracker.set(ip, recentSubmissions);
+  return false;
+};
 
 const handler = async (req: Request): Promise<Response> => {
   if (req.method === "OPTIONS") {
@@ -19,8 +38,58 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    const { name, email }: WorkbookLeadRequest = await req.json();
-    console.log("Received workbook lead:", { name, email });
+    const { name, email, formStartTime }: WorkbookLeadRequest = await req.json();
+    
+    const clientIp = req.headers.get('x-forwarded-for') || 'unknown';
+    
+    // Check rate limiting
+    if (isRateLimited(clientIp)) {
+      console.log("Rate limit exceeded for IP:", clientIp);
+      return new Response(
+        JSON.stringify({ error: "Too many requests. Please try again later." }),
+        {
+          status: 429,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
+    
+    console.log("Received workbook lead:", { name, email, ip: clientIp });
+
+    // Time validation
+    const timeSpent = Date.now() - formStartTime;
+    if (timeSpent < 2000) {
+      console.log("Form submitted too quickly");
+      return new Response(
+        JSON.stringify({ error: "Please take your time" }),
+        {
+          status: 400,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
+
+    // Validate inputs
+    if (!name || !email || name.length > 100 || email.length > 255) {
+      return new Response(
+        JSON.stringify({ error: "Invalid input" }),
+        {
+          status: 400,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return new Response(
+        JSON.stringify({ error: "Invalid email" }),
+        {
+          status: 400,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
 
     // Send notification to valentinaakpan@gmail.com with lead details
     const notificationResult = await resend.emails.send({
