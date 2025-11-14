@@ -197,35 +197,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Problem & Solution Section */}
-      <section className="py-20 px-4 bg-muted/30">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Problem Card */}
-            <div className="bg-gradient-to-br from-primary to-primary/90 text-primary-foreground rounded-lg p-6 sm:p-8 space-y-4">
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold">The Challenge</h3>
-              <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base md:text-lg opacity-95">
-                <li>• Days filled with endless tasks that pull focus from strategic work</li>
-                <li>• Inbox overload and calendar chaos making it hard to stay on top of priorities</li>
-                <li>• Repetitive administrative work consuming valuable time for small businesses, startups, and established companies</li>
-                <li>• Feeling overwhelmed by the details that keep piling up</li>
-              </ul>
-            </div>
-
-            {/* Solution Card */}
-            <div className="bg-gradient-to-br from-teal-500 to-teal-600 text-white rounded-lg p-6 sm:p-8 space-y-4">
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold">How I Help</h3>
-              <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base md:text-lg opacity-95">
-                <li>• Dedicated support for entrepreneurs, founders, coaches, and teams across Canada and globally</li>
-                <li>• Organised systems that bring clarity to your inbox and calendar</li>
-                <li>• Automated workflows that save hours every week</li>
-                <li>• A reliable partner who learns your style and keeps everything running smoothly</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Why Choose Rellatech */}
       <section className="py-20 px-4 bg-background">
         <div className="container mx-auto max-w-4xl text-center">
