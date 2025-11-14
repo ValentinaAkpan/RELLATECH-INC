@@ -170,6 +170,39 @@ const Services = () => {
         </div>
       </section>
 
+      {/* Contact Section */}
+      <section className="py-20 px-4 bg-muted/30">
+        <div className="container mx-auto max-w-5xl">
+          <div className="grid md:grid-cols-2 gap-16 items-start">
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+                  Get In Touch
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                  Fill out the form and I'll get back to you as soon as possible. Or email me directly at:
+                </p>
+                <a 
+                  href="mailto:valentina@rellatech.io" 
+                  className="text-2xl font-semibold text-primary hover:underline"
+                >
+                  valentina@rellatech.io
+                </a>
+              </div>
+
+              <div className="pt-6 border-t border-border">
+                <h3 className="text-xl font-bold mb-3 text-foreground">Based in Canada</h3>
+                <p className="text-muted-foreground">
+                  Serving clients locally and internationally through virtual support.
+                </p>
+              </div>
+            </div>
+
+            <ContactForm />
+          </div>
+        </div>
+      </section>
+
       <FAQ />
 
       <Footer />
