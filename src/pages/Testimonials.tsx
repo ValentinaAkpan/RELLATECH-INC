@@ -21,7 +21,7 @@ const Testimonials = () => {
     {
       quote: "I hired Valentina to manage the many administrative tasks that had started to take too much time away from the strategic work of running my business. After a quick onboarding she jumped in right away and started making a huge difference, reducing my stress and helping me focus on other things. I also trust her to take care of my personal matters for me, helping me and family stay on top of our appointments and other commitments. I highly recommend her!",
       author: "Natalie Hill",
-      role: "Founder and Hilary Co-Founder",
+      role: "Founder",
       company: "Spur Communications",
       logo: spurLogo,
       rating: 5
@@ -29,7 +29,7 @@ const Testimonials = () => {
     {
       quote: "Valentina is an incredible virtual assistant. She works with me and my team quickly, she's very responsive, and she finds great solutions to the issues I ask for help with. Couldn't recommend her more!",
       author: "Hilary Farson",
-      role: "Team Lead",
+      role: "Co-Founder",
       company: "Spur Communications",
       logo: spurLogo,
       rating: 5
