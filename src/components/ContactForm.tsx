@@ -90,6 +90,11 @@ const ContactForm = () => {
       });
 
       if (error) throw error;
+      
+      // Check if the response indicates success
+      if (data && !data.success && data.error) {
+        throw new Error(data.error);
+      }
 
       toast({
         title: "Thank you for reaching out",
