@@ -128,11 +128,13 @@ const Services = () => {
             {services.map((service, index) => {
               const Icon = service.icon;
               const isEven = index % 2 === 0;
+              const serviceSlug = service.title.toLowerCase().replace(/\s+and\s+/g, '-').replace(/\s+/g, '-');
               
               return (
-                <div 
+                <Link 
                   key={index} 
-                  className={`grid md:grid-cols-2 gap-8 items-center ${isEven ? '' : 'md:grid-flow-dense'}`}
+                  to={`/services/${serviceSlug}`}
+                  className="grid md:grid-cols-2 gap-8 items-center hover:opacity-80 transition-opacity"
                 >
                   {/* Icon Card */}
                   <div className={`${isEven ? '' : 'md:col-start-2'}`}>
@@ -152,8 +154,11 @@ const Services = () => {
                     <p className="text-muted-foreground leading-relaxed">
                       {service.details}
                     </p>
+                    <Button variant="outline" className="mt-4">
+                      Learn More →
+                    </Button>
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>
