@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2 } from "lucide-react";
@@ -12,8 +13,11 @@ const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
-    name: "",
+    firstName: "",
+    lastName: "",
     email: "",
+    company: "",
+    topic: "",
     message: ""
   });
 
@@ -22,10 +26,10 @@ const Contact = () => {
     setIsSubmitting(true);
 
     // Basic validation
-    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+    if (!formData.firstName.trim() || !formData.lastName.trim() || !formData.email.trim() || !formData.message.trim()) {
       toast({
         title: "Error",
-        description: "Please fill in all fields",
+        description: "Please fill in all required fields",
         variant: "destructive",
       });
       setIsSubmitting(false);
@@ -46,9 +50,9 @@ const Contact = () => {
 
     try {
       // Create mailto link with form data
-      const subject = encodeURIComponent(`Contact from ${formData.name}`);
+      const subject = encodeURIComponent(`Contact from ${formData.firstName} ${formData.lastName}`);
       const body = encodeURIComponent(
-        `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+        `First Name: ${formData.firstName}\nLast Name: ${formData.lastName}\nEmail: ${formData.email}\nCompany: ${formData.company || "Not provided"}\nTopic: ${formData.topic || "Not selected"}\n\nMessage:\n${formData.message}`
       );
       
       window.location.href = `mailto:valentina@rellatech.io?subject=${subject}&body=${body}`;
@@ -60,8 +64,11 @@ const Contact = () => {
 
       // Reset form
       setFormData({
-        name: "",
+        firstName: "",
+        lastName: "",
         email: "",
+        company: "",
+        topic: "",
         message: ""
       });
     } catch (error) {
@@ -120,21 +127,36 @@ const Contact = () => {
             {/* Right Side - Contact Form */}
             <div className="bg-muted/30 p-8 rounded-lg border border-border">
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="space-y-2">
-                  <Label htmlFor="name" className="text-base">Name *</Label>
-                  <Input
-                    id="name"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder="Your name"
-                    required
-                    maxLength={100}
-                    className="h-12"
-                  />
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="firstName" className="text-base">First Name *</Label>
+                    <Input
+                      id="firstName"
+                      value={formData.firstName}
+                      onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+                      placeholder="First name"
+                      required
+                      maxLength={50}
+                      className="h-12"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="lastName" className="text-base">Last Name *</Label>
+                    <Input
+                      id="lastName"
+                      value={formData.lastName}
+                      onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+                      placeholder="Last name"
+                      required
+                      maxLength={50}
+                      className="h-12"
+                    />
+                  </div>
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="email" className="text-base">Email *</Label>
+                  <Label htmlFor="email" className="text-base">Email Address *</Label>
                   <Input
                     id="email"
                     type="email"
@@ -145,6 +167,34 @@ const Contact = () => {
                     maxLength={255}
                     className="h-12"
                   />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="company" className="text-base">Company Name</Label>
+                  <Input
+                    id="company"
+                    value={formData.company}
+                    onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                    placeholder="Your company (optional)"
+                    maxLength={100}
+                    className="h-12"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="topic" className="text-base">What would you like to connect about?</Label>
+                  <Select value={formData.topic} onValueChange={(value) => setFormData({ ...formData, topic: value })}>
+                    <SelectTrigger className="h-12 bg-background">
+                      <SelectValue placeholder="Select one..." />
+                    </SelectTrigger>
+                    <SelectContent className="bg-background z-50">
+                      <SelectItem value="general">General Inquiry</SelectItem>
+                      <SelectItem value="services">Services & Pricing</SelectItem>
+                      <SelectItem value="consultation">Book a Consultation</SelectItem>
+                      <SelectItem value="partnership">Partnership Opportunity</SelectItem>
+                      <SelectItem value="other">Other</SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
 
                 <div className="space-y-2">
