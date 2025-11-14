@@ -19,6 +19,7 @@ import PitchDecks from "./pages/services/PitchDecks";
 import Contact from "./pages/Contact";
 import Testimonials from "./pages/Testimonials";
 import Blog from "./pages/Blog";
+import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -43,7 +44,7 @@ const App = () => (
           <Route path="/services/business-reports" element={<BusinessReports />} />
           <Route path="/services/graphic-design" element={<GraphicDesign />} />
           <Route path="/services/pitch-decks" element={<PitchDecks />} />
-          <Route path="/faq" element={<Index />} />
+          <Route path="/faq" element={<FAQ />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
