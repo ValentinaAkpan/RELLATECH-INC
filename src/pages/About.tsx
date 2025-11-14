@@ -74,9 +74,9 @@ const About = () => {
       {/* Founder Section */}
       <section className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="flex justify-center">
-              <div className="w-full max-w-md aspect-square rounded-lg overflow-hidden shadow-xl">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="order-2 md:order-1">
+              <div className="w-full max-w-md mx-auto aspect-square rounded-lg overflow-hidden shadow-xl">
                 <img
                   src={valentinaProfile}
                   alt="Valentina Rella"
@@ -84,10 +84,10 @@ const About = () => {
                 />
               </div>
             </div>
-            <div className="space-y-6">
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground">Valentina Rella</h2>
-              <h3 className="text-2xl font-semibold text-primary">Founder and Principal</h3>
-              <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+            <div className="order-1 md:order-2 border-4 border-accent rounded-lg p-6 md:p-8 bg-background shadow-lg space-y-4 md:space-y-6">
+              <h2 className="text-3xl md:text-5xl font-bold text-foreground">Valentina Rella</h2>
+              <h3 className="text-xl md:text-2xl font-semibold text-primary">Founder and Principal</h3>
+              <div className="space-y-4 text-base md:text-lg text-muted-foreground leading-relaxed">
                 <p>
                   Valentina's journey into virtual assistance is rooted in meaningful collaboration with individuals, teams, and businesses across Canada and beyond. With experience supporting clients in diverse industries—from technology and creative services to professional consulting and small business operations—she founded Rellatech to bring a more human, thoughtful approach to business support.
                 </p>

@@ -81,7 +81,7 @@ const Index = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] px-4 py-20 overflow-hidden">
+      <section className="relative min-h-[50vh] md:min-h-[85vh] px-4 py-12 md:py-20 overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroWorkspace})` }}
@@ -89,22 +89,22 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-background/98 via-background/92 to-background/80"></div>
         </div>
         
-        <div className="container mx-auto max-w-6xl relative z-10 min-h-[70vh] flex items-center">
-          <div className="max-w-2xl space-y-6 bg-background/40 backdrop-blur-sm p-8 rounded-lg">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
+        <div className="container mx-auto max-w-6xl relative z-10 min-h-[40vh] md:min-h-[70vh] flex items-center">
+          <div className="max-w-2xl space-y-4 md:space-y-6 bg-background/40 backdrop-blur-sm p-6 md:p-8 rounded-lg">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
               Rellatech
             </h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+            <p className="text-lg md:text-2xl text-muted-foreground leading-relaxed">
               Clarity, structure, and dependable support for the work that fills your days.
             </p>
             
-            <p className="text-lg md:text-xl text-muted-foreground">
+            <p className="text-base md:text-xl text-muted-foreground">
               Rooted in Canada. Supporting clients everywhere.
             </p>
 
-            <div className="pt-4">
-              <Button size="lg" asChild className="text-lg px-8 py-6 h-auto">
+            <div className="pt-2 md:pt-4">
+              <Button size="lg" asChild className="text-base md:text-lg px-6 md:px-8 py-4 md:py-6 h-auto">
                 <Link to="/contact">Book a Consultation</Link>
               </Button>
             </div>
@@ -115,9 +115,17 @@ const Index = () => {
       {/* Welcome Section */}
       <section className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="order-2 md:order-1">
+              <img 
+                src={valentinaProfile}
+                alt="Valentina Rella"
+                className="w-full max-w-md mx-auto rounded-lg shadow-xl"
+              />
+            </div>
+
+            <div className="order-1 md:order-2 border-4 border-accent rounded-lg p-6 md:p-8 bg-background shadow-lg">
+              <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-6">
                 Welcome to Rellatech
               </h2>
               
@@ -130,14 +138,6 @@ const Index = () => {
                   Every partnership receives direct, dedicated attention. Rellatech learns your pace, your preferences, and the way you like things done. Support becomes seamless, woven into your daily rhythm, bringing ease to the places that once felt crowded.
                 </p>
               </div>
-            </div>
-
-            <div className="flex justify-center">
-              <img 
-                src={valentinaProfile}
-                alt="Valentina Rella"
-                className="w-full max-w-md rounded-lg shadow-xl"
-              />
             </div>
           </div>
         </div>
