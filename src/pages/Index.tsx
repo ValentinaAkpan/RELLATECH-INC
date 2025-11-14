@@ -2,48 +2,98 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, Clock, CheckCircle, TrendingUp, Shield, Users } from "lucide-react";
+import { Mail, Clock, CheckCircle, TrendingUp, Shield, Users, Briefcase, Puzzle, Handshake, LineChart } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-workspace.jpg";
+import rellatechLogo from "@/assets/rellatech-logo.png";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="min-h-[80vh] px-4 py-20">
-        <div className="container mx-auto max-w-7xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      {/* Hero Section with Gradient Background */}
+      <section className="relative min-h-[85vh] px-4 py-20 bg-gradient-to-br from-primary/90 via-primary to-primary/80 overflow-hidden">
+        {/* Decorative circles */}
+        <div className="absolute top-20 left-10 w-24 h-24 rounded-full bg-accent/20 blur-xl"></div>
+        <div className="absolute bottom-32 right-20 w-32 h-32 rounded-full bg-accent/20 blur-xl"></div>
+        <div className="absolute top-1/2 left-1/4 w-20 h-20 rounded-full bg-primary-foreground/10 blur-lg"></div>
+        
+        <div className="container mx-auto max-w-7xl relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[70vh]">
             {/* Text Content */}
-            <div className="space-y-8">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight">
-                Are you overwhelmed with business tasks yet underwhelmed with business growth?
+            <div className="space-y-8 text-primary-foreground">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight uppercase">
+                Welcome to<br />Rellatech
               </h1>
               
-              <div className="space-y-4">
-                <p className="text-xl md:text-2xl text-foreground font-medium">
-                  Get back in the CEO seat!
-                </p>
-                <p className="text-lg md:text-xl text-muted-foreground">
-                  Grab your guide and get relief today.
-                </p>
-              </div>
+              <h2 className="text-2xl md:text-3xl font-semibold uppercase leading-tight">
+                Fractional Operations, Business Management and Virtual Executive Assistance
+              </h2>
+              
+              <p className="text-lg md:text-xl italic opacity-90 max-w-lg">
+                Experience the synergy of organization and growth - where your vision gets the powerhouse support it deserves. Serving Canadian businesses coast to coast.
+              </p>
 
               <div className="pt-4">
-                <Button size="lg" asChild className="text-lg px-8 py-6 h-auto">
-                  <Link to="/contact">Get Your Free Guide</Link>
+                <Button size="lg" asChild className="text-lg px-8 py-6 h-auto bg-accent hover:bg-accent/90 text-accent-foreground">
+                  <Link to="/contact">Book a Call Today</Link>
                 </Button>
               </div>
             </div>
 
-            {/* Hero Image */}
-            <div className="relative">
+            {/* Logo */}
+            <div className="flex justify-center items-center">
               <img
-                src={heroImage}
-                alt="Professional workspace with clean desk setup"
-                className="rounded-lg shadow-2xl w-full h-auto object-cover"
+                src={rellatechLogo}
+                alt="Rellatech - Smart Support, Real Result"
+                className="w-full max-w-md lg:max-w-lg drop-shadow-2xl"
               />
+            </div>
+          </div>
+
+          {/* Testimonial Quote */}
+          <div className="mt-12 text-center">
+            <p className="text-primary-foreground text-xl md:text-2xl italic opacity-90">
+              "Rellatech is largely becoming my secret ingredient in my business!"
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="py-20 px-4 bg-background">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center space-y-4">
+              <div className="w-20 h-20 rounded-full bg-accent mx-auto flex items-center justify-center">
+                <Briefcase className="w-10 h-10 text-accent-foreground" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground uppercase">Professional</h3>
+              <p className="text-muted-foreground">Expert support tailored to your business needs</p>
+            </div>
+
+            <div className="text-center space-y-4">
+              <div className="w-20 h-20 rounded-full bg-accent mx-auto flex items-center justify-center">
+                <Puzzle className="w-10 h-10 text-accent-foreground" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground uppercase">Holistic</h3>
+              <p className="text-muted-foreground">Comprehensive solutions for every aspect of your operations</p>
+            </div>
+
+            <div className="text-center space-y-4">
+              <div className="w-20 h-20 rounded-full bg-accent mx-auto flex items-center justify-center">
+                <Handshake className="w-10 h-10 text-accent-foreground" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground uppercase">Authentic</h3>
+              <p className="text-muted-foreground">Genuine partnership and trusted collaboration</p>
+            </div>
+
+            <div className="text-center space-y-4">
+              <div className="w-20 h-20 rounded-full bg-accent mx-auto flex items-center justify-center">
+                <LineChart className="w-10 h-10 text-accent-foreground" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground uppercase">Progressive</h3>
+              <p className="text-muted-foreground">Forward-thinking strategies for sustainable growth</p>
             </div>
           </div>
         </div>
