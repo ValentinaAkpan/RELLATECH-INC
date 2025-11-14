@@ -22,16 +22,19 @@ const Navigation = () => {
               Home
             </Link>
             <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
-              About Me
+              About
             </Link>
             <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">
               Services
             </Link>
-            <Link to="/projects" className="text-muted-foreground hover:text-primary transition-colors">
-              Projects
+            <Link to="/faq" className="text-muted-foreground hover:text-primary transition-colors">
+              FAQ
             </Link>
-            <Link to="/automation" className="text-muted-foreground hover:text-primary transition-colors">
-              Automation
+            <Link to="/testimonials" className="text-muted-foreground hover:text-primary transition-colors">
+              Testimonials
+            </Link>
+            <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">
+              Blog
             </Link>
             <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
               Contact
@@ -66,7 +69,7 @@ const Navigation = () => {
               className="text-muted-foreground hover:text-primary transition-colors"
               onClick={() => setIsOpen(false)}
             >
-              About Me
+              About
             </Link>
             <Link
               to="/services"
@@ -76,18 +79,25 @@ const Navigation = () => {
               Services
             </Link>
             <Link
-              to="/projects"
+              to="/faq"
               className="text-muted-foreground hover:text-primary transition-colors"
               onClick={() => setIsOpen(false)}
             >
-              Projects
+              FAQ
             </Link>
             <Link
-              to="/automation"
+              to="/testimonials"
               className="text-muted-foreground hover:text-primary transition-colors"
               onClick={() => setIsOpen(false)}
             >
-              Automation
+              Testimonials
+            </Link>
+            <Link
+              to="/blog"
+              className="text-muted-foreground hover:text-primary transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              Blog
             </Link>
             <Link
               to="/contact"

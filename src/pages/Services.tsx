@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Calendar, FileText, Megaphone, Settings, Globe, GraduationCap, Film, BookOpen, BarChart, Palette, Presentation, Smartphone } from "lucide-react";
 import { Link } from "react-router-dom";
+import servicesHero from "@/assets/services-hero.jpg";
 
 const Services = () => {
   const services = [
@@ -96,18 +97,27 @@ const Services = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-primary/10 to-accent/10">
-        <div className="container mx-auto max-w-4xl text-center space-y-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
-            Services
-          </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-            Support shaped with intention to bring order, flow, and clarity to your work.
-          </p>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            From administrative essentials to creative projects, every service is designed to lighten your workload and bring structure to your business operations.
-          </p>
+      {/* Hero Section with Background Image */}
+      <section className="relative min-h-[70vh] px-4 py-20 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${servicesHero})` }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-background/98 via-background/92 to-background/80"></div>
+        </div>
+        
+        <div className="container mx-auto max-w-6xl relative z-10 min-h-[60vh] flex items-center">
+          <div className="max-w-2xl space-y-6 bg-background/40 backdrop-blur-sm p-8 rounded-lg">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
+              Services
+            </h1>
+            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+              Support shaped with intention to bring order, flow, and clarity to your work.
+            </p>
+            <p className="text-lg text-muted-foreground">
+              From administrative essentials to creative projects, every service is designed to lighten your workload and bring structure to your business operations.
+            </p>
+          </div>
         </div>
       </section>
 
