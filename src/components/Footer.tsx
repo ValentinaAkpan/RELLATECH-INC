@@ -58,8 +58,12 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="border-t border-primary-foreground/20 pt-8 text-center">
-          <p className="text-sm opacity-75">
-            © {new Date().getFullYear()} Rellatech. Made with care in Canada.
+          <p className="text-sm opacity-75 flex items-center justify-center gap-2 flex-wrap">
+            © 2024-2025 rellatech. Website by
+            <a href="https://rellatech.io" className="hover:opacity-100 transition-opacity">
+              rellatech.io
+            </a>
+            . Made in Canada 🇨🇦 🇳🇬
           </p>
         </div>
       </div>
