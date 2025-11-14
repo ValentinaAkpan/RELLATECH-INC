@@ -51,25 +51,36 @@ const FAQ = () => {
         </div>
 
         <Accordion type="single" collapsible className="w-full space-y-3">
-          {faqs.map((faq, index) => (
-            <AccordionItem 
-              key={index} 
-              value={`item-${index}`}
-              className="bg-blue-600 border-0 rounded-lg overflow-hidden"
-            >
-              <AccordionTrigger className="text-left text-base md:text-lg font-medium hover:no-underline text-white px-4 md:px-6 py-4 gap-3 group">
-                <div className="flex items-center gap-3 flex-1">
-                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-amber-400 flex items-center justify-center flex-shrink-0">
-                    <HelpCircle className="w-4 h-4 md:w-5 md:h-5 text-blue-600" />
+          {faqs.map((faq, index) => {
+            const colors = [
+              'bg-gradient-to-br from-primary to-primary/90',
+              'bg-gradient-to-br from-teal-500 to-teal-600',
+              'bg-gradient-to-br from-accent to-accent/90',
+              'bg-gradient-to-br from-primary to-primary/90',
+              'bg-gradient-to-br from-teal-500 to-teal-600',
+              'bg-gradient-to-br from-accent to-accent/90',
+              'bg-gradient-to-br from-primary to-primary/90'
+            ];
+            return (
+              <AccordionItem 
+                key={index} 
+                value={`item-${index}`}
+                className={`${colors[index]} border-0 rounded-lg overflow-hidden`}
+              >
+                <AccordionTrigger className="text-left text-base md:text-lg font-medium hover:no-underline text-white px-4 md:px-6 py-4 gap-3 group">
+                  <div className="flex items-center gap-3 flex-1">
+                    <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
+                      <HelpCircle className="w-4 h-4 md:w-5 md:h-5 text-white" />
+                    </div>
+                    <span className="flex-1">{faq.question}</span>
                   </div>
-                  <span className="flex-1">{faq.question}</span>
-                </div>
-              </AccordionTrigger>
-              <AccordionContent className="text-white/90 leading-relaxed px-4 md:px-6 pl-14 md:pl-20">
-                {faq.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
+                </AccordionTrigger>
+                <AccordionContent className="text-white/95 leading-relaxed px-4 md:px-6 pl-14 md:pl-20">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            );
+          })}
         </Accordion>
 
         <div className="mt-12 text-center">

@@ -96,13 +96,13 @@ const Index = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroWorkspace})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/70"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-background/98 via-background/92 to-background/80"></div>
         </div>
         
         <div className="container mx-auto max-w-6xl relative z-10 min-h-[70vh] flex items-center">
-          <div className="max-w-2xl space-y-6">
+          <div className="max-w-2xl space-y-6 bg-background/40 backdrop-blur-sm p-8 rounded-lg">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
-              Rellatech Virtual Assistant Services
+              Rellatech
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
@@ -165,13 +165,27 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => {
               const Icon = service.icon;
+              const colors = [
+                'bg-gradient-to-br from-primary to-primary/80',
+                'bg-gradient-to-br from-accent to-accent/80',
+                'bg-gradient-to-br from-teal-500 to-teal-600',
+                'bg-gradient-to-br from-primary to-primary/80',
+                'bg-gradient-to-br from-accent to-accent/80',
+                'bg-gradient-to-br from-teal-500 to-teal-600',
+                'bg-gradient-to-br from-primary to-primary/80',
+                'bg-gradient-to-br from-accent to-accent/80',
+                'bg-gradient-to-br from-teal-500 to-teal-600',
+                'bg-gradient-to-br from-primary to-primary/80',
+                'bg-gradient-to-br from-accent to-accent/80',
+                'bg-gradient-to-br from-teal-500 to-teal-600'
+              ];
               return (
-                <div key={index} className="space-y-3">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Icon className="w-6 h-6 text-primary" />
+                <div key={index} className="bg-card border-2 border-border rounded-lg p-6 space-y-4 hover:shadow-lg transition-shadow">
+                  <div className={`w-14 h-14 rounded-full ${colors[index]} flex items-center justify-center`}>
+                    <Icon className="w-7 h-7 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-foreground">
                     {service.title}
@@ -186,8 +200,37 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Why Choose Rellatech */}
+      {/* Problem & Solution Section */}
       <section className="py-20 px-4 bg-muted/30">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Problem Card */}
+            <div className="bg-gradient-to-br from-primary to-primary/90 text-primary-foreground rounded-lg p-8 space-y-4">
+              <h3 className="text-2xl md:text-3xl font-bold">The Problem</h3>
+              <ul className="space-y-3 text-lg opacity-95">
+                <li>• Days filled with endless tasks that pull focus from strategic work</li>
+                <li>• Inbox overload and calendar chaos making it hard to stay on top of priorities</li>
+                <li>• Repetitive administrative work consuming valuable time</li>
+                <li>• Feeling overwhelmed by the details that keep piling up</li>
+              </ul>
+            </div>
+
+            {/* Solution Card */}
+            <div className="bg-gradient-to-br from-teal-500 to-teal-600 text-white rounded-lg p-8 space-y-4">
+              <h3 className="text-2xl md:text-3xl font-bold">The Solution</h3>
+              <ul className="space-y-3 text-lg opacity-95">
+                <li>• Dedicated support that handles the details so you can focus on growth</li>
+                <li>• Organised systems that bring clarity to your inbox and calendar</li>
+                <li>• Automated workflows that save hours every week</li>
+                <li>• A reliable partner who learns your style and keeps everything running smoothly</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Rellatech */}
+      <section className="py-20 px-4 bg-background">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground">
             Why Choose Rellatech
@@ -206,7 +249,7 @@ const Index = () => {
       </section>
 
       {/* Philosophy Section */}
-      <section className="py-20 px-4 bg-background">
+      <section className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
@@ -215,16 +258,23 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {philosophyValues.map((value, index) => (
-              <div key={index} className="text-center space-y-3">
-                <h3 className="text-2xl font-bold text-foreground">
-                  {value.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {value.description}
-                </p>
-              </div>
-            ))}
+            {philosophyValues.map((value, index) => {
+              const colors = [
+                'bg-gradient-to-br from-primary to-primary/80',
+                'bg-gradient-to-br from-accent to-accent/80',
+                'bg-gradient-to-br from-teal-500 to-teal-600'
+              ];
+              return (
+                <div key={index} className={`${colors[index]} text-white rounded-lg p-8 text-center space-y-4`}>
+                  <h3 className="text-2xl font-bold">
+                    {value.title}
+                  </h3>
+                  <p className="opacity-95 leading-relaxed">
+                    {value.description}
+                  </p>
+                </div>
+              );
+            })}
           </div>
 
           <div className="text-center max-w-3xl mx-auto">
