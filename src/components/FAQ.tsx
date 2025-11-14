@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { HelpCircle } from "lucide-react";
 
 const FAQ = () => {
   const faqs = [
@@ -49,17 +50,22 @@ const FAQ = () => {
           </p>
         </div>
 
-        <Accordion type="single" collapsible className="w-full space-y-4">
+        <Accordion type="single" collapsible className="w-full space-y-3">
           {faqs.map((faq, index) => (
             <AccordionItem 
               key={index} 
               value={`item-${index}`}
-              className="bg-teal-50 dark:bg-teal-950/30 border-2 border-teal-200 dark:border-teal-800 rounded-lg px-6 transition-colors hover:border-teal-400 dark:hover:border-teal-600"
+              className="bg-blue-600 border-0 rounded-lg overflow-hidden"
             >
-              <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline text-teal-900 dark:text-teal-100">
-                {faq.question}
+              <AccordionTrigger className="text-left text-base md:text-lg font-medium hover:no-underline text-white px-4 md:px-6 py-4 gap-3 group">
+                <div className="flex items-center gap-3 flex-1">
+                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-amber-400 flex items-center justify-center flex-shrink-0">
+                    <HelpCircle className="w-4 h-4 md:w-5 md:h-5 text-blue-600" />
+                  </div>
+                  <span className="flex-1">{faq.question}</span>
+                </div>
               </AccordionTrigger>
-              <AccordionContent className="text-teal-700 dark:text-teal-300 leading-relaxed">
+              <AccordionContent className="text-white/90 leading-relaxed px-4 md:px-6 pl-14 md:pl-20">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>
