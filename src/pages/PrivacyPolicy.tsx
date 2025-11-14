@@ -115,8 +115,8 @@ const PrivacyPolicy = () => {
             </ul>
             <p className="mt-4">
               To exercise any of these rights, please contact us at{" "}
-              <a href="mailto:hello@rellatech.io" className="text-primary hover:underline">
-                hello@rellatech.io
+              <a href="mailto:valentina@rellatech.io" className="text-primary hover:underline">
+                valentina@rellatech.io
               </a>
             </p>
           </section>
@@ -180,8 +180,8 @@ const PrivacyPolicy = () => {
             <div className="mt-4 space-y-2">
               <p>
                 <strong>Email:</strong>{" "}
-                <a href="mailto:hello@rellatech.io" className="text-primary hover:underline">
-                  hello@rellatech.io
+                <a href="mailto:valentina@rellatech.io" className="text-primary hover:underline">
+                  valentina@rellatech.io
                 </a>
               </p>
               <p>

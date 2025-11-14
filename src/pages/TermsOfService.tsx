@@ -147,8 +147,8 @@ const TermsOfService = () => {
             </p>
             <p className="text-sm text-muted-foreground mt-4">
               If you have questions about these Terms of Service, please contact us at{" "}
-              <a href="mailto:hello@rellatech.io" className="text-primary hover:underline">
-                hello@rellatech.io
+              <a href="mailto:valentina@rellatech.io" className="text-primary hover:underline">
+                valentina@rellatech.io
               </a>
             </p>
           </section>
