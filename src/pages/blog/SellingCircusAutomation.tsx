@@ -13,7 +13,7 @@ const SellingCircusAutomation = () => {
       {/* Hero Section with Full Width Image */}
       <section className="relative min-h-[70vh] overflow-hidden">
         <img 
-          src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920&q=80"
+          src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=1920&q=80"
           alt="Clean workspace with tablet showing DocuSign in soft teal tones"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -65,8 +65,8 @@ const SellingCircusAutomation = () => {
             
             <div className="flex justify-center my-8">
               <img 
-                src="https://images.unsplash.com/photo-1554224311-beee460c201a?w=800&q=80"
-                alt="DocuSign signature completion milestone"
+                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80"
+                alt="DocuSign signature completion showing milestone moment"
                 className="rounded-2xl shadow-xl max-w-2xl w-full"
               />
             </div>
@@ -88,8 +88,8 @@ const SellingCircusAutomation = () => {
 
             <div className="flex justify-center my-8">
               <img 
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80"
-                alt="Clean student profile interface showing organized structure"
+                src="https://images.unsplash.com/photo-1633265486064-086b219458ec?w=800&q=80"
+                alt="Organized student profile interface with clean structure"
                 className="rounded-2xl shadow-xl max-w-2xl w-full"
               />
             </div>
@@ -121,8 +121,8 @@ const SellingCircusAutomation = () => {
 
             <div className="rounded-2xl overflow-hidden shadow-xl my-8">
               <img 
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80"
-                alt="ActiveCampaign automation dashboard showing smooth connected workflow"
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80"
+                alt="Automation flow dashboard showing smooth connected workflow"
                 className="w-full"
               />
             </div>
@@ -171,8 +171,8 @@ const SellingCircusAutomation = () => {
 
             <div className="flex justify-center my-8">
               <img 
-                src="https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=800&q=80"
-                alt="Warm welcome email illustration showing inviting friendly tone"
+                src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=800&q=80"
+                alt="Welcome email with warm inviting friendly design"
                 className="rounded-2xl shadow-xl max-w-2xl w-full"
               />
             </div>
@@ -203,8 +203,8 @@ const SellingCircusAutomation = () => {
 
             <div className="rounded-2xl overflow-hidden shadow-xl my-8">
               <img 
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80"
-                alt="Google Sheets with clean organized columns showing clarity and oversight"
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80"
+                alt="Google Sheets with clean organized columns showing clarity"
                 className="w-full"
               />
             </div>
