@@ -16,26 +16,16 @@ const GraphicDesign = () => {
     "Print-ready files"
   ];
 
-  const portfolioItems = [
-    { id: 1, title: "Brand Identity Package", category: "Branding" },
-    { id: 2, title: "Business Card Design", category: "Print" },
-    { id: 3, title: "Signage Design", category: "Commercial" },
-    { id: 4, title: "Packaging Design", category: "Product" },
-    { id: 5, title: "Marketing Collateral", category: "Marketing" },
-    { id: 6, title: "Print Materials", category: "Print" }
-  ];
-
-  const handleDesignClick = (designTitle: string, designCategory: string) => {
+  const handlePortfolioClick = () => {
     // Track click in Google Analytics
     if (typeof (window as any).gtag !== 'undefined') {
-      (window as any).gtag('event', 'design_click', {
+      (window as any).gtag('event', 'portfolio_click', {
         event_category: 'Graphics Portfolio',
-        event_label: designTitle,
-        design_category: designCategory,
+        event_label: 'View Design Portfolio',
         page_path: window.location.pathname
       });
     }
-    console.log(`Tracked click: ${designTitle} - ${designCategory}`);
+    console.log('Tracked portfolio click');
   };
 
   return (
@@ -91,46 +81,39 @@ const GraphicDesign = () => {
 
       {/* Portfolio Section */}
       <section className="py-20 px-4 bg-muted/30">
-        <div className="container mx-auto max-w-6xl space-y-12">
-          <div className="text-center space-y-4">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               Design Portfolio
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Explore examples of our graphic and print design work
+            <p className="text-lg text-muted-foreground">
+              View examples of our graphic and print design work
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {portfolioItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => handleDesignClick(item.title, item.category)}
-                className="group relative overflow-hidden rounded-lg bg-card border border-border hover:border-teal-500 transition-all duration-300 hover:shadow-lg"
-              >
-                <div className="aspect-square bg-gradient-to-br from-teal-500/20 to-teal-600/20 flex items-center justify-center">
-                  <Palette className="w-24 h-24 text-teal-500/40 group-hover:text-teal-500/60 transition-colors" />
-                </div>
-                <div className="p-6 space-y-2">
-                  <div className="text-sm font-medium text-teal-600">
-                    {item.category}
-                  </div>
-                  <h3 className="text-lg font-semibold text-foreground group-hover:text-teal-600 transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    Click to view details
-                  </p>
-                </div>
-              </button>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <p className="text-sm text-muted-foreground">
-              Want to see more examples? <Link to="/contact" className="text-teal-600 hover:underline">Get in touch</Link>
-            </p>
-          </div>
+          <Link 
+            to="/contact"
+            onClick={handlePortfolioClick}
+            className="group block relative overflow-hidden rounded-xl bg-card border-2 border-border hover:border-teal-500 transition-all duration-300 hover:shadow-xl"
+          >
+            <div className="aspect-[16/9] bg-gradient-to-br from-teal-500/20 to-teal-600/20 flex items-center justify-center overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-teal-600/30" />
+              <Palette className="w-32 h-32 text-teal-500/40 group-hover:scale-110 transition-transform duration-300" />
+            </div>
+            <div className="p-8 text-center space-y-3 bg-card/50 backdrop-blur-sm">
+              <h3 className="text-2xl font-bold text-foreground group-hover:text-teal-600 transition-colors">
+                View Our Design Work
+              </h3>
+              <p className="text-muted-foreground">
+                Click to explore our portfolio and get in touch about your project
+              </p>
+              <div className="pt-2">
+                <span className="text-teal-600 font-medium group-hover:underline">
+                  See Portfolio →
+                </span>
+              </div>
+            </div>
+          </Link>
         </div>
       </section>
 
