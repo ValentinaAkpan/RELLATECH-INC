@@ -2,90 +2,87 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { CheckCircle, Clock, Sparkles, Target } from "lucide-react";
+import { Mail, Calendar, FileText, TrendingUp, Megaphone, Settings, Globe, GraduationCap, Film, BookOpen, BarChart, Smartphone, Palette, Presentation } from "lucide-react";
 import { Link } from "react-router-dom";
-import rellatechLogo from "@/assets/rellatech-logo.png";
+import heroWorkspace from "@/assets/hero-calm-workspace.jpg";
 import valentinaProfile from "@/assets/valentina-profile.png";
 
 const Index = () => {
-  const coreValues = [
+  const services = [
     {
-      icon: CheckCircle,
-      title: "Reliability",
-      description: "Consistent support you can count on, delivered with care and attention to detail."
+      icon: FileText,
+      title: "Administrative Support",
+      description: "Reliable help with documents, tasks, planning, and day-to-day organisation."
     },
     {
-      icon: Clock,
-      title: "Efficiency",
-      description: "Streamlined processes that save you time and keep your business moving forward."
+      icon: Calendar,
+      title: "Inbox and Calendar Management",
+      description: "Clear scheduling, structured communication, and reminders that keep your day steady."
     },
     {
-      icon: Sparkles,
-      title: "Flexibility",
-      description: "Adaptable solutions tailored to your unique needs and working style."
+      icon: Megaphone,
+      title: "Social Media and Marketing Support",
+      description: "Light content help, posting, basic SEO, email campaigns, and simple promotional guidance."
     },
     {
-      icon: Target,
-      title: "Results",
-      description: "Focused on outcomes that matter, helping you achieve your goals with confidence."
+      icon: Settings,
+      title: "CRMs and Automation",
+      description: "Support with tools like HubSpot, Keap, Mailchimp, and Kartra to keep your systems clean and easy to follow."
+    },
+    {
+      icon: Globe,
+      title: "Web Services and Platform Migrations",
+      description: "Updates, transitions, and guidance for websites that need refreshing or moving to a better platform."
+    },
+    {
+      icon: GraduationCap,
+      title: "LMS and Online Courses",
+      description: "Setup and support for Kajabi, LearnDash, Kartra, and ThriveCart to bring your programs to life."
+    },
+    {
+      icon: Film,
+      title: "Animation Support",
+      description: "Access to creative animation for storytelling, training, or promotional content."
+    },
+    {
+      icon: BookOpen,
+      title: "eBook Design",
+      description: "Clean formatting and layout so your writing becomes a polished digital book."
+    },
+    {
+      icon: BarChart,
+      title: "Business Reports",
+      description: "Beautiful, clear reports that reflect your achievements and growth."
+    },
+    {
+      icon: Palette,
+      title: "Graphic and Print Design",
+      description: "Brand visuals, signage, packaging, and creative materials that elevate your presence."
+    },
+    {
+      icon: Presentation,
+      title: "Pitch Decks",
+      description: "Compelling, organised presentations that help you communicate your ideas with confidence."
+    },
+    {
+      icon: Smartphone,
+      title: "App Guidance",
+      description: "Direction and coordination for clients developing web or mobile apps."
     }
   ];
 
-  const services = [
+  const philosophyValues = [
     {
-      number: "01",
-      title: "Inbox Management",
-      description: "Your inbox organized and prioritized so you can focus on what matters most. Professional email handling with timely responses and follow-ups.",
-      image: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=800&q=80"
+      title: "Professional",
+      description: "Support that honours your standards and reflects the quality of your work."
     },
     {
-      number: "02",
-      title: "Calendar Coordination",
-      description: "Seamless scheduling and calendar management. Never miss a meeting or double-book again with professional appointment coordination.",
-      image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800&q=80"
+      title: "Authentic",
+      description: "A partnership built on trust, sincerity, and real connection."
     },
     {
-      number: "03",
-      title: "Workflow Automation",
-      description: "Save hours every week with intelligent automation setup. From repetitive tasks to complex workflows, I'll help you work smarter.",
-      image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80"
-    },
-    {
-      number: "04",
-      title: "Social Media Support",
-      description: "Keep your online presence active and engaging. Content scheduling, monitoring, and community management that represents your brand.",
-      image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80"
-    },
-    {
-      number: "05",
-      title: "Administrative Support",
-      description: "General business support that keeps operations running smoothly. Document preparation, data entry, and organizational tasks handled professionally.",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80"
-    },
-    {
-      number: "06",
-      title: "Web Services",
-      description: "Website updates, content management, and basic maintenance. Keep your online presence fresh and functional without the technical hassle.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
-    },
-    {
-      number: "07",
-      title: "Project Coordination",
-      description: "Keep projects on track with organized coordination and follow-through. Timeline management, stakeholder communication, and progress tracking.",
-      image: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=800&q=80"
-    },
-    {
-      number: "08",
-      title: "Research & Analysis",
-      description: "Thorough research and clear summaries delivered when you need them. Market research, competitor analysis, and information gathering.",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80"
-    },
-    {
-      number: "09",
-      title: "Creative Coordination",
-      description: "Bridge the gap between vision and execution. Coordinate with designers, manage creative assets, and keep brand materials organized.",
-      image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80"
+      title: "Thoughtful",
+      description: "A steady approach guided by patience, intention, and meaningful detail."
     }
   ];
 
@@ -94,62 +91,93 @@ const Index = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] px-4 py-20 bg-gradient-to-br from-primary via-primary/95 to-primary/90 overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute top-20 right-20 w-32 h-32 rounded-full bg-accent/20 blur-2xl"></div>
-        <div className="absolute bottom-40 left-20 w-40 h-40 rounded-full bg-accent/15 blur-3xl"></div>
-        <div className="absolute top-1/2 right-1/3 w-24 h-24 rounded-full bg-primary-foreground/10 blur-xl"></div>
+      <section className="relative min-h-[85vh] px-4 py-20 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroWorkspace})` }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/70"></div>
+        </div>
         
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="flex flex-col items-center text-center space-y-8">
-            {/* Logo */}
-            <div className="w-48 h-48 md:w-56 md:h-56">
-              <img
-                src={rellatechLogo}
-                alt="Rellatech"
-                className="w-full h-full drop-shadow-2xl"
-              />
-            </div>
+        <div className="container mx-auto max-w-6xl relative z-10 min-h-[70vh] flex items-center">
+          <div className="max-w-2xl space-y-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
+              Rellatech Virtual Assistant Services
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+              Clarity, structure, and dependable support for the work that fills your days.
+            </p>
+            
+            <p className="text-lg md:text-xl text-muted-foreground">
+              Rooted in Canada. Supporting clients everywhere.
+            </p>
 
-            <div className="space-y-6 text-primary-foreground max-w-4xl">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                WELCOME TO RELLATECH
-              </h1>
-              
-              <p className="text-lg md:text-xl lg:text-2xl leading-relaxed opacity-95">
-                Professional virtual assistant services designed to simplify your workload and bring structure to your business operations.
-              </p>
-              
-              <p className="text-base md:text-lg opacity-90 max-w-3xl mx-auto">
-                Based in Canada, serving clients locally and internationally. Whether you need ongoing support or project-based assistance, I provide reliable, thoughtful service that helps you stay focused on what matters most.
-              </p>
-
-              <div className="pt-4">
-                <Button size="lg" asChild className="text-base md:text-lg px-8 py-6 h-auto bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
-                  <Link to="/contact">GET STARTED</Link>
-                </Button>
-              </div>
+            <div className="pt-4">
+              <Button size="lg" asChild className="text-lg px-8 py-6 h-auto">
+                <Link to="/contact">Book a Consultation</Link>
+              </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Core Values */}
-      <section className="py-16 px-4 bg-background">
+      {/* Welcome Section */}
+      <section className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {coreValues.map((value, index) => {
-              const Icon = value.icon;
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                Welcome to Rellatech
+              </h2>
+              
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  Rellatech offers personal, steady support for individuals, teams, and businesses who want their workload to feel lighter and more manageable. The focus is always on creating calm through clear organisation and thoughtful care.
+                </p>
+                
+                <p>
+                  Every partnership receives direct, dedicated attention. Rellatech learns your pace, your preferences, and the way you like things done. Support becomes seamless, woven into your daily rhythm, bringing ease to the places that once felt crowded.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex justify-center">
+              <img 
+                src={valentinaProfile}
+                alt="Valentina Rella"
+                className="w-full max-w-md rounded-lg shadow-xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 px-4 bg-background">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12 space-y-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+              Services
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Support shaped with intention to bring order, flow, and clarity to your work.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => {
+              const Icon = service.icon;
               return (
-                <div key={index} className="flex flex-col items-center text-center space-y-3">
-                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-accent flex items-center justify-center">
-                    <Icon className="w-8 h-8 md:w-10 md:h-10 text-accent-foreground" />
+                <div key={index} className="space-y-3">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Icon className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="text-lg md:text-xl font-bold text-foreground">
-                    {value.title}
+                  <h3 className="text-xl font-semibold text-foreground">
+                    {service.title}
                   </h3>
-                  <p className="text-sm md:text-base text-muted-foreground">
-                    {value.description}
+                  <p className="text-muted-foreground leading-relaxed">
+                    {service.description}
                   </p>
                 </div>
               );
@@ -158,114 +186,77 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Why Choose Rellatech */}
       <section className="py-20 px-4 bg-muted/30">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
-              SERVICES
-            </h2>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-              Comprehensive virtual assistant services designed to streamline your operations and free up your time for strategic work.
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground">
+            Why Choose Rellatech
+          </h2>
+          
+          <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+            <p>
+              Clients choose Rellatech because the support feels human, consistent, and deeply attentive. No handoffs. No confusion. Just direct partnership, steady communication, and care that grows with your needs.
             </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow border-2">
-                <div className="relative h-48 overflow-hidden">
-                  <div className="absolute top-4 left-4 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center z-10">
-                    <span className="text-white font-bold text-lg">{service.number}</span>
-                  </div>
-                  <img 
-                    src={service.image} 
-                    alt={service.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-6 space-y-3">
-                  <h3 className="text-xl font-bold text-foreground">
-                    {service.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {service.description}
-                  </p>
-                  <Button variant="default" size="sm" className="mt-2">
-                    LEARN MORE
-                  </Button>
-                </div>
-              </Card>
-            ))}
+            
+            <p>
+              Rellatech becomes a reliable presence in your workflow, carrying the details that often go overlooked. With your world organised, you can lead your work with more confidence and calm.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* About Section */}
+      {/* Philosophy Section */}
       <section className="py-20 px-4 bg-background">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1">
-              <img 
-                src={valentinaProfile}
-                alt="Valentina"
-                className="w-full max-w-md mx-auto rounded-lg shadow-xl"
-              />
-            </div>
-            <div className="order-1 md:order-2 space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                Meet Valentina Rella
-              </h2>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>
-                  I'm Valentina, the founder of Rellatech. With a background in administrative support and a passion for organization, I've dedicated my career to helping busy professionals and business owners reclaim their time.
-                </p>
-                <p>
-                  I understand that behind every successful business is a mountain of details that need attention. My approach combines traditional values of reliability and professionalism with modern tools and technologies to deliver efficient, high-quality support.
-                </p>
-                <p>
-                  Whether you're a solo entrepreneur, small business owner, or part of a growing team, I'm here to provide the behind-the-scenes support that keeps everything running smoothly.
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+              My Philosophy
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {philosophyValues.map((value, index) => (
+              <div key={index} className="text-center space-y-3">
+                <h3 className="text-2xl font-bold text-foreground">
+                  {value.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {value.description}
                 </p>
               </div>
-              <Button asChild size="lg" className="mt-4">
-                <Link to="/about">MORE ABOUT ME</Link>
-              </Button>
-            </div>
+            ))}
+          </div>
+
+          <div className="text-center max-w-3xl mx-auto">
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Rellatech believes in support that is personal and grounded. By understanding the full shape of your responsibilities, Rellatech helps you move through your days with greater clarity and ease.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 px-4 bg-muted/30">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-              TESTIMONIALS
-            </h2>
-          </div>
+      {/* How We Begin Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-primary/10 to-accent/10">
+        <div className="container mx-auto max-w-4xl text-center space-y-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+            How We Begin
+          </h2>
           
-          <div className="bg-background border-4 border-primary/20 rounded-lg p-8 md:p-12 space-y-6">
-            <div className="space-y-4">
-              <p className="text-lg italic text-muted-foreground leading-relaxed">
-                "Working with Valentina has been transformative for my business. She handles all the administrative details that used to consume my days, allowing me to focus on growth and client relationships. Her attention to detail and proactive communication are exceptional."
-              </p>
-              <div className="flex items-center gap-2 text-amber-500">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i}>★</span>
-                ))}
-              </div>
-              <p className="font-semibold text-foreground">
-                — Sarah M., Business Consultant
-              </p>
-            </div>
-          </div>
+          <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+            Everything starts with a conversation. Share what you need, and Rellatech will help shape a clear, manageable plan that gives you space to breathe and focus again.
+          </p>
 
-          <div className="mt-8 text-center">
-            <p className="text-muted-foreground mb-4">
-              Ready to experience the difference professional support can make?
-            </p>
-            <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-              <Link to="/contact">START YOUR JOURNEY</Link>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+            <Button size="lg" asChild className="text-lg px-8 py-6 h-auto">
+              <Link to="/contact">Book a Consultation</Link>
             </Button>
+            <a 
+              href="mailto:valentina@rellatech.io" 
+              className="flex items-center gap-2 text-lg text-primary hover:underline"
+            >
+              <Mail className="w-5 h-5" />
+              valentina@rellatech.io
+            </a>
           </div>
         </div>
       </section>
