@@ -2,18 +2,17 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Menu } from "lucide-react";
 import { useState } from "react";
+import rellatechLogo from "@/assets/rellatech-logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-4">
+    <nav className="border-b border-border bg-card/95 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
+      <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">R</span>
-            </div>
+          <Link to="/" className="flex items-center gap-3">
+            <img src={rellatechLogo} alt="Rellatech" className="h-12 w-12" />
             <span className="text-xl font-bold text-foreground">Rellatech</span>
           </Link>
           
