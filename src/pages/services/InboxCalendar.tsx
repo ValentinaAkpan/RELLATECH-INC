@@ -22,16 +22,18 @@ const InboxCalendar = () => {
       <section className="py-20 px-4 bg-gradient-to-br from-accent to-accent/80">
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 text-accent-foreground">
-              <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                <Calendar className="w-10 h-10" />
+            <div className="space-y-6">
+              <div className="bg-background/90 backdrop-blur-sm p-8 rounded-lg space-y-6">
+                <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center">
+                  <Calendar className="w-10 h-10 text-accent-foreground" />
+                </div>
+                <h1 className="text-4xl md:text-5xl font-bold text-foreground">
+                  Inbox and Calendar Management
+                </h1>
+                <p className="text-xl text-muted-foreground leading-relaxed">
+                  Clear scheduling, structured communication, and reminders that keep your day steady.
+                </p>
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold">
-                Inbox and Calendar Management
-              </h1>
-              <p className="text-xl opacity-95 leading-relaxed">
-                Clear scheduling, structured communication, and reminders that keep your day steady.
-              </p>
             </div>
             <div className="flex justify-center">
               <div className="w-full max-w-md aspect-square bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center">
