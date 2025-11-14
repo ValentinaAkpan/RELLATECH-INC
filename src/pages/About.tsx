@@ -25,12 +25,12 @@ const About = () => {
         </div>
         
         <div className="container mx-auto max-w-6xl relative z-10 min-h-[40vh] md:min-h-[55vh] flex items-center">
-          <div className="max-w-3xl space-y-4 md:space-y-6 bg-background/40 backdrop-blur-sm p-6 md:p-8 rounded-lg">
+          <div className="max-w-3xl space-y-4 md:space-y-6 bg-background/95 backdrop-blur-md p-6 md:p-8 rounded-lg shadow-lg">
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
               About Rellatech
             </h1>
             
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+            <p className="text-lg md:text-xl text-foreground leading-relaxed">
               Personal, steady support for individuals, teams, and businesses who want their workload to feel lighter.
             </p>
           </div>
