@@ -291,6 +291,35 @@ const VirtualAssistantTimeBack = () => {
                 Email: <a href="mailto:valentina@rellatech.io" className="text-primary hover:text-secondary font-semibold underline decoration-2 underline-offset-4 transition-colors">valentina@rellatech.io</a>
               </p>
             </div>
+
+            {/* Hashtags */}
+            <div className="mt-12 pt-8 border-t-2 border-primary/20">
+              <div className="flex flex-wrap gap-3 justify-center">
+                {[
+                  '#VirtualAssistant',
+                  '#TimeManagement',
+                  '#Productivity',
+                  '#AdminSupport',
+                  '#WorkLifeBalance',
+                  '#BusinessSupport',
+                  '#EmailManagement',
+                  '#ProjectCoordination',
+                  '#RemoteWork',
+                  '#EntrepreneurLife',
+                  '#SmallBusiness',
+                  '#VirtualAssistantServices',
+                  '#GetYourTimeBack',
+                  '#DelegateToElevate'
+                ].map((tag, index) => (
+                  <span 
+                    key={index}
+                    className="px-4 py-2 bg-gradient-to-r from-primary/20 to-secondary/20 text-primary font-semibold rounded-full text-sm hover:from-primary/30 hover:to-secondary/30 transition-all cursor-default shadow-sm"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </article>
