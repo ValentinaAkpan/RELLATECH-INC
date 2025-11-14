@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import rellatechLogo from "@/assets/rellatech-logo.png";
 import valentinaProfile from "@/assets/valentina-profile.png";
 import aboutHero from "@/assets/about-hero.jpg";
+import virtualGurusLogo from "@/assets/virtual-gurus-logo.png";
 
 const About = () => {
   return (
@@ -100,13 +101,12 @@ const About = () => {
           <Card className="border-border shadow-xl overflow-hidden">
             <div className="grid md:grid-cols-2 gap-0">
               {/* Image Side */}
-              <div className="relative h-64 md:h-auto">
+              <div className="relative h-64 md:h-auto bg-muted/30 flex items-center justify-center p-8">
                 <img
-                  src={valentinaProfile}
-                  alt="Valentina Akpan"
-                  className="w-full h-full object-cover"
+                  src={virtualGurusLogo}
+                  alt="Virtual Gurus"
+                  className="max-w-full max-h-48 object-contain"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
               </div>
               
               {/* Content Side */}
