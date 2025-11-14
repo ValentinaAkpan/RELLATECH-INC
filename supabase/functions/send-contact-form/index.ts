@@ -49,11 +49,11 @@ const handler = async (req: Request): Promise<Response> => {
     const dateStr = currentDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
     const timeStr = currentDate.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
 
-    // Send notification email to valentina@rellatech.io
+    // Send notification email to valentinaakpan@gmail.com
     const notificationResponse = await resend.emails.send({
       from: "Rellatech Contact Form <onboarding@resend.dev>",
       replyTo: formData.email,
-      to: ["valentina@rellatech.io"],
+      to: ["valentinaakpan@gmail.com"],
       subject: `New Rellatech Inquiry from ${formData.firstName} ${formData.lastName}, ${dateStr} at ${timeStr}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -83,34 +83,8 @@ const handler = async (req: Request): Promise<Response> => {
     });
 
     console.log("Notification email sent:", notificationResponse);
-
-    // Send auto-reply to the user
-    const autoReplyResponse = await resend.emails.send({
-      from: "Rellatech <onboarding@resend.dev>",
-      to: [formData.email],
-      subject: "Thank you for contacting Rellatech",
-      html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-          <h2 style="color: #2c5f7c;">Thank you for your message</h2>
-          
-          <p style="line-height: 1.6; color: #374151;">
-            Thank you for your message. I have received your inquiry and will review it shortly. 
-            I will reach out with next steps as soon as possible.
-          </p>
-          
-          <p style="line-height: 1.6; color: #374151;">
-            I hope your day feels a little lighter knowing you no longer have to carry everything alone.
-          </p>
-          
-          <p style="margin-top: 30px; color: #374151;">
-            Warmly,<br>
-            <strong>Rellatech Virtual Assistant Services</strong>
-          </p>
-        </div>
-      `,
-    });
-
-    console.log("Auto-reply email sent:", autoReplyResponse);
+    
+    // Note: Auto-reply email to user removed - requires domain verification at resend.com/domains
 
     return new Response(
       JSON.stringify({ 
