@@ -11,6 +11,14 @@ import { Link } from "react-router-dom";
 const Blog = () => {
   const posts = [
     {
+      title: "How I Built a Full Student Onboarding Automation for Selling Circus",
+      excerpt: "A behind-the-scenes look at creating a seamless journey for every new student. See how DocuSign, Zapier, TinkiFig, and ActiveCampaign came together to create a smooth onboarding experience.",
+      date: "November 14, 2025",
+      category: "Case Study",
+      slug: "selling-circus-automation",
+      image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80"
+    },
+    {
       title: "How I Helped Austin Bryant Consulting Bring Order Back to Google Drive",
       excerpt: "A gentle behind-the-scenes look at solving digital clutter with care and clarity. Discover how custom automation and thoughtful organisation transformed a chaotic Google Drive into a clean, reliable system.",
       date: "November 14, 2025",
