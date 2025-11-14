@@ -14,8 +14,8 @@ const GoogleDriveOrganization = () => {
       {/* Hero Section with Full Width Image */}
       <section className="relative min-h-[70vh] overflow-hidden">
         <img 
-          src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1920&q=80"
-          alt="Calm organized workspace with laptop showing Google Drive"
+          src="https://images.unsplash.com/photo-1593642532400-2682810df593?w=1920&q=80"
+          alt="Calm teal-toned workspace with laptop open to Google Drive and notebook"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/98 via-background/95 to-background/85"></div>
@@ -87,8 +87,8 @@ const GoogleDriveOrganization = () => {
               
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
-                  alt="Scattered digital folders and files in Google Drive"
+                  src="https://images.unsplash.com/photo-1633265486064-086b219458ec?w=800&q=80"
+                  alt="Scattered folders floating in digital grid showing cluttered state"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -103,8 +103,8 @@ const GoogleDriveOrganization = () => {
 
             <div className="flex justify-center my-8">
               <img 
-                src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=800&q=80"
-                alt="Clean code and automation script"
+                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80"
+                alt="Clean code lines showing Google Apps Script automation"
                 className="rounded-2xl shadow-xl max-w-2xl w-full"
               />
             </div>
@@ -159,7 +159,7 @@ const GoogleDriveOrganization = () => {
 
             <div className="rounded-2xl overflow-hidden shadow-xl my-8">
               <img 
-                src="https://images.unsplash.com/photo-1633265486064-086b219458ec?w=1200&q=80"
+                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80"
                 alt="Clean organized Google Drive folder structure"
                 className="w-full"
               />
@@ -205,8 +205,8 @@ const GoogleDriveOrganization = () => {
 
             <div className="rounded-2xl overflow-hidden shadow-xl my-8">
               <img 
-                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&q=80"
-                alt="Hands typing thoughtfully on laptop"
+                src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=1200&q=80"
+                alt="Hands typing gently on laptop keyboard"
                 className="w-full"
               />
             </div>
@@ -248,18 +248,50 @@ const GoogleDriveOrganization = () => {
         </div>
       </article>
 
-      <section className="py-20 px-4 bg-muted/30">
+      {/* Related Topics Section */}
+      <section className="py-16 px-4 bg-muted/30">
         <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
-            <p className="text-xl text-muted-foreground">Have questions or ready to start? Let me know how I can help</p>
+          <h2 className="text-2xl font-bold mb-6">Related Topics</h2>
+          <div className="flex flex-wrap gap-3">
+            <Link to="/services/crms-automation" className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-full transition-colors">
+              #Automation
+            </Link>
+            <Link to="/services" className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-full transition-colors">
+              #DigitalOrganization
+            </Link>
+            <Link to="/services/administrative-support" className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-full transition-colors">
+              #GoogleDrive
+            </Link>
+            <Link to="/blog" className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-full transition-colors">
+              #VirtualAssistant
+            </Link>
+            <Link to="/blog" className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-full transition-colors">
+              #WorkflowOptimization
+            </Link>
+            <Link to="/services" className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-full transition-colors">
+              #SystemsThinking
+            </Link>
           </div>
-          <ContactForm />
+        </div>
+      </section>
+
+      {/* Share This Article */}
+      <section className="py-12 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 p-8 bg-muted/50 rounded-2xl">
+            <div>
+              <h3 className="text-2xl font-bold mb-2">Found this helpful?</h3>
+              <p className="text-muted-foreground">Share it with someone who needs a calmer digital workspace</p>
+            </div>
+            <Button size="lg" asChild>
+              <Link to="/contact">Get In Touch</Link>
+            </Button>
+          </div>
         </div>
       </section>
 
       <CTASection 
-        title="Ready to transform your workday?"
+        title="Ready to bring calm to your digital workspace?"
         buttonText="See My Services"
         buttonLink="/services"
       />
