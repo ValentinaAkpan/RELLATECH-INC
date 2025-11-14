@@ -12,6 +12,7 @@ import { supabase } from "@/integrations/supabase/client";
 const ContactForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formStartTime] = useState(Date.now());
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -20,12 +21,31 @@ const ContactForm = () => {
     supportType: "",
     timeline: "",
     message: "",
-    consent: false
+    consent: false,
+    website: "" // Honeypot field
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+
+    // Honeypot check - if filled, it's a bot
+    if (formData.website) {
+      setIsSubmitting(false);
+      return;
+    }
+
+    // Time check - if submitted too fast, likely a bot
+    const timeSpent = Date.now() - formStartTime;
+    if (timeSpent < 2000) {
+      toast({
+        title: "Error",
+        description: "Please take a moment to review your message",
+        variant: "destructive",
+      });
+      setIsSubmitting(false);
+      return;
+    }
 
     // Basic validation
     if (!formData.firstName.trim() || !formData.lastName.trim() || !formData.email.trim() || !formData.message.trim()) {
@@ -63,7 +83,10 @@ const ContactForm = () => {
 
     try {
       const { data, error } = await supabase.functions.invoke('send-contact-form', {
-        body: formData
+        body: {
+          ...formData,
+          formStartTime
+        }
       });
 
       if (error) throw error;
@@ -83,7 +106,8 @@ const ContactForm = () => {
         supportType: "",
         timeline: "",
         message: "",
-        consent: false
+        consent: false,
+        website: ""
       });
     } catch (error) {
       console.error('Form submission error:', error);
@@ -102,6 +126,18 @@ const ContactForm = () => {
       <h3 className="text-2xl font-bold mb-6 text-foreground">Send a Message</h3>
       
       <form onSubmit={handleSubmit} className="space-y-6">
+        {/* Honeypot field - hidden from users, but bots will fill it */}
+        <input
+          type="text"
+          name="website"
+          value={formData.website}
+          onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+          style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px' }}
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+        />
+        
         <div className="grid grid-cols-2 gap-4">
           <div className="space-y-2">
             <Label htmlFor="firstName" className="text-base">First Name *</Label>
