@@ -16,6 +16,28 @@ const GraphicDesign = () => {
     "Print-ready files"
   ];
 
+  const portfolioItems = [
+    { id: 1, title: "Brand Identity Package", category: "Branding" },
+    { id: 2, title: "Business Card Design", category: "Print" },
+    { id: 3, title: "Signage Design", category: "Commercial" },
+    { id: 4, title: "Packaging Design", category: "Product" },
+    { id: 5, title: "Marketing Collateral", category: "Marketing" },
+    { id: 6, title: "Print Materials", category: "Print" }
+  ];
+
+  const handleDesignClick = (designTitle: string, designCategory: string) => {
+    // Track click in Google Analytics
+    if (typeof (window as any).gtag !== 'undefined') {
+      (window as any).gtag('event', 'design_click', {
+        event_category: 'Graphics Portfolio',
+        event_label: designTitle,
+        design_category: designCategory,
+        page_path: window.location.pathname
+      });
+    }
+    console.log(`Tracked click: ${designTitle} - ${designCategory}`);
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -63,6 +85,51 @@ const GraphicDesign = () => {
                 <span className="text-lg text-foreground">{benefit}</span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio Section */}
+      <section className="py-20 px-4 bg-muted/30">
+        <div className="container mx-auto max-w-6xl space-y-12">
+          <div className="text-center space-y-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+              Design Portfolio
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Explore examples of our graphic and print design work
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {portfolioItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => handleDesignClick(item.title, item.category)}
+                className="group relative overflow-hidden rounded-lg bg-card border border-border hover:border-teal-500 transition-all duration-300 hover:shadow-lg"
+              >
+                <div className="aspect-square bg-gradient-to-br from-teal-500/20 to-teal-600/20 flex items-center justify-center">
+                  <Palette className="w-24 h-24 text-teal-500/40 group-hover:text-teal-500/60 transition-colors" />
+                </div>
+                <div className="p-6 space-y-2">
+                  <div className="text-sm font-medium text-teal-600">
+                    {item.category}
+                  </div>
+                  <h3 className="text-lg font-semibold text-foreground group-hover:text-teal-600 transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    Click to view details
+                  </p>
+                </div>
+              </button>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <p className="text-sm text-muted-foreground">
+              Want to see more examples? <Link to="/contact" className="text-teal-600 hover:underline">Get in touch</Link>
+            </p>
           </div>
         </div>
       </section>
