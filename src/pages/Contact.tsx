@@ -151,7 +151,7 @@ const Contact = () => {
             </div>
 
             {/* Right Side - Contact Form */}
-            <div className="bg-primary/5 dark:bg-primary/10 p-8 rounded-lg border border-primary/20">
+            <div className="bg-primary/10 dark:bg-primary/20 p-8 rounded-lg border border-primary/30 shadow-lg">
               <h3 className="text-2xl font-bold mb-6 text-foreground">Send a Message</h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">
