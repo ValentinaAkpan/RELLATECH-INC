@@ -206,15 +206,17 @@ const VirtualAssistantTimeBack = () => {
                 <p>
                   When someone helps carry your workload, your mind begins to relax. You think more clearly. You breathe more easily. You focus on the work that brings you energy instead of the tasks that drain it.
                 </p>
-                <p>
+                <p className="text-xl font-semibold text-primary">
                   This is not only about productivity. It is about peace.
                 </p>
                 <p>
                   Days that feel calm. Decisions that feel grounded. A life that feels less crowded and more intentional.
                 </p>
-                <p className="text-xl font-semibold text-secondary">
-                  You deserve that.
-                </p>
+                <div className="my-6 p-6 bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 rounded-xl border-l-4 border-primary">
+                  <p className="text-2xl font-bold text-foreground">
+                    You deserve that.
+                  </p>
+                </div>
               </div>
             </div>
 
