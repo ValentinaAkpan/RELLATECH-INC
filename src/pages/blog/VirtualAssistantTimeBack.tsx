@@ -313,12 +313,13 @@ const VirtualAssistantTimeBack = () => {
                   '#GetYourTimeBack',
                   '#DelegateToElevate'
                 ].map((tag, index) => (
-                  <span 
+                  <Link
                     key={index}
-                    className="px-4 py-2 bg-gradient-to-r from-primary/20 to-secondary/20 text-primary font-semibold rounded-full text-sm hover:from-primary/30 hover:to-secondary/30 transition-all cursor-default shadow-sm"
+                    to="/contact"
+                    className="px-4 py-2 bg-gradient-to-r from-primary/20 to-secondary/20 text-primary font-semibold rounded-full text-sm hover:from-primary/30 hover:to-secondary/30 transition-all shadow-sm hover:shadow-md"
                   >
                     {tag}
-                  </span>
+                  </Link>
                 ))}
               </div>
             </div>

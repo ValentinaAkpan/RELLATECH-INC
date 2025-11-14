@@ -23,6 +23,7 @@ import Testimonials from "./pages/Testimonials";
 import Blog from "./pages/Blog";
 import FAQ from "./pages/FAQ";
 import VirtualAssistantTimeBack from "./pages/blog/VirtualAssistantTimeBack";
+import WorkdayTooHeavy from "./pages/blog/WorkdayTooHeavy";
 import TermsOfService from "./pages/TermsOfService";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
@@ -55,6 +56,7 @@ const App = () => (
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/virtual-assistant-time-back" element={<VirtualAssistantTimeBack />} />
+          <Route path="/blog/workday-too-heavy" element={<WorkdayTooHeavy />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/terms" element={<TermsOfService />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
