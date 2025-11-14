@@ -33,8 +33,8 @@ const Navigation = () => {
     <nav className="bg-primary sticky top-0 z-50 shadow-md">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-3">
-            <img src={rellatechLogo} alt="Rellatech" className="h-14 w-14 md:h-16 md:w-16" />
+          <Link to="/" className="flex items-center gap-3 bg-background rounded-full p-2">
+            <img src={rellatechLogo} alt="Rellatech" className="h-12 w-12 md:h-14 md:w-14" />
           </Link>
           
           {/* Desktop Navigation */}
