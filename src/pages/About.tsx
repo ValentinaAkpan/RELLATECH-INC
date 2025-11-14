@@ -49,10 +49,10 @@ const About = () => {
         </div>
       </section>
 
-      {/* Our Approach Section */}
+      {/* My Approach Section */}
       <section className="py-20 px-4 bg-background">
         <div className="container mx-auto max-w-5xl">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">Our Approach</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">My Approach</h2>
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
               In a world where business owners often feel stretched too thin, Rellatech offers a different kind of support. I provide more than task completion—I bring calm, clarity, and a steady hand to the behind-the-scenes work that keeps your business running smoothly. My services are thoughtfully crafted for clients who value reliability, personalised attention, and genuine care in every interaction.
@@ -104,64 +104,58 @@ const About = () => {
 
       {/* Featured Article Section */}
       <section className="py-20 px-4 bg-background">
-        <div className="container mx-auto max-w-5xl">
+        <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Featured</h2>
             <p className="text-xl text-muted-foreground">
-              Recognised for innovation, creativity, and exceptional client service
+              Recognised for innovation and exceptional client service
             </p>
           </div>
           
-          <Card className="border-border shadow-lg">
-            <CardHeader className="space-y-4">
-              <div className="flex items-start justify-between gap-4">
-                <div className="space-y-2">
-                  <CardTitle className="text-2xl md:text-3xl">
-                    Virtual Assistant Profile: How AI Became Her Superpower
+          <Card className="border-border shadow-xl overflow-hidden">
+            <div className="grid md:grid-cols-2 gap-0">
+              {/* Image Side */}
+              <div className="relative h-64 md:h-auto">
+                <img
+                  src={valentinaProfile}
+                  alt="Valentina Akpan"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+              </div>
+              
+              {/* Content Side */}
+              <div className="p-8 flex flex-col justify-center">
+                <CardHeader className="p-0 mb-6">
+                  <CardTitle className="text-2xl md:text-3xl mb-3">
+                    How AI Became My Superpower
                   </CardTitle>
-                  <p className="text-sm text-muted-foreground">Featured by Virtual Gurus • October 31, 2025</p>
-                </div>
-              </div>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="prose prose-lg max-w-none">
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Valentina Akpan is celebrated as one of Virtual Gurus' most innovative assistants, known for her creative use of AI, steady focus, and ability to give clients back their most valuable resource: time.
-                </p>
+                  <p className="text-sm text-muted-foreground">Featured by Virtual Gurus • October 2025</p>
+                </CardHeader>
                 
-                <div className="bg-muted/50 border-l-4 border-primary p-6 my-6 rounded-r-lg">
-                  <p className="text-lg italic text-foreground">
-                    "I always ask myself first, can AI help with the heavy lifting? If it can, I use it. If not, I do it manually. But I never stop until I find a better way."
-                  </p>
-                </div>
+                <CardContent className="p-0 space-y-4">
+                  <div className="bg-muted/50 border-l-4 border-primary p-4 rounded-r">
+                    <p className="italic text-foreground">
+                      "I always ask myself first, can AI help with the heavy lifting? If it can, I use it."
+                    </p>
+                  </div>
 
-                <div className="space-y-4 text-muted-foreground">
-                  <p>
-                    <strong className="text-foreground">Building Smart Solutions:</strong> For one client spending over $20,000 a year on transcription services, Valentina engineered an AI-powered workflow that automated the process, saving thousands of dollars and reclaiming countless hours.
+                  <p className="text-muted-foreground">
+                    Celebrated as one of Virtual Gurus' most innovative assistants for creative use of AI and ability to save clients thousands of dollars through smart automation.
                   </p>
-                  
-                  <p>
-                    <strong className="text-foreground">From Timid to Unstoppable:</strong> Valentina's transformation from a shy newcomer to Canada to a confident virtual assistant who leads meetings and manages complex projects showcases her resilience and dedication to continuous growth.
-                  </p>
-                  
-                  <p>
-                    <strong className="text-foreground">People-First Approach:</strong> Beyond automation, Valentina's commitment to her clients includes catching critical errors on days off and ensuring projects stay on track, combining technical expertise with genuine care.
-                  </p>
-                </div>
-              </div>
 
-              <div className="pt-4">
-                <Button asChild variant="outline" className="gap-2">
-                  <a 
-                    href="https://thevirtualgurus.com/blog/virtual-assistant-profile-valentina" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                    Read Full Article <ExternalLink className="w-4 h-4" />
-                  </a>
-                </Button>
+                  <Button asChild variant="outline" className="gap-2 w-full md:w-auto">
+                    <a 
+                      href="https://thevirtualgurus.com/blog/virtual-assistant-profile-valentina" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      Read Full Article <ExternalLink className="w-4 h-4" />
+                    </a>
+                  </Button>
+                </CardContent>
               </div>
-            </CardContent>
+            </div>
           </Card>
         </div>
       </section>
@@ -251,13 +245,13 @@ const About = () => {
         <div className="container mx-auto text-center max-w-3xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Feeling Overwhelmed and Stuck?</h2>
           <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-            Connect with us today by scheduling a consultation and start your journey towards a more efficient and successful business.
+            Connect with me today by scheduling a consultation and start your journey towards a more efficient and successful business.
           </p>
           <Button size="lg" asChild className="text-lg px-8 py-6 h-auto">
             <Link to="/contact">Book a Consultation</Link>
           </Button>
           <p className="mt-6 text-muted-foreground">
-            Email: <a href="mailto:hello@rellatech.io" className="text-primary hover:underline">hello@rellatech.io</a>
+            Email: <a href="mailto:valentina@rellatech.io" className="text-primary hover:underline">valentina@rellatech.io</a>
           </p>
         </div>
       </section>

@@ -36,7 +36,7 @@ const Automation = () => {
     {
       step: "1",
       title: "Discovery",
-      description: "We analyze your current processes to identify automation opportunities"
+      description: "I analyze your current processes to identify automation opportunities"
     },
     {
       step: "2",
