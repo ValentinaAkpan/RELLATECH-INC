@@ -35,6 +35,26 @@ const FAQ = () => {
     {
       question: "How do I get started?",
       answer: "Getting started is simple! Fill out the contact form or email me at valentina@rellatech.io. I'll schedule a consultation call to understand your needs and discuss how I can support you. From there, I'll create a customized plan and we can begin working together."
+    },
+    {
+      question: "What makes Rellatech different from other virtual assistant services?",
+      answer: "Rellatech offers a personalized, thoughtful approach. I don't believe in cookie-cutter packages. Every plan is shaped around your unique needs, business goals, and working style. I work with you, not for you, becoming a trusted extension of your team."
+    },
+    {
+      question: "Do you offer ongoing support or just one-time help?",
+      answer: "Both! I provide ongoing support for clients who need regular administrative assistance, as well as one-time project help for specific needs like setting up automation, creating presentations, or organizing special events."
+    },
+    {
+      question: "What industries do you have experience working with?",
+      answer: "I have experience supporting clients across diverse industries including technology, creative services, professional consulting, and small business operations. My adaptable approach allows me to quickly understand your industry-specific needs."
+    },
+    {
+      question: "How do you handle confidential information?",
+      answer: "Confidentiality is paramount. I treat all client information with the utmost care and professionalism. I can sign NDAs and confidentiality agreements as needed, and I follow strict data protection practices."
+    },
+    {
+      question: "Can you work with my existing team?",
+      answer: "Yes! I seamlessly integrate with existing teams and workflows. I'm experienced in collaborating with team members, coordinating with other service providers, and adapting to your team's communication style and tools."
     }
   ];
 
@@ -59,7 +79,12 @@ const FAQ = () => {
               'bg-gradient-to-br from-primary to-primary/90',
               'bg-gradient-to-br from-teal-500 to-teal-600',
               'bg-gradient-to-br from-accent to-accent/90',
-              'bg-gradient-to-br from-primary to-primary/90'
+              'bg-gradient-to-br from-primary to-primary/90',
+              'bg-gradient-to-br from-teal-500 to-teal-600',
+              'bg-gradient-to-br from-accent to-accent/90',
+              'bg-gradient-to-br from-primary to-primary/90',
+              'bg-gradient-to-br from-teal-500 to-teal-600',
+              'bg-gradient-to-br from-accent to-accent/90'
             ];
             return (
               <AccordionItem 
