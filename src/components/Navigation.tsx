@@ -85,7 +85,7 @@ const Navigation = () => {
             </Link>
             <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold px-6">
               <Link to="/contact">
-                CONTACT US
+                CONTACT ME
               </Link>
             </Button>
           </div>
