@@ -15,37 +15,24 @@ const About = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] px-4 py-20 overflow-hidden">
+      <section className="relative min-h-[50vh] md:min-h-[70vh] px-4 py-12 md:py-20 overflow-hidden">
         {/* Background Image with Overlay */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${aboutHero})` }}
+          style={{ backgroundImage: `url(https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=1920&q=80)` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/70 via-primary/60 to-primary/50"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-background/98 via-background/92 to-background/80"></div>
         </div>
         
-        {/* Decorative circles */}
-        <div className="absolute top-20 left-10 w-24 h-24 rounded-full bg-accent/20 blur-xl"></div>
-        <div className="absolute bottom-32 right-20 w-32 h-32 rounded-full bg-accent/20 blur-xl"></div>
-        
-        <div className="container mx-auto max-w-4xl text-center relative z-10">
-          <div className="mb-8">
-            <img
-              src={rellatechLogo}
-              alt="Rellatech"
-              className="w-64 mx-auto drop-shadow-2xl"
-            />
-          </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-primary-foreground">
-            About Rellatech
-          </h1>
-          <p className="text-2xl md:text-3xl font-semibold text-primary-foreground uppercase leading-tight">
-            A Thoughtful Approach to Virtual Assistance, Workflow Organisation, and Dependable Business Support
-          </p>
-          <div className="mt-8">
-            <Button size="lg" asChild className="text-lg px-8 py-6 h-auto bg-accent hover:bg-accent/90 text-accent-foreground">
-              <Link to="/contact">Book a Consultation</Link>
-            </Button>
+        <div className="container mx-auto max-w-6xl relative z-10 min-h-[40vh] md:min-h-[55vh] flex items-center">
+          <div className="max-w-3xl space-y-4 md:space-y-6 bg-background/40 backdrop-blur-sm p-6 md:p-8 rounded-lg">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
+              About Rellatech
+            </h1>
+            
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              Personal, steady support for individuals, teams, and businesses who want their workload to feel lighter.
+            </p>
           </div>
         </div>
       </section>
