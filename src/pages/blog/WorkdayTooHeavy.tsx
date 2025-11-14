@@ -329,8 +329,9 @@ const WorkdayTooHeavy = () => {
             </div>
 
             {/* Hashtags */}
-            <div className="mt-12 pt-8 border-t-2 border-secondary/20">
-              <div className="flex flex-wrap gap-3 justify-center">
+            <div className="mt-12 pt-8 border-t-4 border-secondary/40">
+              <h3 className="text-center text-xl font-bold text-foreground mb-6">Topics & Tags</h3>
+              <div className="flex flex-wrap gap-4 justify-center">
                 {[
                   '#WorkOverwhelm',
                   '#BurnoutPrevention',
@@ -350,7 +351,7 @@ const WorkdayTooHeavy = () => {
                   <Link
                     key={index}
                     to="/contact"
-                    className="px-4 py-2 bg-gradient-to-r from-secondary/20 to-accent/20 text-secondary font-semibold rounded-full text-sm hover:from-secondary/30 hover:to-accent/30 transition-all shadow-sm hover:shadow-md"
+                    className="px-5 py-3 bg-gradient-to-br from-secondary via-accent to-primary text-white font-bold rounded-full text-base hover:scale-110 hover:shadow-2xl transition-all shadow-lg"
                   >
                     {tag}
                   </Link>
