@@ -2,10 +2,11 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Briefcase, Puzzle, Handshake, TrendingUp, ExternalLink } from "lucide-react";
+import { Briefcase, Heart, Handshake, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import rellatechLogo from "@/assets/rellatech-logo.png";
 import valentinaProfile from "@/assets/valentina-profile.png";
+import aboutHero from "@/assets/about-hero.jpg";
 
 const About = () => {
   return (
@@ -13,7 +14,16 @@ const About = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] px-4 py-20 bg-gradient-to-br from-primary/90 via-primary to-primary/80 overflow-hidden">
+      <section className="relative min-h-[60vh] px-4 py-20 overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${aboutHero})` }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/85 to-primary/80"></div>
+        </div>
+        
+        {/* Decorative circles */}
         <div className="absolute top-20 left-10 w-24 h-24 rounded-full bg-accent/20 blur-xl"></div>
         <div className="absolute bottom-32 right-20 w-32 h-32 rounded-full bg-accent/20 blur-xl"></div>
         
@@ -178,13 +188,10 @@ const About = () => {
       <section className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Our Philosophy</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Our philosophy is simple yet powerful. By taking a holistic approach, we assess the entire picture while strategically targeting actionable steps to achieve results. We pride ourselves on working closely with clients, continuously learning, and adapting to provide thoughtful and effective solutions.
-            </p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">My Philosophy</h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
             <Card className="border-border">
               <CardHeader>
                 <div className="w-16 h-16 rounded-full bg-accent mx-auto flex items-center justify-center mb-4">
@@ -194,21 +201,7 @@ const About = () => {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-center text-base">
-                  Engage with support that honours and upholds your business ethos, delivering dedicated service to you and your clientele.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="border-border">
-              <CardHeader>
-                <div className="w-16 h-16 rounded-full bg-accent mx-auto flex items-center justify-center mb-4">
-                  <Puzzle className="w-8 h-8 text-accent-foreground" />
-                </div>
-                <CardTitle className="text-center text-2xl uppercase">Holistic</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-center text-base">
-                  Support that sees the whole picture, aligning intuitively with the heartbeat of your business to elevate your operations.
+                  Support that respects your standards and reflects the care you put into your work.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -222,7 +215,7 @@ const About = () => {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-center text-base">
-                  Build a relationship based on trust and genuine interaction, where every exchange feels as real and committed as your own vision.
+                  A partnership built on honesty, trust, and real human connection.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -230,16 +223,25 @@ const About = () => {
             <Card className="border-border">
               <CardHeader>
                 <div className="w-16 h-16 rounded-full bg-accent mx-auto flex items-center justify-center mb-4">
-                  <TrendingUp className="w-8 h-8 text-accent-foreground" />
+                  <Heart className="w-8 h-8 text-accent-foreground" />
                 </div>
-                <CardTitle className="text-center text-2xl uppercase">Progressive</CardTitle>
+                <CardTitle className="text-center text-2xl uppercase">Thoughtful</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-center text-base">
-                  Collaborate with support that adapts intuitively to the future of work and business with a thoughtful, human touch.
+                  An approach shaped by patience, intention, and attention to the details that matter.
                 </CardDescription>
               </CardContent>
             </Card>
+          </div>
+
+          <div className="max-w-4xl mx-auto space-y-6 text-lg text-muted-foreground leading-relaxed">
+            <p>
+              I believe support should feel personal and steady, not rushed or impersonal. My work is rooted in listening closely, understanding your pace, and helping you move forward with clarity. I pay attention to the full shape of your responsibilities while taking care of the small tasks that bring order to your day.
+            </p>
+            <p>
+              This gentle way of working creates space for you to breathe, plan, and feel in control again. My goal is simple. To show up with care, communicate with respect, and create a sense of calm in the places that feel crowded. When support is thoughtful and sincere, your entire work life becomes lighter and more aligned.
+            </p>
           </div>
         </div>
       </section>
