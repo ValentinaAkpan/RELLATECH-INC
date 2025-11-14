@@ -7,9 +7,18 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import hraiLogo from "@/assets/hrai-logo.png";
 import spurLogo from "@/assets/spur-logo.png";
+import undividedLogo from "@/assets/undivided-project-logo.png";
 
 const Testimonials = () => {
   const testimonials = [
+    {
+      quote: "Valentina has been an indispensable part of my team. As my Executive Assistant, she keeps everything running smoothly—from managing a complex calendar and coordinating meetings across time zones to providing data analytics and high-level brand support. Her attention to detail, professionalism, and proactive approach have made a real difference in my ability to focus on strategic work. I highly recommend RellaTech VA Services to anyone who needs reliable, high-quality virtual assistant support.",
+      author: "Monica Sanders",
+      role: "Founder",
+      company: "The Undivided Project",
+      logo: undividedLogo,
+      rating: 5
+    },
     {
       quote: "I'm in the imagination business but can't imagine a Virtual Assistant with more initiative, intelligence and instinct than Valentina. Did you notice that her initials are V.A? What more do you need?",
       author: "Lorne Silver",
