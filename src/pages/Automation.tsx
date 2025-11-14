@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import ContactForm from "@/components/ContactForm";
+import CTASection from "@/components/CTASection";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Zap, Workflow, Clock, TrendingUp, CheckCircle, ArrowRight } from "lucide-react";
@@ -213,6 +214,12 @@ const Automation = () => {
           <ContactForm />
         </div>
       </section>
+
+      <CTASection 
+        title="Ready to save time with smart automation?"
+        buttonText="Automate Your Business"
+        buttonLink="/contact"
+      />
 
       <FAQ />
 

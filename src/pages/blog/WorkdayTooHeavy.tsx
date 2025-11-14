@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import CTASection from "@/components/CTASection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
@@ -361,6 +362,12 @@ const WorkdayTooHeavy = () => {
           </div>
         </div>
       </article>
+
+      <CTASection 
+        title="Ready to lighten your workload?"
+        buttonText="Discover How We Can Help"
+        buttonLink="/services"
+      />
 
       <Footer />
     </div>

@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
+import CTASection from "@/components/CTASection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Calendar, CheckCircle } from "lucide-react";
@@ -117,6 +118,12 @@ const InboxCalendar = () => {
           </div>
         </div>
       </section>
+
+      <CTASection 
+        title="Ready for organized inbox and calendar?"
+        buttonText="Get Organized Today"
+        buttonLink="/contact"
+      />
 
       <FAQ />
 

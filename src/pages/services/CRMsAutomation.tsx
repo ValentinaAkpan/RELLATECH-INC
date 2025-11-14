@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
+import CTASection from "@/components/CTASection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Settings, CheckCircle } from "lucide-react";
@@ -85,6 +86,12 @@ const CRMsAutomation = () => {
           </div>
         </div>
       </section>
+
+      <CTASection 
+        title="Ready to streamline your business processes?"
+        buttonText="Automate Your Workflow"
+        buttonLink="/contact"
+      />
 
       <FAQ />
 

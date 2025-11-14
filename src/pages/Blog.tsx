@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import ContactForm from "@/components/ContactForm";
+import CTASection from "@/components/CTASection";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "lucide-react";
@@ -97,6 +98,12 @@ const Blog = () => {
           <ContactForm />
         </div>
       </section>
+
+      <CTASection 
+        title="Ready to transform your workday?"
+        buttonText="See Our Services"
+        buttonLink="/services"
+      />
 
       <FAQ />
 

@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
+import CTASection from "@/components/CTASection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { GraduationCap, CheckCircle } from "lucide-react";
@@ -85,6 +86,12 @@ const LMSCourses = () => {
           </div>
         </div>
       </section>
+
+      <CTASection 
+        title="Ready to launch your online program?"
+        buttonText="Build Your Course"
+        buttonLink="/contact"
+      />
 
       <FAQ />
 

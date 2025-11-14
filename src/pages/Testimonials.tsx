@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import ContactForm from "@/components/ContactForm";
+import CTASection from "@/components/CTASection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import hraiLogo from "@/assets/hrai-logo.png";
@@ -126,6 +127,12 @@ const Testimonials = () => {
           <ContactForm />
         </div>
       </section>
+
+      <CTASection 
+        title="Ready to experience this level of support?"
+        buttonText="Start Working Together"
+        buttonLink="/contact"
+      />
 
       <FAQ />
 

@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
+import CTASection from "@/components/CTASection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Globe, CheckCircle } from "lucide-react";
@@ -85,6 +86,12 @@ const WebServices = () => {
           </div>
         </div>
       </section>
+
+      <CTASection 
+        title="Ready to refresh your website?"
+        buttonText="Get Expert Guidance"
+        buttonLink="/contact"
+      />
 
       <FAQ />
 
