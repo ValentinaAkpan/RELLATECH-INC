@@ -103,7 +103,7 @@ const Chatbot = () => {
           {/* Header */}
           <div className="bg-primary text-primary-foreground p-4 rounded-t-lg">
             <h3 className="font-bold text-lg">Rellatech Assistant</h3>
-            <p className="text-sm opacity-90">Ask me about our services</p>
+            <p className="text-sm opacity-90">Ask me about my services</p>
           </div>
 
           {/* Messages */}

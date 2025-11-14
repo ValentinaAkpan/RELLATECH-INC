@@ -34,7 +34,7 @@ const FAQ = () => {
     },
     {
       question: "How do I get started?",
-      answer: "Getting started is simple! Fill out the contact form or email me at valentina@rellatech.io. I'll schedule a consultation call to understand your needs and discuss how I can support you. From there, I'll create a customized plan and we can begin working together."
+      answer: "Getting started is simple! Fill out the contact form or email me at valentina@rellatech.io. I'll schedule a consultation call to understand your needs and discuss how I can support you. From there, I'll create a customized plan and I can begin working with you."
     },
     {
       question: "What makes Rellatech different from other virtual assistant services?",

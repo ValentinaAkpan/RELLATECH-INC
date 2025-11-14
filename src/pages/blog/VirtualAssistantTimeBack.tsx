@@ -331,7 +331,7 @@ const VirtualAssistantTimeBack = () => {
 
       <CTASection 
         title="Ready to reclaim your time?"
-        buttonText="Learn About Our Services"
+        buttonText="Learn About My Services"
         buttonLink="/services"
       />
 

@@ -62,7 +62,7 @@ const Contact = () => {
 
       <CTASection 
         title="Still have questions?"
-        buttonText="View Our FAQ"
+        buttonText="View My FAQ"
         buttonLink="/faq"
       />
 
