@@ -12,10 +12,18 @@ const Blog = () => {
     {
       title: "How a Virtual Assistant Helps You Get Your Time Back",
       excerpt: "Find clarity, calm, and steady support in the moments you need it most. Discover how a virtual assistant changes the rhythm of your day.",
-      date: "March 20, 2024",
+      date: "November 14, 2025",
       category: "Productivity",
       slug: "virtual-assistant-time-back",
       image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80"
+    },
+    {
+      title: "When Your Workday Feels Too Heavy, Here Is Where You Begin",
+      excerpt: "A gentle guide for anyone carrying more than they planned to. Learn how to recognize overwhelm, release invisible work, and invite support before stress takes over.",
+      date: "November 14, 2025",
+      category: "Work-Life Balance",
+      slug: "workday-too-heavy",
+      image: "https://images.unsplash.com/photo-1455849318743-b2233052fcff?w=800&q=80"
     }
   ];
 
