@@ -1,141 +1,184 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import ContactForm from "@/components/ContactForm";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, Calendar, MessageSquare, MapPin } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
+import { Loader2 } from "lucide-react";
 
 const Contact = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Basic validation
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+      toast({
+        title: "Error",
+        description: "Please fill in all fields",
+        variant: "destructive",
+      });
+      setIsSubmitting(false);
+      return;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      toast({
+        title: "Error",
+        description: "Please enter a valid email address",
+        variant: "destructive",
+      });
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      // Create mailto link with form data
+      const subject = encodeURIComponent(`Contact from ${formData.name}`);
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+      );
+      
+      window.location.href = `mailto:valentina@rellatech.io?subject=${subject}&body=${body}`;
+
+      toast({
+        title: "Success!",
+        description: "Your email client will open. Please send the message to complete your submission.",
+      });
+
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        message: ""
+      });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try emailing valentina@rellatech.io directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      {/* Hero Section */}
+      {/* Contact Section */}
       <section className="py-20 px-4">
-        <div className="container mx-auto text-center max-w-4xl">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">
-            Let's Work Together
-          </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground">
-            Serving Canadian businesses from coast to coast. Get your free guide and take back control of your time.
-          </p>
-        </div>
-      </section>
-
-      {/* Contact Form */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <ContactForm />
-        </div>
-      </section>
-
-      {/* Contact Methods */}
-      <section className="py-16 px-4 bg-muted/30">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-foreground">Other Ways to Connect</h2>
-          </div>
-          <div className="grid md:grid-cols-4 gap-6 mb-12">
-            <Card className="border-border text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <Mail className="w-6 h-6 text-primary" />
-                </div>
-                <CardTitle className="text-lg">Email Me</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="mb-4">
-                  Send me a message and I'll respond within 24 hours
-                </CardDescription>
-                <Button asChild variant="outline" className="w-full">
-                  <a href="mailto:valentina@rellatech.io">
-                    valentina@rellatech.io
-                  </a>
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="border-border text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mx-auto mb-4">
-                  <Calendar className="w-6 h-6 text-accent" />
-                </div>
-                <CardTitle className="text-lg">Schedule a Call</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="mb-4">
-                  Book a free 30-minute consultation call
-                </CardDescription>
-                <Button asChild variant="outline" className="w-full">
-                  <a href="mailto:valentina@rellatech.io?subject=Schedule a Call">
-                    Book a Call
-                  </a>
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="border-border text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <MessageSquare className="w-6 h-6 text-primary" />
-                </div>
-                <CardTitle className="text-lg">Quick Question</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="mb-4">
-                  Have a quick question? Drop me a line
-                </CardDescription>
-                <Button asChild variant="outline" className="w-full">
-                  <a href="mailto:valentina@rellatech.io?subject=Quick Question">
-                    Send Message
-                  </a>
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="border-border text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="w-6 h-6 text-primary" />
-                </div>
-                <CardTitle className="text-lg">Serving All of Canada</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="mb-4">
-                  Remote support for businesses across Canada
-                </CardDescription>
-                <p className="text-sm font-semibold text-primary">
-                  Coast to Coast Coverage
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Additional Info */}
-          <Card className="border-border">
-            <CardHeader className="text-center">
-              <CardTitle className="text-2xl">Why Canadian Businesses Choose Rellatech</CardTitle>
-              <CardDescription className="text-base">
-                From solo entrepreneurs to scaling teams, I help Canadian businesses reclaim their time and focus on growth.
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="text-center">
-              <div className="max-w-2xl mx-auto space-y-4 text-muted-foreground">
-                <p>
-                  <strong className="text-foreground">Response Time:</strong> I respond to all inquiries within 24 hours during business days.
-                </p>
-                <p>
-                  <strong className="text-foreground">Location:</strong> Serving businesses across Canada remotely
-                </p>
-                <p>
-                  <strong className="text-foreground">Team Sizes:</strong> From solo entrepreneurs to teams of 50+
-                </p>
-                <p>
-                  <strong className="text-foreground">Services:</strong> Executive assistance, administrative support, project management, web development, data analysis, automation, and more.
+        <div className="container mx-auto max-w-5xl">
+          <div className="grid md:grid-cols-2 gap-16 items-start">
+            {/* Left Side - Text Content */}
+            <div className="space-y-8">
+              <div>
+                <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">
+                  Let's Connect
+                </h1>
+                <p className="text-xl text-muted-foreground leading-relaxed">
+                  Ready to bring calm and clarity to your workload? I'd love to hear about what you're working on and explore how I can support you.
                 </p>
               </div>
-            </CardContent>
-          </Card>
+
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-2xl font-bold mb-3 text-foreground">Get In Touch</h3>
+                  <p className="text-lg text-muted-foreground mb-4">
+                    Fill out the form and I'll get back to you within 24 hours. Or email me directly at:
+                  </p>
+                  <a 
+                    href="mailto:valentina@rellatech.io" 
+                    className="text-2xl font-semibold text-primary hover:underline"
+                  >
+                    valentina@rellatech.io
+                  </a>
+                </div>
+
+                <div className="pt-6 border-t border-border">
+                  <h3 className="text-xl font-bold mb-3 text-foreground">Based in Canada</h3>
+                  <p className="text-muted-foreground">
+                    Serving clients locally and internationally through virtual support.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Side - Contact Form */}
+            <div className="bg-muted/30 p-8 rounded-lg border border-border">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="space-y-2">
+                  <Label htmlFor="name" className="text-base">Name *</Label>
+                  <Input
+                    id="name"
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    placeholder="Your name"
+                    required
+                    maxLength={100}
+                    className="h-12"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="email" className="text-base">Email *</Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    placeholder="your.email@example.com"
+                    required
+                    maxLength={255}
+                    className="h-12"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="message" className="text-base">Message *</Label>
+                  <Textarea
+                    id="message"
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    placeholder="Tell me about your needs and how I can help..."
+                    required
+                    maxLength={1000}
+                    rows={6}
+                    className="resize-none"
+                  />
+                </div>
+
+                <Button 
+                  type="submit" 
+                  size="lg" 
+                  disabled={isSubmitting}
+                  className="w-full text-lg h-12"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    'Send Message'
+                  )}
+                </Button>
+              </form>
+            </div>
+          </div>
         </div>
       </section>
 

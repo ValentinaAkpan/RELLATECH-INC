@@ -93,9 +93,6 @@ const About = () => {
                 <p>
                   Valentina believes that great support is built on listening, adapting, and treating every client's workload with the same care they would give it themselves. Her vision offers clients dependable service that feels personal, professional, and refreshingly straightforward. She values balance and believes that when your business operations are organised, your mind feels clearer and your days feel lighter.
                 </p>
-                <p>
-                  Valentina seamlessly blends creativity with structured efficiency, knowing when to bring process and when to offer flexibility. Her approach ensures that clients receive the right kind of support at the right time—helping them stay focused on their vision while she handles the details that keep everything moving forward.
-                </p>
               </div>
             </div>
           </div>
