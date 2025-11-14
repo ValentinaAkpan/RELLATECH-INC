@@ -54,23 +54,32 @@ const Blog = () => {
             {posts.map((post, index) => (
               <Card key={index} className="overflow-hidden border-2 border-border hover:shadow-xl transition-shadow">
                 <Link to={`/blog/${post.slug}`}>
-                  <div className="p-6 md:p-8">
-                    <div className="flex items-center gap-4 mb-4">
-                      <span className="text-sm font-semibold text-primary">{post.category}</span>
-                      <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <Calendar className="w-4 h-4" />
-                        <span>{post.date}</span>
-                      </div>
+                  <div className="grid md:grid-cols-3 gap-6">
+                    <div className="md:col-span-1">
+                      <img 
+                        src={post.image}
+                        alt={post.title}
+                        className="w-full h-64 md:h-full object-cover"
+                      />
                     </div>
-                    <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 hover:text-primary transition-colors">
-                      {post.title}
-                    </h2>
-                    <p className="text-muted-foreground leading-relaxed mb-6">
-                      {post.excerpt}
-                    </p>
-                    <Button variant="outline">
-                      Read Article
-                    </Button>
+                    <div className="md:col-span-2 p-6 md:p-8">
+                      <div className="flex items-center gap-4 mb-4">
+                        <span className="text-sm font-semibold text-primary">{post.category}</span>
+                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                          <Calendar className="w-4 h-4" />
+                          <span>{post.date}</span>
+                        </div>
+                      </div>
+                      <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 hover:text-primary transition-colors">
+                        {post.title}
+                      </h2>
+                      <p className="text-muted-foreground leading-relaxed mb-6">
+                        {post.excerpt}
+                      </p>
+                      <Button variant="outline">
+                        Read Article
+                      </Button>
+                    </div>
                   </div>
                 </Link>
               </Card>
