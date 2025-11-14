@@ -5,21 +5,33 @@ import { Card } from "@/components/ui/card";
 const Testimonials = () => {
   const testimonials = [
     {
-      quote: "Working with Valentina has been transformative for my business. She handles all the administrative details that used to consume my days, allowing me to focus on growth and client relationships. Her attention to detail and proactive communication are exceptional.",
-      author: "Sarah M.",
-      role: "Business Consultant",
+      quote: "I'm in the imagination business but can't imagine a Virtual Assistant with more initiative, intelligence and instinct than Valentina. Did you notice that her initials are V.A? What more do you need?",
+      author: "Lorne Silver",
+      role: "HR & AI Professional",
       rating: 5
     },
     {
-      quote: "I was drowning in emails and calendar conflicts before Rellatech. Now everything runs smoothly, and I actually have time to focus on strategic work. Valentina's organizational skills are truly remarkable.",
-      author: "Michael T.",
-      role: "Tech Entrepreneur",
+      quote: "I hired Valentina to manage the many administrative tasks that had started to take too much time away from the strategic work of running my business. After a quick onboarding she jumped in right away and started making a huge difference, reducing my stress and helping me focus on other things. I also trust her to take care of my personal matters for me, helping me and family stay on top of our appointments and other commitments. I highly recommend her!",
+      author: "Natalie Hill",
+      role: "Business Owner",
       rating: 5
     },
     {
-      quote: "The automation support has saved us countless hours every week. Valentina took the time to understand our workflows and implemented systems that just work. Highly recommend!",
-      author: "Jennifer L.",
-      role: "Marketing Director",
+      quote: "Valentina is an incredible virtual assistant. She works with me and my team quickly, she's very responsive, and she finds great solutions to the issues I ask for help with. Couldn't recommend her more!",
+      author: "Hilary Farson",
+      role: "Spur Communications",
+      rating: 5
+    },
+    {
+      quote: "Rellatech Virtual Assistant Services has been an absolute game-changer for me. Their team is professional, efficient, and always delivers top-quality work.",
+      author: "Faith Decent Emezie",
+      role: "Business Professional",
+      rating: 5
+    },
+    {
+      quote: "Top notch services 📌",
+      author: "Azi Embellish",
+      role: "Spur Communications",
       rating: 5
     }
   ];
@@ -43,15 +55,15 @@ const Testimonials = () => {
       {/* Testimonials Grid */}
       <section className="py-20 px-4 bg-background">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="p-8 space-y-6">
+              <Card key={index} className="p-8 space-y-6 flex flex-col">
                 <div className="flex gap-1 text-amber-500">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <span key={i} className="text-2xl">★</span>
                   ))}
                 </div>
-                <p className="text-muted-foreground italic leading-relaxed">
+                <p className="text-muted-foreground italic leading-relaxed flex-grow">
                   "{testimonial.quote}"
                 </p>
                 <div className="border-t pt-4">
