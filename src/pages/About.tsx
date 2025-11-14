@@ -2,9 +2,10 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Briefcase, Puzzle, Handshake, TrendingUp } from "lucide-react";
+import { Briefcase, Puzzle, Handshake, TrendingUp, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import rellatechLogo from "@/assets/rellatech-logo.png";
+import valentinaProfile from "@/assets/valentina-profile.png";
 
 const About = () => {
   return (
@@ -64,11 +65,11 @@ const About = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="flex justify-center">
-              <div className="w-full max-w-md aspect-square bg-primary/10 rounded-lg flex items-center justify-center">
+              <div className="w-full max-w-md aspect-square rounded-lg overflow-hidden shadow-xl">
                 <img
-                  src={rellatechLogo}
-                  alt="Rellatech"
-                  className="w-3/4 opacity-50"
+                  src={valentinaProfile}
+                  alt="Valentina Rella"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
@@ -88,6 +89,70 @@ const About = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Featured Article Section */}
+      <section className="py-20 px-4 bg-background">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Featured</h2>
+            <p className="text-xl text-muted-foreground">
+              Recognised for innovation, creativity, and exceptional client service
+            </p>
+          </div>
+          
+          <Card className="border-border shadow-lg">
+            <CardHeader className="space-y-4">
+              <div className="flex items-start justify-between gap-4">
+                <div className="space-y-2">
+                  <CardTitle className="text-2xl md:text-3xl">
+                    Virtual Assistant Profile: How AI Became Her Superpower
+                  </CardTitle>
+                  <p className="text-sm text-muted-foreground">Featured by Virtual Gurus • October 31, 2025</p>
+                </div>
+              </div>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div className="prose prose-lg max-w-none">
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Valentina Akpan is celebrated as one of Virtual Gurus' most innovative assistants, known for her creative use of AI, steady focus, and ability to give clients back their most valuable resource: time.
+                </p>
+                
+                <div className="bg-muted/50 border-l-4 border-primary p-6 my-6 rounded-r-lg">
+                  <p className="text-lg italic text-foreground">
+                    "I always ask myself first, can AI help with the heavy lifting? If it can, I use it. If not, I do it manually. But I never stop until I find a better way."
+                  </p>
+                </div>
+
+                <div className="space-y-4 text-muted-foreground">
+                  <p>
+                    <strong className="text-foreground">Building Smart Solutions:</strong> For one client spending over $20,000 a year on transcription services, Valentina engineered an AI-powered workflow that automated the process, saving thousands of dollars and reclaiming countless hours.
+                  </p>
+                  
+                  <p>
+                    <strong className="text-foreground">From Timid to Unstoppable:</strong> Valentina's transformation from a shy newcomer to Canada to a confident virtual assistant who leads meetings and manages complex projects showcases her resilience and dedication to continuous growth.
+                  </p>
+                  
+                  <p>
+                    <strong className="text-foreground">People-First Approach:</strong> Beyond automation, Valentina's commitment to her clients includes catching critical errors on days off and ensuring projects stay on track, combining technical expertise with genuine care.
+                  </p>
+                </div>
+              </div>
+
+              <div className="pt-4">
+                <Button asChild variant="outline" className="gap-2">
+                  <a 
+                    href="https://thevirtualgurus.com/blog/virtual-assistant-profile-valentina" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    Read Full Article <ExternalLink className="w-4 h-4" />
+                  </a>
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
