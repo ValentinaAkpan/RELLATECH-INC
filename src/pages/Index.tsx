@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import ContactForm from "@/components/ContactForm";
+import CTASection from "@/components/CTASection";
 import { WorkbookOfferDialog } from "@/components/WorkbookOfferDialog";
 import { Button } from "@/components/ui/button";
 import { Mail, Calendar, FileText, TrendingUp, Megaphone, Settings, Globe, GraduationCap, BookOpen, BarChart, Palette, Presentation } from "lucide-react";
@@ -312,6 +313,9 @@ const Index = () => {
           <ContactForm />
         </div>
       </section>
+
+      {/* CTA Section */}
+      <CTASection />
 
       {/* FAQ Section */}
       <FAQ />

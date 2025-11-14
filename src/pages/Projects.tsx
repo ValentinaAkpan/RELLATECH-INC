@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import ContactForm from "@/components/ContactForm";
+import CTASection from "@/components/CTASection";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink } from "lucide-react";
@@ -111,6 +112,12 @@ const Projects = () => {
           <ContactForm />
         </div>
       </section>
+
+      <CTASection 
+        title="Want results like these for your business?"
+        buttonText="Start Your Project"
+        buttonLink="/contact"
+      />
 
       <FAQ />
 

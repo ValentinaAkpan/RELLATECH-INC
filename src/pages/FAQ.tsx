@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FAQComponent from "@/components/FAQ";
 import ContactForm from "@/components/ContactForm";
+import CTASection from "@/components/CTASection";
 
 const FAQ = () => {
   return (
@@ -36,6 +37,13 @@ const FAQ = () => {
           <ContactForm />
         </div>
       </section>
+
+      <CTASection 
+        title="Need personalized guidance?"
+        buttonText="Get In Touch"
+        buttonLink="/contact"
+      />
+
       <Footer />
     </div>
   );

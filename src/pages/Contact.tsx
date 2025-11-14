@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import ContactForm from "@/components/ContactForm";
+import CTASection from "@/components/CTASection";
 
 const Contact = () => {
   return (
@@ -58,6 +59,12 @@ const Contact = () => {
           </div>
         </div>
       </section>
+
+      <CTASection 
+        title="Still have questions?"
+        buttonText="View Our FAQ"
+        buttonLink="/faq"
+      />
 
       <FAQ />
 
