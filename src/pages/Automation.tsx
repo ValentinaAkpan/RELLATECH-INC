@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import FAQ from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Zap, Workflow, Clock, TrendingUp, CheckCircle, ArrowRight } from "lucide-react";
@@ -213,6 +214,8 @@ const Automation = () => {
           </Button>
         </div>
       </section>
+
+      <FAQ />
 
       <Footer />
     </div>

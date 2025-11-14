@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import FAQ from "@/components/FAQ";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink } from "lucide-react";
@@ -112,6 +113,8 @@ const Projects = () => {
           </a>
         </div>
       </section>
+
+      <FAQ />
 
       <Footer />
     </div>

@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import FAQ from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, FileText, TrendingUp, Megaphone, Settings, Globe, GraduationCap, Film, BookOpen, BarChart, Smartphone, Palette, Presentation } from "lucide-react";
@@ -196,6 +197,8 @@ const Index = () => {
           </p>
         </div>
       </section>
+
+      <FAQ />
 
       <Footer />
     </div>

@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import FAQ from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Briefcase, Heart, Handshake, ExternalLink } from "lucide-react";
@@ -20,7 +21,7 @@ const About = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${aboutHero})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/85 to-primary/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/70 via-primary/60 to-primary/50"></div>
         </div>
         
         {/* Decorative circles */}
@@ -252,6 +253,8 @@ const About = () => {
           </p>
         </div>
       </section>
+
+      <FAQ />
 
       <Footer />
     </div>
