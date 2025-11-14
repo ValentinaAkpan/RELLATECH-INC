@@ -107,18 +107,6 @@ const FAQ = () => {
             );
           })}
         </Accordion>
-
-        <div className="mt-16 text-center p-8 bg-muted/50 rounded-xl border border-border">
-          <p className="text-lg text-muted-foreground mb-4">
-            Still have questions?
-          </p>
-          <a 
-            href="mailto:valentina@rellatech.io" 
-            className="text-xl font-semibold text-primary hover:underline inline-flex items-center gap-2"
-          >
-            valentina@rellatech.io
-          </a>
-        </div>
       </div>
     </section>
   );
