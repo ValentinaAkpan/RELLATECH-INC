@@ -92,8 +92,10 @@ const GraphicDesign = () => {
             </p>
           </div>
 
-          <Link 
-            to="/contact"
+          <a 
+            href="https://drive.google.com/drive/folders/101XGE6B192THcd3fBhfIqGM67DTRU3Fg?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={handlePortfolioClick}
             className="group block relative overflow-hidden rounded-xl bg-card border-2 border-border hover:border-teal-500 transition-all duration-300 hover:shadow-xl"
           >
@@ -118,7 +120,7 @@ const GraphicDesign = () => {
                 </span>
               </div>
             </div>
-          </Link>
+          </a>
         </div>
       </section>
 
