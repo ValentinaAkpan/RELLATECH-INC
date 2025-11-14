@@ -23,12 +23,10 @@ const Navigation = () => {
     { name: "CRMs and Automation", slug: "crms-automation" },
     { name: "Web Services", slug: "web-services" },
     { name: "LMS and Online Courses", slug: "lms-courses" },
-    { name: "Animation Support", slug: "animation" },
     { name: "eBook Design", slug: "ebook-design" },
     { name: "Business Reports", slug: "business-reports" },
     { name: "Graphic and Print Design", slug: "graphic-design" },
-    { name: "Pitch Decks", slug: "pitch-decks" },
-    { name: "App Guidance", slug: "app-guidance" }
+    { name: "Pitch Decks", slug: "pitch-decks" }
   ];
 
   return (
