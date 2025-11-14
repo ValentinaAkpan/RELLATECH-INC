@@ -19,7 +19,7 @@ const Footer = () => {
       <div className="absolute bottom-20 right-0 w-24 h-24 rounded-full bg-accent/20" style={{ transform: 'translateX(50%)' }}></div>
       
       <div className="container mx-auto max-w-6xl relative z-10">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
+        <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Location */}
           <div className="border-l-4 border-accent pl-6">
             <h3 className="text-2xl font-bold mb-4">
@@ -67,6 +67,33 @@ const Footer = () => {
             </div>
           </div>
 
+          {/* Quick Access */}
+          <div className="border-l-4 border-accent pl-6">
+            <h3 className="text-2xl font-bold mb-4">
+              Quick Access
+            </h3>
+            <nav className="space-y-2">
+              <a href="/about" className="block opacity-90 hover:opacity-100 transition-opacity">
+                About
+              </a>
+              <a href="/services" className="block opacity-90 hover:opacity-100 transition-opacity">
+                Services
+              </a>
+              <a href="/testimonials" className="block opacity-90 hover:opacity-100 transition-opacity">
+                Testimonials
+              </a>
+              <a href="/blog" className="block opacity-90 hover:opacity-100 transition-opacity">
+                Blog
+              </a>
+              <a href="/faq" className="block opacity-90 hover:opacity-100 transition-opacity">
+                FAQ
+              </a>
+              <a href="/contact" className="block opacity-90 hover:opacity-100 transition-opacity">
+                Contact
+              </a>
+            </nav>
+          </div>
+
           {/* Back to Top */}
           <div className="flex items-end justify-end">
             <Button
@@ -82,16 +109,26 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-primary-foreground/20 pt-8 text-center">
-          <p className="text-sm opacity-75 flex items-center justify-center gap-2 flex-wrap">
-            © 2023-2025 RELLATECH. Website by
-            <a href="https://rellatech.io" className="hover:opacity-100 transition-opacity uppercase font-semibold">
-              RELLATECH INC
-            </a>
-            . Made in
-            <img src={flagCanada} alt="Canada" className="h-4 inline" />
-            <img src={flagNigeria} alt="Nigeria" className="h-4 inline" />
-          </p>
+        <div className="border-t border-primary-foreground/20 pt-8">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-center">
+            <p className="text-sm opacity-75">
+              © 2023-2025 RELLATECH. Website by{" "}
+              <a href="https://rellatech.io" className="hover:opacity-100 transition-opacity uppercase font-semibold">
+                RELLATECH INC
+              </a>
+            </p>
+            
+            <div className="flex items-center gap-6">
+              <div className="flex items-center gap-2">
+                <img src={flagNigeria} alt="Nigeria" className="h-5" />
+              </div>
+              
+              <div className="flex items-center gap-2">
+                <span className="text-sm opacity-75">Made in</span>
+                <img src={flagCanada} alt="Canada" className="h-5" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
