@@ -1,8 +1,9 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ContactForm from "@/components/ContactForm";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, Calendar, MessageSquare } from "lucide-react";
+import { Mail, Calendar, MessageSquare, MapPin } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -16,15 +17,25 @@ const Contact = () => {
             Let's Work Together
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground">
-            Ready to streamline your business and reclaim your time? Get in touch today.
+            Serving Canadian businesses from coast to coast. Get your free guide and take back control of your time.
           </p>
         </div>
       </section>
 
-      {/* Contact Methods */}
+      {/* Contact Form */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-4xl">
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
+          <ContactForm />
+        </div>
+      </section>
+
+      {/* Contact Methods */}
+      <section className="py-16 px-4 bg-muted/30">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4 text-foreground">Other Ways to Connect</h2>
+          </div>
+          <div className="grid md:grid-cols-4 gap-6 mb-12">
             <Card className="border-border text-center hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
@@ -81,33 +92,48 @@ const Contact = () => {
                 </Button>
               </CardContent>
             </Card>
+
+            <Card className="border-border text-center hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="w-6 h-6 text-primary" />
+                </div>
+                <CardTitle className="text-lg">Serving All of Canada</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="mb-4">
+                  Remote support for businesses across Canada
+                </CardDescription>
+                <p className="text-sm font-semibold text-primary">
+                  Coast to Coast Coverage
+                </p>
+              </CardContent>
+            </Card>
           </div>
 
-          {/* Contact Form Alternative */}
-          <Card className="border-border bg-muted/30">
+          {/* Additional Info */}
+          <Card className="border-border">
             <CardHeader className="text-center">
-              <CardTitle className="text-2xl">What Can I Help You With?</CardTitle>
+              <CardTitle className="text-2xl">Why Canadian Businesses Choose Rellatech</CardTitle>
               <CardDescription className="text-base">
-                Whether you need executive support, project management, or technical assistance, I'm here to help streamline your business.
+                From solo entrepreneurs to scaling teams, I help Canadian businesses reclaim their time and focus on growth.
               </CardDescription>
             </CardHeader>
             <CardContent className="text-center">
               <div className="max-w-2xl mx-auto space-y-4 text-muted-foreground">
                 <p>
-                  <strong className="text-foreground">Response Time:</strong> I typically respond to all inquiries within 24 hours during business days.
+                  <strong className="text-foreground">Response Time:</strong> I respond to all inquiries within 24 hours during business days.
                 </p>
                 <p>
-                  <strong className="text-foreground">Availability:</strong> Monday - Friday, 9 AM - 5 PM EST
+                  <strong className="text-foreground">Location:</strong> Serving businesses across Canada remotely
                 </p>
                 <p>
-                  <strong className="text-foreground">Services:</strong> Executive Assistant, Administrative Support, Project Management, Web Development, Data Analysis, and more.
+                  <strong className="text-foreground">Team Sizes:</strong> From solo entrepreneurs to teams of 50+
+                </p>
+                <p>
+                  <strong className="text-foreground">Services:</strong> Executive assistance, administrative support, project management, web development, data analysis, automation, and more.
                 </p>
               </div>
-              <Button asChild size="lg" className="mt-8">
-                <a href="mailto:valentina@rellatech.io">
-                  Get Started Today
-                </a>
-              </Button>
             </CardContent>
           </Card>
         </div>

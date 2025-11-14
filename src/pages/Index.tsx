@@ -14,10 +14,10 @@ const Index = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto text-center max-w-4xl">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">
-            Professional Fractional Support for Your Business
+            Are You Overwhelmed with Business Tasks Yet Underwhelmed with Business Growth?
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-            Welcome to <span className="text-primary font-semibold">Rellatech</span>. I'm Valentina, your trusted partner in streamlining the busywork so you can focus on what matters most.
+            Get back in the CEO seat! Whether you're a small team or scaling fast across Canada, <span className="text-primary font-semibold">Rellatech</span> helps you reclaim your time with organized systems, calm communication, and reliable tech support.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild className="text-lg">
@@ -34,9 +34,9 @@ const Index = () => {
       <section id="about" className="py-16 px-4 bg-muted/30">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">About Me</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Supporting Canadian Businesses Coast to Coast</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              I help you reclaim your time with calm, clarity, and expert support so you can focus on what truly matters.
+              From solo entrepreneurs to growing teams, I help Canadian businesses reclaim their time with calm, clarity, and expert fractional support tailored to your needs.
             </p>
           </div>
           
@@ -133,10 +133,10 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-              Focus on What Matters. Let Me Handle the Rest.
+              Focus on Growing Your Business. Let Me Handle the Rest.
             </h2>
             <p className="text-xl text-muted-foreground">
-              Discover my services tailored to your business needs
+              Professional fractional services for Canadian businesses of all sizes
             </p>
           </div>
 
@@ -213,12 +213,12 @@ const Index = () => {
       {/* Contact Section */}
       <section id="contact" className="py-16 px-4 bg-muted/30">
         <div className="container mx-auto text-center max-w-2xl">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Ready to Get Started?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Ready to Take Back Your Time?</h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Let's discuss how I can help streamline your business and give you back your time.
+            Grab your guide and get relief today. Serving small teams and large teams across Canada.
           </p>
           <Button size="lg" asChild className="text-lg">
-            <a href="mailto:valentina@rellatech.io">Contact Me Today</a>
+            <Link to="/contact">Get Your Free Guide</Link>
           </Button>
         </div>
       </section>
