@@ -4,7 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { HelpCircle } from "lucide-react";
+import { HelpCircle, ChevronDown } from "lucide-react";
 
 const FAQ = () => {
   const faqs = [
@@ -39,9 +39,9 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-muted/30">
+    <section className="py-20 px-4 bg-background">
       <div className="container mx-auto max-w-4xl">
-        <div className="text-center mb-12">
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
             Frequently Asked Questions
           </h2>
@@ -50,46 +50,36 @@ const FAQ = () => {
           </p>
         </div>
 
-        <Accordion type="single" collapsible className="w-full space-y-3">
-          {faqs.map((faq, index) => {
-            const colors = [
-              'bg-gradient-to-br from-primary to-primary/90',
-              'bg-gradient-to-br from-teal-500 to-teal-600',
-              'bg-gradient-to-br from-accent to-accent/90',
-              'bg-gradient-to-br from-primary to-primary/90',
-              'bg-gradient-to-br from-teal-500 to-teal-600',
-              'bg-gradient-to-br from-accent to-accent/90',
-              'bg-gradient-to-br from-primary to-primary/90'
-            ];
-            return (
-              <AccordionItem 
-                key={index} 
-                value={`item-${index}`}
-                className={`${colors[index]} border-0 rounded-lg overflow-hidden`}
-              >
-                <AccordionTrigger className="text-left text-base md:text-lg font-medium hover:no-underline text-white px-4 md:px-6 py-4 gap-3 group">
-                  <div className="flex items-center gap-3 flex-1">
-                    <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
-                      <HelpCircle className="w-4 h-4 md:w-5 md:h-5 text-white" />
-                    </div>
-                    <span className="flex-1">{faq.question}</span>
+        <Accordion type="single" collapsible className="w-full space-y-6">
+          {faqs.map((faq, index) => (
+            <AccordionItem 
+              key={index} 
+              value={`item-${index}`}
+              className="border-2 border-border rounded-xl overflow-hidden bg-card shadow-sm hover:shadow-md transition-shadow"
+            >
+              <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline px-6 py-6 gap-4 [&[data-state=open]>svg]:rotate-180">
+                <div className="flex items-start gap-4 flex-1">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
+                    <HelpCircle className="w-5 h-5 text-primary" />
                   </div>
-                </AccordionTrigger>
-                <AccordionContent className="text-white/95 leading-relaxed px-4 md:px-6 pl-14 md:pl-20">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            );
-          })}
+                  <span className="flex-1 text-foreground pr-4">{faq.question}</span>
+                </div>
+                <ChevronDown className="h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200" />
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed px-6 pb-6 pl-[4.5rem]">
+                {faq.answer}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
         </Accordion>
 
-        <div className="mt-12 text-center">
+        <div className="mt-16 text-center p-8 bg-muted/50 rounded-xl border border-border">
           <p className="text-lg text-muted-foreground mb-4">
             Still have questions?
           </p>
           <a 
             href="mailto:valentina@rellatech.io" 
-            className="text-xl font-semibold text-primary hover:underline"
+            className="text-xl font-semibold text-primary hover:underline inline-flex items-center gap-2"
           >
             valentina@rellatech.io
           </a>
