@@ -22,14 +22,16 @@ const Blog = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative min-h-[40vh] md:min-h-[50vh] px-4 py-12 md:py-20 overflow-hidden bg-primary">
-        <div className="container mx-auto max-w-6xl relative z-10 min-h-[30vh] md:min-h-[35vh] flex items-center">
-          <div className="max-w-3xl space-y-4 md:space-y-6">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-primary-foreground">
+      {/* Hero Section with Background Image */}
+      <section className="relative min-h-[70vh] px-4 py-20 overflow-hidden" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1920&q=80)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="absolute inset-0 bg-gradient-to-r from-background/98 via-background/95 to-background/85"></div>
+        
+        <div className="container mx-auto max-w-6xl relative z-10 min-h-[60vh] flex items-center">
+          <div className="max-w-2xl space-y-6 bg-background/90 backdrop-blur-md p-10 rounded-lg shadow-xl border-2 border-primary/20">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
               Insights & Resources
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/95 leading-relaxed">
+            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
               Thoughtful guidance on virtual assistance, productivity, and creating calm in your workday.
             </p>
           </div>
