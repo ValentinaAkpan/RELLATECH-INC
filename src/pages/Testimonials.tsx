@@ -13,7 +13,7 @@ const Testimonials = () => {
     {
       quote: "I'm in the imagination business but can't imagine a Virtual Assistant with more initiative, intelligence and instinct than Valentina. Did you notice that her initials are V.A? What more do you need?",
       author: "Lorne Silver",
-      role: "HR & AI Professional",
+      role: "Creative Chameleon • Magnet Maker • Enthusiast",
       company: "HRAI",
       logo: hraiLogo,
       rating: 5
@@ -21,7 +21,7 @@ const Testimonials = () => {
     {
       quote: "I hired Valentina to manage the many administrative tasks that had started to take too much time away from the strategic work of running my business. After a quick onboarding she jumped in right away and started making a huge difference, reducing my stress and helping me focus on other things. I also trust her to take care of my personal matters for me, helping me and family stay on top of our appointments and other commitments. I highly recommend her!",
       author: "Natalie Hill",
-      role: "Business Owner",
+      role: "Founder and Hillary Co-Founder",
       company: "Spur Communications",
       logo: spurLogo,
       rating: 5
