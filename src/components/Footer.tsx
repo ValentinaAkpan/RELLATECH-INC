@@ -2,7 +2,6 @@ import { Mail, MapPin, ArrowUp, Instagram, Linkedin } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import flagCanada from "@/assets/flag-canada.png";
-import flagNigeria from "@/assets/flag-nigeria.png";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -36,7 +35,7 @@ const Footer = () => {
           {/* Contact & Social */}
           <div className="border-l-4 border-accent pl-6">
             <h3 className="text-2xl font-bold mb-4">
-              Reach Out
+              Contact Me
             </h3>
             <a 
               href="mailto:valentina@rellatech.io" 
@@ -111,23 +110,15 @@ const Footer = () => {
         {/* Bottom */}
         <div className="border-t border-primary-foreground/20 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-center">
-            <p className="text-sm opacity-75">
-              © 2023-2025 RELLATECH. Website by{" "}
-              <a href="https://rellatech.io" className="hover:opacity-100 transition-opacity uppercase font-semibold">
-                RELLATECH INC
-              </a>
-            </p>
-            
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
-                <img src={flagNigeria} alt="Nigeria" className="h-5" />
-              </div>
-              
-              <div className="flex items-center gap-2">
-                <span className="text-sm opacity-75">Made in</span>
-                <img src={flagCanada} alt="Canada" className="h-5" />
+                <span className="text-sm font-medium">Made in Canada</span>
+                <img src={flagCanada} alt="Canada flag" className="h-5" />
               </div>
             </div>
+            <p className="text-sm opacity-75">
+              © 2025 Rellatech Inc. All rights reserved.
+            </p>
           </div>
         </div>
       </div>

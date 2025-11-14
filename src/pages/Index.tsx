@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
+import ContactForm from "@/components/ContactForm";
 import { Button } from "@/components/ui/button";
 import { Mail, Calendar, FileText, TrendingUp, Megaphone, Settings, Globe, GraduationCap, BookOpen, BarChart, Palette, Presentation } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -296,6 +297,17 @@ const Index = () => {
               <span className="break-all">valentina@rellatech.io</span>
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 bg-muted/30">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Get Started?</h2>
+            <p className="text-xl text-muted-foreground">Let's discuss how I can support your business</p>
+          </div>
+          <ContactForm />
         </div>
       </section>
 
