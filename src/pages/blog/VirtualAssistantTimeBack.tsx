@@ -10,24 +10,19 @@ const VirtualAssistantTimeBack = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative min-h-[50vh] md:min-h-[70vh] px-4 py-12 md:py-20 overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1920&q=80)` }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-background/98 via-background/92 to-background/80"></div>
-        </div>
+      <section className="relative min-h-[70vh] px-4 py-20 overflow-hidden" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1920&q=80)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="absolute inset-0 bg-gradient-to-r from-background/98 via-background/95 to-background/85"></div>
         
-        <div className="container mx-auto max-w-4xl relative z-10 min-h-[40vh] md:min-h-[55vh] flex items-center">
-          <div className="space-y-4 md:space-y-6 bg-background/40 backdrop-blur-sm p-6 md:p-8 rounded-lg">
+        <div className="container mx-auto max-w-6xl relative z-10 min-h-[60vh] flex items-center">
+          <div className="max-w-2xl space-y-6 bg-background/90 backdrop-blur-md p-10 rounded-lg shadow-xl border-2 border-primary/20">
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <Calendar className="w-4 h-4" />
-              <span>March 20, 2024</span>
+              <span>November 14, 2025</span>
             </div>
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
               How a Virtual Assistant Helps You Get Your Time Back
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
               Find clarity, calm, and steady support in the moments you need it most.
             </p>
           </div>
