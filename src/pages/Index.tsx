@@ -1,29 +1,14 @@
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Clock, CheckCircle, TrendingUp, Shield, Users } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">VP</span>
-            </div>
-            <span className="text-xl font-bold text-foreground">VirtualPea</span>
-          </div>
-          <div className="hidden md:flex gap-6">
-            <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">About</a>
-            <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">Services</a>
-            <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</a>
-          </div>
-          <Button asChild variant="default">
-            <a href="mailto:valentina@rellatech.io">Get Started</a>
-          </Button>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Hero Section */}
       <section className="py-20 px-4">
@@ -32,14 +17,14 @@ const Index = () => {
             Professional Fractional Support for Your Business
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-            Welcome to <span className="text-primary font-semibold">VirtualPea</span>. I'm your trusted partner in streamlining the busywork so you can focus on what matters most.
+            Welcome to <span className="text-primary font-semibold">Rellatech</span>. I'm Valentina, your trusted partner in streamlining the busywork so you can focus on what matters most.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild className="text-lg">
-              <a href="#services">Explore Services</a>
+              <Link to="/about">Learn More About Me</Link>
             </Button>
             <Button size="lg" variant="outline" asChild className="text-lg">
-              <a href="mailto:valentina@rellatech.io">Contact Me</a>
+              <Link to="/contact">Get in Touch</Link>
             </Button>
           </div>
         </div>
@@ -238,13 +223,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-border py-8 px-4">
-        <div className="container mx-auto text-center text-muted-foreground">
-          <p>© {new Date().getFullYear()} VirtualPea. All Rights Reserved.</p>
-          <p className="text-sm mt-2">Smart Support. Real Results.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
