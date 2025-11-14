@@ -11,22 +11,37 @@ const Index = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto text-center max-w-4xl">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">
-            Are You Overwhelmed with Business Tasks Yet Underwhelmed with Business Growth?
-          </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-            Get back in the CEO seat! Whether you're a small team or scaling fast across Canada, <span className="text-primary font-semibold">Rellatech</span> helps you reclaim your time with organized systems, calm communication, and reliable tech support.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild className="text-lg">
-              <Link to="/about">Learn More About Me</Link>
-            </Button>
-            <Button size="lg" variant="outline" asChild className="text-lg">
-              <Link to="/contact">Get in Touch</Link>
-            </Button>
+      <section className="min-h-[80vh] flex items-center justify-center px-4 py-20">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center space-y-8">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary leading-tight">
+              Are you overwhelmed with business tasks yet underwhelmed with business growth?
+            </h1>
+            
+            <div className="space-y-4 max-w-3xl mx-auto">
+              <p className="text-xl md:text-2xl text-foreground font-medium">
+                Get back in the CEO seat!
+              </p>
+              <p className="text-lg md:text-xl text-muted-foreground">
+                Grab your guide and get relief today.
+              </p>
+            </div>
+
+            <div className="pt-6">
+              <Button size="lg" asChild className="text-lg px-8 py-6 h-auto">
+                <Link to="/contact">Get Your Free Guide</Link>
+              </Button>
+            </div>
           </div>
+        </div>
+      </section>
+
+      {/* Supporting Message */}
+      <section className="py-16 px-4 bg-muted/30">
+        <div className="container mx-auto text-center max-w-3xl">
+          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+            Whether you're a <span className="text-primary font-semibold">solo entrepreneur</span>, a <span className="text-primary font-semibold">small team</span>, or <span className="text-primary font-semibold">scaling fast</span> across Canada, Rellatech provides the fractional support you need to focus on what truly matters.
+          </p>
         </div>
       </section>
 
