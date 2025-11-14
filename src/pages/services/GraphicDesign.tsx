@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import FAQ from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Palette, CheckCircle } from "lucide-react";
@@ -84,6 +85,8 @@ const GraphicDesign = () => {
           </div>
         </div>
       </section>
+
+      <FAQ />
 
       <Footer />
     </div>
