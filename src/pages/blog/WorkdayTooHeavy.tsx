@@ -65,7 +65,7 @@ const WorkdayTooHeavy = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] px-4 py-20 overflow-hidden" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1920&q=80)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <section className="relative min-h-[70vh] px-4 py-20 overflow-hidden" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1920&q=80)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/90 to-secondary/85"></div>
         
         <div className="container mx-auto max-w-6xl relative z-10 min-h-[60vh] flex items-center">
@@ -125,8 +125,8 @@ const WorkdayTooHeavy = () => {
               </h2>
               <div className="mb-8 rounded-2xl overflow-hidden shadow-2xl border-4 border-secondary/10">
                 <img 
-                  src="https://images.unsplash.com/photo-1455849318743-b2233052fcff?w=1200&q=80"
-                  alt="Hands resting on desk in reflection"
+                  src="https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=1200&q=80"
+                  alt="Person feeling stressed with hands on head at desk"
                   className="w-full h-64 md:h-96 object-cover"
                 />
               </div>
@@ -167,8 +167,8 @@ const WorkdayTooHeavy = () => {
               </h2>
               <div className="mb-8 rounded-2xl overflow-hidden shadow-2xl border-4 border-accent/10">
                 <img 
-                  src="https://images.unsplash.com/photo-1517842645767-c639042777db?w=1200&q=80"
-                  alt="Notebook with notes and pen on desk"
+                  src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=1200&q=80"
+                  alt="Cluttered desk with scattered papers representing invisible work"
                   className="w-full h-64 md:h-96 object-cover"
                 />
               </div>
@@ -197,8 +197,8 @@ const WorkdayTooHeavy = () => {
               </h2>
               <div className="mb-8 rounded-2xl overflow-hidden shadow-2xl border-4 border-primary/10">
                 <img 
-                  src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=1200&q=80"
-                  alt="Three sticky notes on desk representing focused priorities"
+                  src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&q=80"
+                  alt="Clean organized desk with laptop and notebook"
                   className="w-full h-64 md:h-96 object-cover"
                 />
               </div>
@@ -263,8 +263,8 @@ const WorkdayTooHeavy = () => {
               </h2>
               <div className="mb-8 rounded-2xl overflow-hidden shadow-2xl border-4 border-accent/10">
                 <img 
-                  src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1200&q=80"
-                  alt="Cup of coffee on desk representing comfort and relief"
+                  src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&q=80"
+                  alt="Calm workspace with tea cup representing relief"
                   className="w-full h-64 md:h-96 object-cover"
                 />
               </div>
@@ -303,11 +303,11 @@ const WorkdayTooHeavy = () => {
                 <p className="text-xl font-semibold text-foreground">
                   You are allowed to create a future filled with clarity instead of chaos.
                 </p>
-                <div className="my-8 p-6 bg-background/50 rounded-xl">
-                  <p className="text-2xl font-bold text-primary">
+                <div className="my-8 p-10 bg-gradient-to-r from-primary/30 to-secondary/30 rounded-2xl border-l-8 border-primary shadow-2xl">
+                  <p className="text-3xl md:text-4xl font-bold text-primary mb-3">
                     When you are ready, I am here.
                   </p>
-                  <p className="text-lg mt-2 text-secondary">
+                  <p className="text-2xl md:text-3xl font-bold text-foreground">
                     Steady. Calm. Ready to help you breathe again.
                   </p>
                 </div>
@@ -329,8 +329,9 @@ const WorkdayTooHeavy = () => {
             </div>
 
             {/* Hashtags */}
-            <div className="mt-12 pt-8 border-t-2 border-secondary/20">
-              <div className="flex flex-wrap gap-3 justify-center">
+            <div className="mt-12 pt-8 bg-gradient-to-br from-primary/15 to-secondary/15 rounded-2xl p-8 border-2 border-primary/30">
+              <h3 className="text-2xl font-bold mb-6 text-foreground text-center">Related Topics</h3>
+              <div className="flex flex-wrap gap-4 justify-center">
                 {[
                   '#WorkOverwhelm',
                   '#BurnoutPrevention',
@@ -350,7 +351,7 @@ const WorkdayTooHeavy = () => {
                   <Link
                     key={index}
                     to="/contact"
-                    className="px-4 py-2 bg-gradient-to-r from-secondary/20 to-accent/20 text-secondary font-semibold rounded-full text-sm hover:from-secondary/30 hover:to-accent/30 transition-all shadow-sm hover:shadow-md"
+                    className="px-8 py-4 bg-gradient-to-r from-primary/30 to-secondary/30 hover:from-primary/50 hover:to-secondary/50 text-foreground font-bold rounded-full text-base transition-all duration-300 border-2 border-primary/50 hover:border-primary hover:shadow-xl hover:scale-105"
                   >
                     {tag}
                   </Link>
