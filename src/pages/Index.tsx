@@ -167,12 +167,12 @@ const Index = () => {
         </div>
       </section>
 
-      {/* How We Begin */}
+      {/* How I Begin */}
       <section className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">How We Begin</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">How I Begin</h2>
           <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
-            Your first step is easy. Book a consultation and share what you need. Together we will shape a plan that lifts the weight from your shoulders and brings steady order to your days.
+            Your first step is easy. Book a consultation and share what you need. Together I will shape a plan that lifts the weight from your shoulders and brings steady order to your days.
           </p>
           <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
             You do not have to do everything alone. Let your work feel clear. Let your path feel calm.
@@ -182,7 +182,7 @@ const Index = () => {
               <Link to="/contact">Book a Consultation</Link>
             </Button>
             <p className="text-muted-foreground">
-              Email: <a href="mailto:hello@rellatech.io" className="text-primary hover:underline">hello@rellatech.io</a>
+              Email: <a href="mailto:valentina@rellatech.io" className="text-primary hover:underline">valentina@rellatech.io</a>
             </p>
           </div>
         </div>
