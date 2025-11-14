@@ -45,7 +45,7 @@ const Footer = () => {
               valentina@rellatech.io
             </a>
             
-            <h4 className="text-xl font-bold mb-3">Follow Us</h4>
+            <h4 className="text-xl font-bold mb-3">Follow Me</h4>
             <div className="flex gap-3">
               <a 
                 href="https://www.instagram.com/rellatech/" 
