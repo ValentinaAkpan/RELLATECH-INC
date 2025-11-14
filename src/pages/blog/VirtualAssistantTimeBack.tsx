@@ -295,8 +295,9 @@ const VirtualAssistantTimeBack = () => {
             </div>
 
             {/* Hashtags */}
-            <div className="mt-12 pt-8 border-t-2 border-primary/20">
-              <div className="flex flex-wrap gap-3 justify-center">
+            <div className="mt-12 pt-8 bg-gradient-to-br from-primary/15 to-secondary/15 rounded-2xl p-8 border-2 border-primary/30">
+              <h3 className="text-2xl font-bold mb-6 text-foreground text-center">Related Topics</h3>
+              <div className="flex flex-wrap gap-4 justify-center">
                 {[
                   '#VirtualAssistant',
                   '#TimeManagement',
@@ -316,7 +317,7 @@ const VirtualAssistantTimeBack = () => {
                   <Link
                     key={index}
                     to="/contact"
-                    className="px-4 py-2 bg-gradient-to-r from-primary/20 to-secondary/20 text-primary font-semibold rounded-full text-sm hover:from-primary/30 hover:to-secondary/30 transition-all shadow-sm hover:shadow-md"
+                    className="px-8 py-4 bg-gradient-to-r from-primary/30 to-secondary/30 hover:from-primary/50 hover:to-secondary/50 text-foreground font-bold rounded-full text-base transition-all duration-300 border-2 border-primary/50 hover:border-primary hover:shadow-xl hover:scale-105"
                   >
                     {tag}
                   </Link>
