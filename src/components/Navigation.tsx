@@ -34,7 +34,7 @@ const Navigation = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3">
-            <img src={rellatechLogo} alt="Rellatech" className="h-12 w-12" />
+            <img src={rellatechLogo} alt="Rellatech" className="h-14 w-14 md:h-16 md:w-16" />
           </Link>
           
           {/* Desktop Navigation */}
