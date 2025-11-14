@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
+import ContactForm from "@/components/ContactForm";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "lucide-react";
@@ -76,6 +77,16 @@ const Blog = () => {
               </Card>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 bg-muted/30">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+            <p className="text-xl text-muted-foreground">Have questions or ready to start? Let me know how I can help</p>
+          </div>
+          <ContactForm />
         </div>
       </section>
 

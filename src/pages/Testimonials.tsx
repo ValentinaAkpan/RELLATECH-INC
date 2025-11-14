@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
+import ContactForm from "@/components/ContactForm";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import hraiLogo from "@/assets/hrai-logo.png";
@@ -113,6 +114,16 @@ const Testimonials = () => {
               </a>
             </Button>
           </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 bg-muted/30">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Share Your Feedback</h2>
+            <p className="text-xl text-muted-foreground">Have questions or want to share your experience? Get in touch</p>
+          </div>
+          <ContactForm />
         </div>
       </section>
 

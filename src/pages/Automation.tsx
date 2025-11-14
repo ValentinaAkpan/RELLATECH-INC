@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
+import ContactForm from "@/components/ContactForm";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Zap, Workflow, Clock, TrendingUp, CheckCircle, ArrowRight } from "lucide-react";
@@ -199,19 +200,13 @@ const Automation = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-muted/30">
-        <div className="container mx-auto text-center max-w-2xl">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-            Ready to Automate Your Workflow?
-          </h2>
-          <p className="text-xl text-muted-foreground mb-8">
-            Let's identify opportunities to streamline your business processes
-          </p>
-          <Button asChild size="lg" className="text-lg">
-            <a href="mailto:valentina@rellatech.io?subject=Automation Consultation">
-              Schedule a Free Consultation
-            </a>
-          </Button>
+      <section className="py-20 px-4 bg-muted/30">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Automate Your Workflow?</h2>
+            <p className="text-xl text-muted-foreground">Let's identify opportunities to streamline your business processes</p>
+          </div>
+          <ContactForm />
         </div>
       </section>
 

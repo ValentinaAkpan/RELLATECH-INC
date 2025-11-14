@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FAQComponent from "@/components/FAQ";
+import ContactForm from "@/components/ContactForm";
 
 const FAQ = () => {
   return (
@@ -26,6 +27,15 @@ const FAQ = () => {
       <main className="flex-1">
         <FAQComponent />
       </main>
+      <section className="py-20 px-4 bg-muted/30">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Still Have Questions?</h2>
+            <p className="text-xl text-muted-foreground">Get in touch and I'll be happy to help</p>
+          </div>
+          <ContactForm />
+        </div>
+      </section>
       <Footer />
     </div>
   );
