@@ -96,7 +96,7 @@ const Navigation = () => {
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
-            <Menu className="w-6 h-6 text-foreground" />
+            <Menu className="w-6 h-6 text-primary-foreground" />
           </button>
         </div>
 
@@ -105,14 +105,14 @@ const Navigation = () => {
           <div className="md:hidden mt-4 pb-4 flex flex-col gap-4 animate-fade-in">
             <Link
               to="/"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="text-primary-foreground hover:text-accent transition-colors font-medium"
               onClick={() => setIsOpen(false)}
             >
               Home
             </Link>
             <Link
               to="/about"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="text-primary-foreground hover:text-accent transition-colors font-medium"
               onClick={() => setIsOpen(false)}
             >
               About
@@ -122,7 +122,7 @@ const Navigation = () => {
             <div>
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
-                className="flex items-center justify-between w-full text-muted-foreground hover:text-primary transition-colors"
+                className="flex items-center justify-between w-full text-primary-foreground hover:text-accent transition-colors font-medium"
               >
                 Services
                 <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
@@ -131,7 +131,7 @@ const Navigation = () => {
                 <div className="ml-4 mt-2 space-y-2">
                   <Link
                     to="/services"
-                    className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+                    className="block text-sm text-primary-foreground/90 hover:text-accent transition-colors"
                     onClick={() => setIsOpen(false)}
                   >
                     All Services
@@ -140,7 +140,7 @@ const Navigation = () => {
                     <Link
                       key={service.slug}
                       to={`/services/${service.slug}`}
-                      className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+                      className="block text-sm text-primary-foreground/90 hover:text-accent transition-colors"
                       onClick={() => setIsOpen(false)}
                     >
                       {service.name}
@@ -152,33 +152,33 @@ const Navigation = () => {
 
             <Link
               to="/faq"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="text-primary-foreground hover:text-accent transition-colors font-medium"
               onClick={() => setIsOpen(false)}
             >
               FAQ
             </Link>
             <Link
               to="/testimonials"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="text-primary-foreground hover:text-accent transition-colors font-medium"
               onClick={() => setIsOpen(false)}
             >
               Testimonials
             </Link>
             <Link
               to="/blog"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="text-primary-foreground hover:text-accent transition-colors font-medium"
               onClick={() => setIsOpen(false)}
             >
               Blog
             </Link>
             <Link
               to="/contact"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="text-primary-foreground hover:text-accent transition-colors font-medium"
               onClick={() => setIsOpen(false)}
             >
               Contact
             </Link>
-            <Button asChild variant="default" className="w-full">
+            <Button asChild variant="default" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold">
               <a href="mailto:valentina@rellatech.io">Get Started</a>
             </Button>
           </div>
