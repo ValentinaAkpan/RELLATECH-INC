@@ -30,7 +30,7 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="bg-primary sticky top-0 z-50 shadow-md">
+    <nav className="bg-primary/90 backdrop-blur-lg sticky top-0 z-50 shadow-lg border-b border-primary-foreground/10">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3 bg-background rounded-full p-2">

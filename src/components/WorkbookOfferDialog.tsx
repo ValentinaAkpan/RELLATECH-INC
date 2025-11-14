@@ -98,7 +98,7 @@ export const WorkbookOfferDialog = () => {
           <div className="flex items-center gap-2 justify-center">
             <Sparkles className="h-6 w-6 text-primary animate-pulse" />
             <DialogTitle className="text-3xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-              Free Download
+              The Clarity Reset Workbook
             </DialogTitle>
           </div>
           <DialogDescription className="text-base text-center leading-relaxed">
