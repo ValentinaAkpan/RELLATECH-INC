@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import ContactForm from "@/components/ContactForm";
+import { WorkbookOfferDialog } from "@/components/WorkbookOfferDialog";
 import { Button } from "@/components/ui/button";
 import { Mail, Calendar, FileText, TrendingUp, Megaphone, Settings, Globe, GraduationCap, BookOpen, BarChart, Palette, Presentation } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -79,6 +80,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <WorkbookOfferDialog />
       <Navigation />
 
       {/* Hero Section */}
