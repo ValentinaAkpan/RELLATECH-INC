@@ -80,10 +80,10 @@ const SellingCircusAutomation = () => {
             </p>
           </section>
 
-          {/* Section 2: TinkiFig Profile */}
+          {/* Section 2: Thinkific Profile */}
           <section className="space-y-8">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-              2. Creating the Student Profile in TinkiFig
+              2. Creating the Student Profile in Thinkific
             </h2>
 
             <div className="flex justify-center my-8">
@@ -99,7 +99,7 @@ const SellingCircusAutomation = () => {
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed font-medium">
-              It creates a new student profile in TinkiFig.
+              It creates a new student profile in Thinkific.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
