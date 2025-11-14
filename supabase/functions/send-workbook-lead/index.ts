@@ -22,7 +22,7 @@ const handler = async (req: Request): Promise<Response> => {
     const { name, email }: WorkbookLeadRequest = await req.json();
     console.log("Received workbook lead:", { name, email });
 
-    // Send notification to you
+    // Send notification to valentinaakpan@gmail.com with lead details
     const notificationResult = await resend.emails.send({
       from: "Rellatech <onboarding@resend.dev>",
       to: ["valentinaakpan@gmail.com"],
@@ -32,25 +32,11 @@ const handler = async (req: Request): Promise<Response> => {
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Downloaded:</strong> The Clarity Reset Workbook</p>
+        <br>
+        <p><em>Note: To send thank-you emails to leads, please verify your domain at <a href="https://resend.com/domains">resend.com/domains</a></em></p>
       `,
     });
     console.log("Notification email result:", notificationResult);
-
-    // Send thank you email to the lead
-    const thankYouResult = await resend.emails.send({
-      from: "Rellatech <onboarding@resend.dev>",
-      to: [email],
-      subject: "Your Clarity Reset Workbook is Ready!",
-      html: `
-        <h1>Thank you, ${name}!</h1>
-        <p>Your download of <strong>The Clarity Reset Workbook</strong> is ready.</p>
-        <p>We hope this workbook helps you organize your thoughts and streamline your workflow.</p>
-        <p>If you have any questions or need assistance, feel free to reach out.</p>
-        <br>
-        <p>Best regards,<br>Valentina<br>Rellatech Virtual Assistant Services</p>
-      `,
-    });
-    console.log("Thank you email result:", thankYouResult);
 
     return new Response(
       JSON.stringify({ success: true }),
