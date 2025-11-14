@@ -303,11 +303,11 @@ const WorkdayTooHeavy = () => {
                 <p className="text-xl font-semibold text-foreground">
                   You are allowed to create a future filled with clarity instead of chaos.
                 </p>
-                <div className="my-8 p-6 bg-background/50 rounded-xl">
-                  <p className="text-2xl font-bold text-primary">
+                <div className="my-8 p-8 bg-gradient-to-br from-primary/30 via-secondary/25 to-accent/30 rounded-2xl border-2 border-primary shadow-xl">
+                  <p className="text-3xl font-bold text-primary mb-3">
                     When you are ready, I am here.
                   </p>
-                  <p className="text-lg mt-2 text-secondary">
+                  <p className="text-2xl font-semibold text-secondary">
                     Steady. Calm. Ready to help you breathe again.
                   </p>
                 </div>
