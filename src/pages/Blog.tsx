@@ -32,7 +32,7 @@ const Blog = () => {
       date: "November 14, 2025",
       category: "Productivity",
       slug: "virtual-assistant-time-back",
-      image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80"
+      image: "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=800&q=80"
     },
     {
       title: "When Your Workday Feels Too Heavy, Here Is Where You Begin",
