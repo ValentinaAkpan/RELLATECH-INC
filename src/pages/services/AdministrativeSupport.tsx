@@ -74,16 +74,16 @@ const AdministrativeSupport = () => {
           </h2>
           
           <div className="space-y-6">
-            <div className="bg-background border-2 border-border rounded-lg p-6">
-              <h3 className="text-xl font-bold text-foreground mb-3">1. Initial Consultation</h3>
-              <p className="text-muted-foreground">
-                We discuss your specific administrative needs, current processes, and pain points to create a customized support plan.
+            <div className="bg-background border-2 border-border rounded-lg p-4 sm:p-6">
+              <h3 className="text-lg sm:text-xl font-bold text-foreground mb-3">1. Initial Consultation</h3>
+              <p className="text-sm sm:text-base text-muted-foreground">
+                I discuss your specific administrative needs, current processes, and pain points to create a customized support plan.
               </p>
             </div>
 
-            <div className="bg-background border-2 border-border rounded-lg p-6">
-              <h3 className="text-xl font-bold text-foreground mb-3">2. System Setup</h3>
-              <p className="text-muted-foreground">
+            <div className="bg-background border-2 border-border rounded-lg p-4 sm:p-6">
+              <h3 className="text-lg sm:text-xl font-bold text-foreground mb-3">2. System Setup</h3>
+              <p className="text-sm sm:text-base text-muted-foreground">
                 I learn your preferences, tools, and workflows to provide seamless support that fits naturally into your operations.
               </p>
             </div>
