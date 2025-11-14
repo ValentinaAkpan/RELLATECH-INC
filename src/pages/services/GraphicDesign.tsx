@@ -52,7 +52,7 @@ const GraphicDesign = () => {
             What's Included
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Professional design that elevates your brand presence. From business cards to signage, packaging to promotional materials—creative design that captures your essence and communicates your values. Visual identity that makes lasting impressions.
+            Professional design that elevates your brand presence. From business cards to signage, packaging to promotional materials, creative design that captures your essence and communicates your values. Visual identity that makes lasting impressions.
           </p>
 
           <div className="grid md:grid-cols-2 gap-6 pt-8">

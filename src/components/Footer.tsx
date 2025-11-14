@@ -67,29 +67,13 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Newsletter & Back to Top */}
-          <div>
-            <h3 className="text-2xl font-bold mb-4">
-              JOIN OUR CIRCLE
-            </h3>
-            <div className="flex gap-2 mb-6">
-              <Input 
-                type="email" 
-                placeholder="Enter your email" 
-                className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/60"
-              />
-              <Button 
-                className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold px-6"
-              >
-                SUBMIT
-              </Button>
-            </div>
-            
+          {/* Back to Top */}
+          <div className="flex items-end justify-end">
             <Button
               onClick={scrollToTop}
               variant="outline"
               size="lg"
-              className="bg-accent hover:bg-accent/90 text-accent-foreground border-0 gap-2 w-full font-bold"
+              className="bg-accent hover:bg-accent/90 text-accent-foreground border-0 gap-2 w-full md:w-auto font-bold"
             >
               BACK TO THE TOP
               <ArrowUp className="w-4 h-4" />

@@ -52,7 +52,7 @@ const LMSCourses = () => {
             What's Included
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Transform your knowledge into engaging online programs. Professional setup and support for Kajabi, LearnDash, Kartra, and ThriveCart. Course structure, content upload, student management, and technical support—everything needed to launch and maintain successful online learning programs.
+            Transform your knowledge into engaging online programs. Professional setup and support for Kajabi, LearnDash, Kartra, and ThriveCart. Course structure, content upload, student management, and technical support. Everything needed to launch and maintain successful online learning programs.
           </p>
 
           <div className="grid md:grid-cols-2 gap-6 pt-8">

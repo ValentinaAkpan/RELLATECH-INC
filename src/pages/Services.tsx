@@ -12,7 +12,7 @@ const Services = () => {
       icon: FileText,
       title: "Administrative Support",
       description: "Reliable help with documents, tasks, planning, and day-to-day organisation.",
-      details: "Professional administrative support that keeps your business running smoothly. From document preparation to task management, planning coordination to daily organizational needs—everything handled with care and attention to detail. Focus on your core work while the administrative foundation stays solid.",
+      details: "Professional administrative support that keeps your business running smoothly. From document preparation to task management, planning coordination to daily organizational needs, everything handled with care and attention to detail. Focus on your core work while the administrative foundation stays solid.",
       color: "from-primary to-primary/80"
     },
     {
@@ -47,14 +47,14 @@ const Services = () => {
       icon: GraduationCap,
       title: "LMS and Online Courses",
       description: "Setup and support for Kajabi, LearnDash, Kartra, and ThriveCart to bring your programs to life.",
-      details: "Transform your knowledge into engaging online programs. Professional setup and support for Kajabi, LearnDash, Kartra, and ThriveCart. Course structure, content upload, student management, and technical support—everything needed to launch and maintain successful online learning programs.",
+      details: "Transform your knowledge into engaging online programs. Professional setup and support for Kajabi, LearnDash, Kartra, and ThriveCart. Course structure, content upload, student management, and technical support. Everything needed to launch and maintain successful online learning programs.",
       color: "from-teal-500 to-teal-600"
     },
     {
       icon: BookOpen,
       title: "eBook Design",
       description: "Clean formatting and layout so your writing becomes a polished digital book.",
-      details: "Transform your manuscript into a beautifully formatted digital book. Professional layout design, clean formatting, proper structure, and polished presentation. Your expertise deserves professional presentation—from concept to finished eBook ready for publication.",
+      details: "Transform your manuscript into a beautifully formatted digital book. Professional layout design, clean formatting, proper structure, and polished presentation. Your expertise deserves professional presentation, from concept to finished eBook ready for publication.",
       color: "from-primary to-primary/80"
     },
     {
@@ -68,7 +68,7 @@ const Services = () => {
       icon: Palette,
       title: "Graphic and Print Design",
       description: "Brand visuals, signage, packaging, and creative materials that elevate your presence.",
-      details: "Professional design that elevates your brand presence. From business cards to signage, packaging to promotional materials—creative design that captures your essence and communicates your values. Visual identity that makes lasting impressions.",
+      details: "Professional design that elevates your brand presence. From business cards to signage, packaging to promotional materials, creative design that captures your essence and communicates your values. Visual identity that makes lasting impressions.",
       color: "from-accent to-accent/80"
     },
     {
