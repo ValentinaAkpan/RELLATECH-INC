@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Clock, CheckCircle, TrendingUp, Shield, Users } from "lucide-react";
 import { Link } from "react-router-dom";
+import heroImage from "@/assets/hero-workspace.jpg";
 
 const Index = () => {
   return (
@@ -11,26 +12,38 @@ const Index = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="min-h-[80vh] flex items-center justify-center px-4 py-20">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center space-y-8">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary leading-tight">
-              Are you overwhelmed with business tasks yet underwhelmed with business growth?
-            </h1>
-            
-            <div className="space-y-4 max-w-3xl mx-auto">
-              <p className="text-xl md:text-2xl text-foreground font-medium">
-                Get back in the CEO seat!
-              </p>
-              <p className="text-lg md:text-xl text-muted-foreground">
-                Grab your guide and get relief today.
-              </p>
+      <section className="min-h-[80vh] px-4 py-20">
+        <div className="container mx-auto max-w-7xl">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Text Content */}
+            <div className="space-y-8">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight">
+                Are you overwhelmed with business tasks yet underwhelmed with business growth?
+              </h1>
+              
+              <div className="space-y-4">
+                <p className="text-xl md:text-2xl text-foreground font-medium">
+                  Get back in the CEO seat!
+                </p>
+                <p className="text-lg md:text-xl text-muted-foreground">
+                  Grab your guide and get relief today.
+                </p>
+              </div>
+
+              <div className="pt-4">
+                <Button size="lg" asChild className="text-lg px-8 py-6 h-auto">
+                  <Link to="/contact">Get Your Free Guide</Link>
+                </Button>
+              </div>
             </div>
 
-            <div className="pt-6">
-              <Button size="lg" asChild className="text-lg px-8 py-6 h-auto">
-                <Link to="/contact">Get Your Free Guide</Link>
-              </Button>
+            {/* Hero Image */}
+            <div className="relative">
+              <img
+                src={heroImage}
+                alt="Professional workspace with clean desk setup"
+                className="rounded-lg shadow-2xl w-full h-auto object-cover"
+              />
             </div>
           </div>
         </div>
