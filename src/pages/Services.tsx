@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import ContactForm from "@/components/ContactForm";
 import CTASection from "@/components/CTASection";
+import { BookConsultCTA } from "@/components/BookConsultCTA";
 import { Button } from "@/components/ui/button";
 import { ServiceCard } from "@/components/ServiceCard";
 import { Calendar, FileText, Megaphone, Settings, Globe, GraduationCap, BookOpen, BarChart, Palette, Presentation, CheckCircle2, MessageCircle, Users, TrendingUp } from "lucide-react";
@@ -257,6 +258,9 @@ const Services = () => {
       />
 
       <FAQ />
+      
+      <BookConsultCTA />
+      
       <Footer />
     </div>
   );

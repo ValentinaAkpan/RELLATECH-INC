@@ -23,6 +23,7 @@ All colors MUST be HSL.
     --primary-foreground: 0 0% 100%;
     --primary-light: 185 66% 45%;
     --primary-lighter: 185 60% 60%;
+    --primary-dark: 195 65% 17%;
 
     /* Secondary - Light Neutral */
     --secondary: 200 15% 92%;
@@ -82,6 +83,7 @@ All colors MUST be HSL.
     --primary-foreground: 0 0% 100%;
     --primary-light: 185 66% 55%;
     --primary-lighter: 185 60% 65%;
+    --primary-dark: 195 65% 20%;
 
     --secondary: 200 20% 20%;
     --secondary-foreground: 195 50% 80%;

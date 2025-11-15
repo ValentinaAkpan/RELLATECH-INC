@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import ContactForm from "@/components/ContactForm";
 import CTASection from "@/components/CTASection";
+import { BookConsultCTA } from "@/components/BookConsultCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import hraiLogo from "@/assets/hrai-logo.png";
@@ -150,6 +151,8 @@ const Testimonials = () => {
       />
 
       <FAQ />
+
+      <BookConsultCTA />
 
       <Footer />
     </div>
