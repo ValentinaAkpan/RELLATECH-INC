@@ -19,7 +19,7 @@ const About = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative px-4 py-20 overflow-hidden bg-primary">
+      <section className="relative px-4 py-20 overflow-hidden bg-primary-dark">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-accent/20 rounded-full -translate-y-48 translate-x-48"></div>
           <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent/20 rounded-full translate-y-40 -translate-x-40"></div>
