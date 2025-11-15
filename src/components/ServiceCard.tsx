@@ -1,5 +1,5 @@
 import { LucideIcon } from "lucide-react";
-import { useState } from "react";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 
 interface ServiceCardProps {
   icon: LucideIcon;
@@ -10,34 +10,36 @@ interface ServiceCardProps {
 }
 
 export const ServiceCard = ({ icon: Icon, title, description, detailedDescription, colorClass }: ServiceCardProps) => {
-  const [isFlipped, setIsFlipped] = useState(false);
-
   return (
-    <div 
-      className="relative h-64 cursor-pointer perspective-1000"
-      onClick={() => setIsFlipped(!isFlipped)}
-    >
-      <div className={`relative w-full h-full transition-transform duration-700 transform-style-3d ${isFlipped ? 'rotate-y-180' : ''}`}>
-        {/* Front of card */}
-        <div className={`absolute w-full h-full backface-hidden ${colorClass} bg-opacity-10 border-2 border-opacity-30 ${colorClass.replace('bg-', 'border-')} rounded-xl p-6 flex flex-col items-center justify-center text-center space-y-4 shadow-lg hover:shadow-xl transition-shadow backdrop-blur-sm`}>
-          <div className={`w-16 h-16 rounded-full ${colorClass} flex items-center justify-center shadow-lg`}>
-            <Icon className="w-8 h-8 text-white" />
-          </div>
-          <h3 className="text-xl font-semibold text-white">{title}</h3>
-          <p className="text-sm text-white/90 leading-relaxed">{description}</p>
-        </div>
-        
-        {/* Back of card */}
-        <div className={`absolute w-full h-full backface-hidden ${colorClass} bg-opacity-20 border-2 ${colorClass.replace('bg-', 'border-')} border-opacity-40 rounded-xl p-6 flex flex-col justify-center rotate-y-180 shadow-lg backdrop-blur-sm`}>
-          <div className="space-y-3">
-            <div className={`w-12 h-12 rounded-full ${colorClass} flex items-center justify-center mx-auto shadow-md`}>
-              <Icon className="w-6 h-6 text-white" />
+    <HoverCard openDelay={200}>
+      <HoverCardTrigger asChild>
+        <div className="group relative h-48 cursor-pointer transition-smooth hover-lift">
+          <div className={`w-full h-full ${colorClass} rounded-xl p-6 flex flex-col items-center justify-center text-center space-y-3 shadow-elegant`}>
+            <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center shadow-md group-hover:scale-110 transition-smooth">
+              <Icon className="w-7 h-7 text-white" />
             </div>
-            <h3 className="text-lg font-semibold text-white text-center">{title}</h3>
-            <p className="text-sm text-white/90 leading-relaxed text-center">{detailedDescription}</p>
+            <h3 className="text-lg font-semibold text-white leading-tight">{title}</h3>
+            <p className="text-xs text-white/90 leading-relaxed line-clamp-2">{description}</p>
           </div>
         </div>
-      </div>
-    </div>
+      </HoverCardTrigger>
+      <HoverCardContent 
+        className="w-80 p-6 shadow-xl border-2 bg-card/95 backdrop-blur-xl" 
+        side="top"
+        sideOffset={5}
+      >
+        <div className="space-y-3">
+          <div className="flex items-center gap-3">
+            <div className={`w-10 h-10 rounded-full ${colorClass} flex items-center justify-center shadow-md`}>
+              <Icon className="w-5 h-5 text-white" />
+            </div>
+            <h4 className="font-semibold text-foreground">{title}</h4>
+          </div>
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            {detailedDescription}
+          </p>
+        </div>
+      </HoverCardContent>
+    </HoverCard>
   );
 };
