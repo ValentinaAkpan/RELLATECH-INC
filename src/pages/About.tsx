@@ -17,17 +17,20 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      {/* Hero Section with Background Image */}
-      <section className="relative min-h-[70vh] px-4 py-20 overflow-hidden" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=1920&q=80)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        <div className="absolute inset-0 bg-gradient-to-r from-background/98 via-background/95 to-background/85"></div>
+      {/* Hero Section */}
+      <section className="relative px-4 py-20 overflow-hidden bg-primary">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-accent/20 rounded-full -translate-y-48 translate-x-48"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent/20 rounded-full translate-y-40 -translate-x-40"></div>
+        </div>
         
-        <div className="container mx-auto max-w-6xl relative z-10 min-h-[60vh] flex items-center">
-          <div className="max-w-3xl space-y-6 bg-white/70 dark:bg-background/70 backdrop-blur-xl p-10 rounded-2xl shadow-2xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <div className="max-w-3xl space-y-6 text-primary-foreground py-16">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight">
               About Rellatech
             </h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+            <p className="text-xl md:text-2xl leading-relaxed opacity-95">
               Personal, steady support for individuals, teams, and businesses who want their workload to feel lighter.
             </p>
           </div>
@@ -37,7 +40,7 @@ const About = () => {
       {/* My Approach Section */}
       <section className="py-20 px-4 bg-background">
         <div className="container mx-auto max-w-5xl">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">My Approach</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-8 text-foreground tracking-tight">My Approach</h2>
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
               In a world where business owners often feel stretched too thin, Rellatech offers a different kind of support. I provide more than task completion. I bring calm, clarity, and a steady hand to the behind-the-scenes work that keeps your business running smoothly. My services are thoughtfully crafted for clients who value reliability, personalised attention, and genuine care in every interaction.
@@ -45,9 +48,11 @@ const About = () => {
             <p>
               I believe in a collaborative approach, taking time to understand your rhythm, your priorities, and the way you work. There are no cookie-cutter packages here. Every plan is shaped around your unique needs, your business goals, and the areas where you need support most. Whether you are managing daily operations, navigating seasonal demands, or building systems that scale, I tailor my services to fit your reality.
             </p>
-            <p className="text-xl font-semibold text-foreground">
-              I don't work for you; <em>I work with you</em>, becoming a trusted extension of your team and a steady partner in your business journey.
-            </p>
+            <div className="bg-accent/10 border-l-4 border-accent p-6 rounded-r-xl my-8">
+              <p className="text-xl font-semibold text-foreground">
+                I don't work for you; <em>I work with you</em>, becoming a trusted extension of your team and a steady partner in your business journey.
+              </p>
+            </div>
             <p>
               My approach is both holistic and precise. I look at the full picture while focusing on the specific actions that move the needle. This allows me to provide support that is efficient, effective, and aligned with the elevated standard you expect. When your operations flow smoothly, you gain space to think clearly, lead confidently, and focus on the work only you can do.
             </p>

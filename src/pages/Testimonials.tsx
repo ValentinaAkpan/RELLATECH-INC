@@ -49,16 +49,19 @@ const Testimonials = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      {/* Hero Section with Background Image */}
-      <section className="relative min-h-[70vh] px-4 py-20 overflow-hidden" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1920&q=80)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        <div className="absolute inset-0 bg-gradient-to-r from-background/98 via-background/95 to-background/85"></div>
+      {/* Hero Section */}
+      <section className="relative px-4 py-20 overflow-hidden bg-primary">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-accent/20 rounded-full -translate-y-48 translate-x-48"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent/20 rounded-full translate-y-40 -translate-x-40"></div>
+        </div>
         
-        <div className="container mx-auto max-w-6xl relative z-10 min-h-[60vh] flex items-center">
-          <div className="max-w-2xl space-y-6 bg-white/70 dark:bg-background/70 backdrop-blur-xl p-10 rounded-2xl shadow-2xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
-              Testimonials
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <div className="max-w-3xl space-y-6 text-primary-foreground py-16">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight">
+              Client Success Stories
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+            <p className="text-xl md:text-2xl leading-relaxed opacity-95">
               What clients say about working with Rellatech
             </p>
           </div>
@@ -66,30 +69,30 @@ const Testimonials = () => {
       </section>
 
       {/* Testimonials - Large Card Layout */}
-      <section className="py-20 px-4 bg-background">
-        <div className="container mx-auto max-w-6xl space-y-12">
+      <section className="py-20 px-4 bg-muted/30">
+        <div className="container mx-auto max-w-6xl space-y-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="border-4 border-primary rounded-2xl p-8 md:p-12 bg-card shadow-lg">
+            <div key={index} className="bg-background border-2 border-primary/20 rounded-2xl p-8 md:p-12 shadow-elegant hover-lift">
               <div className="grid md:grid-cols-[1fr,auto] gap-8 items-start">
                 {/* Content */}
                 <div className="space-y-6">
-                  <h3 className="text-2xl md:text-3xl font-bold text-foreground uppercase tracking-wide">
+                  <h3 className="text-2xl md:text-3xl font-bold text-primary uppercase tracking-wide">
                     {testimonial.company}
                   </h3>
                   
-                  <div className="border-l-4 border-primary pl-6 space-y-4">
-                    <p className="text-lg text-muted-foreground leading-relaxed">
-                      {testimonial.quote}
+                  <div className="border-l-4 border-accent pl-6 space-y-4">
+                    <p className="text-lg text-foreground leading-relaxed">
+                      "{testimonial.quote}"
                     </p>
                   </div>
 
-                  <div className="flex gap-1 text-amber-500 text-2xl">
+                  <div className="flex gap-1 text-accent text-2xl">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <span key={i}>★</span>
                     ))}
                   </div>
 
-                  <div className="pt-4 border-t">
+                  <div className="pt-4 border-t-2 border-border">
                     <p className="font-bold text-lg text-foreground">{testimonial.author}</p>
                     <p className="text-muted-foreground">{testimonial.role}</p>
                   </div>
@@ -113,22 +116,27 @@ const Testimonials = () => {
 
           {/* Google Reviews Link */}
           <div className="text-center pt-8">
-            <p className="text-lg text-muted-foreground mb-4">
-              Read more reviews on Google
-            </p>
-            <Button asChild size="lg" className="text-lg px-8 py-6">
-              <a href="https://g.page/r/CX1l82p_9SZtEAE/review" target="_blank" rel="noopener noreferrer">
-                View Google Reviews
-              </a>
-            </Button>
+            <div className="bg-primary text-primary-foreground rounded-2xl p-10 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-accent/20 rounded-full -translate-y-16 translate-x-16"></div>
+              <div className="relative z-10 space-y-4">
+                <p className="text-xl font-semibold">
+                  Read more reviews on Google
+                </p>
+                <Button asChild size="lg" className="bg-accent hover:bg-accent-light text-accent-foreground text-lg px-8 py-6 h-auto">
+                  <a href="https://g.page/r/CX1l82p_9SZtEAE/review" target="_blank" rel="noopener noreferrer">
+                    View Google Reviews
+                  </a>
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-muted/30">
+      <section className="py-20 px-4 bg-background">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Send a Message</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">Send a Message</h2>
             <p className="text-xl text-muted-foreground">Get in touch to discuss how we can work together</p>
           </div>
           <ContactForm />
