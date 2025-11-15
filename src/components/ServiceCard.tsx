@@ -22,24 +22,14 @@ export const ServiceCard = ({ icon: Icon, title, description, detailedDescriptio
         >
           <div className={`w-full h-full rounded-xl p-6 flex flex-col items-center justify-center text-center space-y-3 shadow-elegant transition-all duration-300 ${
             isClicked 
-              ? `${colorClass} scale-[0.98]` 
-              : 'bg-white border-2 border-border hover:border-primary/30'
+              ? 'bg-accent' 
+              : 'bg-primary'
           }`}>
-            <div className={`w-14 h-14 rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-all duration-300 ${
-              isClicked 
-                ? 'bg-white/20 backdrop-blur-sm' 
-                : `${colorClass}`
-            }`}>
-              <Icon className={`w-7 h-7 transition-colors duration-300 ${
-                isClicked ? 'text-white' : 'text-white'
-              }`} />
+            <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center shadow-md group-hover:scale-110 transition-all duration-300">
+              <Icon className="w-7 h-7 text-white" />
             </div>
-            <h3 className={`text-lg font-semibold leading-tight transition-colors duration-300 ${
-              isClicked ? 'text-white' : 'text-foreground'
-            }`}>{title}</h3>
-            <p className={`text-xs leading-relaxed line-clamp-2 transition-colors duration-300 ${
-              isClicked ? 'text-white/90' : 'text-muted-foreground'
-            }`}>{description}</p>
+            <h3 className="text-lg font-semibold text-white leading-tight">{title}</h3>
+            <p className="text-xs text-white/90 leading-relaxed line-clamp-2">{description}</p>
           </div>
         </div>
       </HoverCardTrigger>
