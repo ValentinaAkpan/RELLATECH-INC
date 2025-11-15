@@ -91,33 +91,40 @@ const Chatbot = () => {
       {/* Chat Button */}
       <Button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 z-50 h-14 w-14 rounded-full shadow-xl hover:scale-110 transition-transform bg-primary hover:bg-primary/90"
+        className="fixed bottom-6 right-6 z-50 h-16 w-16 rounded-full shadow-2xl hover:scale-105 transition-all bg-accent hover:bg-accent/90 border-4 border-background"
         size="icon"
       >
-        {isOpen ? <X className="h-6 w-6" /> : <MessageCircle className="h-6 w-6" />}
+        {isOpen ? <X className="h-7 w-7" /> : <MessageCircle className="h-7 w-7" />}
       </Button>
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-24 right-6 z-50 w-[90vw] max-w-md h-[500px] bg-background border-2 border-primary rounded-lg shadow-2xl flex flex-col">
+        <div className="fixed bottom-28 right-6 z-50 w-[90vw] max-w-[400px] h-[600px] bg-background rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-border/50">
           {/* Header */}
-          <div className="bg-primary text-primary-foreground p-4 rounded-t-lg">
-            <h3 className="font-bold text-lg">Rellatech Assistant</h3>
-            <p className="text-sm opacity-90">Ask me about my services</p>
+          <div className="bg-gradient-to-r from-primary to-primary/90 text-primary-foreground p-6">
+            <div className="flex items-center gap-3">
+              <div className="h-12 w-12 rounded-full bg-accent flex items-center justify-center">
+                <MessageCircle className="h-6 w-6" />
+              </div>
+              <div>
+                <h3 className="font-bold text-lg">Chat with me</h3>
+                <p className="text-sm opacity-90">I'm here to help</p>
+              </div>
+            </div>
           </div>
 
           {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-4">
+          <div className="flex-1 overflow-y-auto p-6 space-y-4 bg-muted/20">
             {messages.map((message, index) => (
               <div
                 key={index}
                 className={`flex ${message.role === "user" ? "justify-end" : "justify-start"}`}
               >
                 <div
-                  className={`max-w-[80%] p-3 rounded-lg ${
+                  className={`max-w-[85%] p-4 rounded-2xl shadow-sm ${
                     message.role === "user"
-                      ? "bg-primary text-primary-foreground"
-                      : "bg-muted text-foreground"
+                      ? "bg-accent text-white rounded-br-sm"
+                      : "bg-background text-foreground rounded-bl-sm border border-border/50"
                   }`}
                 >
                   <p className="text-sm leading-relaxed">{message.content}</p>
@@ -126,8 +133,8 @@ const Chatbot = () => {
             ))}
             {isLoading && (
               <div className="flex justify-start">
-                <div className="bg-muted p-3 rounded-lg">
-                  <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
+                <div className="bg-background p-4 rounded-2xl rounded-bl-sm border border-border/50 shadow-sm">
+                  <Loader2 className="h-5 w-5 animate-spin text-primary" />
                 </div>
               </div>
             )}
@@ -135,20 +142,21 @@ const Chatbot = () => {
           </div>
 
           {/* Input */}
-          <div className="p-4 border-t border-border">
+          <div className="p-4 border-t border-border bg-background">
             <div className="flex gap-2">
               <Input
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyPress={handleKeyPress}
-                placeholder="Type your question..."
+                placeholder="Ask me anything..."
                 disabled={isLoading}
-                className="flex-1"
+                className="flex-1 rounded-full border-border/50 focus:border-accent"
               />
               <Button
                 onClick={sendMessage}
                 disabled={!input.trim() || isLoading}
                 size="icon"
+                className="rounded-full h-10 w-10 bg-accent hover:bg-accent/90"
               >
                 <Send className="h-4 w-4" />
               </Button>
