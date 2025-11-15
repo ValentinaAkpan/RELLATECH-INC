@@ -18,11 +18,11 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 200 40% 18%;
 
-    /* Primary - Deep Teal (VG inspired) */
-    --primary: 195 88% 20%;
+    /* Primary - Teal (Rellatech Brand) */
+    --primary: 185 66% 33%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 195 88% 35%;
-    --primary-lighter: 195 70% 50%;
+    --primary-light: 185 66% 45%;
+    --primary-lighter: 185 60% 60%;
 
     /* Secondary - Light Neutral */
     --secondary: 200 15% 92%;
@@ -31,10 +31,10 @@ All colors MUST be HSL.
     --muted: 200 10% 94%;
     --muted-foreground: 200 20% 50%;
 
-    /* Accent - Vibrant Orange for CTAs (VG inspired) */
-    --accent: 18 100% 50%;
+    /* Accent - Orange (Rellatech Brand) */
+    --accent: 32 92% 55%;
     --accent-foreground: 0 0% 100%;
-    --accent-light: 18 100% 60%;
+    --accent-light: 32 92% 65%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
@@ -46,17 +46,17 @@ All colors MUST be HSL.
     --radius: 0.75rem;
 
     /* Gradients for Visual Interest */
-    --gradient-primary: linear-gradient(135deg, hsl(186 55% 28%) 0%, hsl(186 65% 35%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(28 85% 52%) 0%, hsl(32 90% 60%) 100%);
-    --gradient-hero: linear-gradient(to bottom right, hsl(186 55% 28% / 0.03), hsl(28 85% 52% / 0.05));
+    --gradient-primary: linear-gradient(135deg, hsl(185 66% 33%) 0%, hsl(185 66% 40%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(32 92% 55%) 0%, hsl(32 92% 62%) 100%);
+    --gradient-hero: linear-gradient(to bottom right, hsl(185 66% 33% / 0.03), hsl(32 92% 55% / 0.05));
     
     /* Shadows for Depth */
     --shadow-sm: 0 1px 2px hsl(215 28% 17% / 0.05);
     --shadow-md: 0 4px 6px -1px hsl(215 28% 17% / 0.08), 0 2px 4px -2px hsl(215 28% 17% / 0.05);
     --shadow-lg: 0 10px 15px -3px hsl(215 28% 17% / 0.1), 0 4px 6px -4px hsl(215 28% 17% / 0.05);
     --shadow-xl: 0 20px 25px -5px hsl(215 28% 17% / 0.12), 0 8px 10px -6px hsl(215 28% 17% / 0.05);
-    --shadow-primary: 0 8px 16px -4px hsl(186 55% 28% / 0.3);
-    --shadow-accent: 0 8px 16px -4px hsl(28 85% 52% / 0.3);
+    --shadow-primary: 0 8px 16px -4px hsl(185 66% 33% / 0.3);
+    --shadow-accent: 0 8px 16px -4px hsl(32 92% 55% / 0.3);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 215 28% 25%;
@@ -78,10 +78,10 @@ All colors MUST be HSL.
     --popover: 195 35% 15%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 195 88% 35%;
+    --primary: 185 66% 45%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 195 88% 45%;
-    --primary-lighter: 195 70% 55%;
+    --primary-light: 185 66% 55%;
+    --primary-lighter: 185 60% 65%;
 
     --secondary: 200 20% 20%;
     --secondary-foreground: 195 50% 80%;
@@ -89,9 +89,9 @@ All colors MUST be HSL.
     --muted: 200 20% 18%;
     --muted-foreground: 200 15% 65%;
 
-    --accent: 18 100% 55%;
+    --accent: 32 92% 60%;
     --accent-foreground: 0 0% 100%;
-    --accent-light: 18 100% 65%;
+    --accent-light: 32 92% 70%;
 
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
@@ -100,16 +100,16 @@ All colors MUST be HSL.
     --input: 215 20% 22%;
     --ring: 186 60% 50%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(186 60% 45%) 0%, hsl(186 70% 52%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(28 88% 58%) 0%, hsl(32 93% 65%) 100%);
-    --gradient-hero: linear-gradient(to bottom right, hsl(186 60% 45% / 0.05), hsl(28 88% 58% / 0.07));
+    --gradient-primary: linear-gradient(135deg, hsl(185 66% 45%) 0%, hsl(185 66% 52%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(32 92% 60%) 0%, hsl(32 92% 67%) 100%);
+    --gradient-hero: linear-gradient(to bottom right, hsl(185 66% 45% / 0.05), hsl(32 92% 60% / 0.07));
     
     --shadow-sm: 0 1px 2px hsl(0 0% 0% / 0.2);
     --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -2px hsl(0 0% 0% / 0.2);
     --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.4), 0 4px 6px -4px hsl(0 0% 0% / 0.3);
     --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.5), 0 8px 10px -6px hsl(0 0% 0% / 0.4);
-    --shadow-primary: 0 8px 16px -4px hsl(186 60% 45% / 0.4);
-    --shadow-accent: 0 8px 16px -4px hsl(28 88% 58% / 0.4);
+    --shadow-primary: 0 8px 16px -4px hsl(185 66% 45% / 0.4);
+    --shadow-accent: 0 8px 16px -4px hsl(32 92% 60% / 0.4);
 
     --sidebar-background: 215 28% 10%;
     --sidebar-foreground: 30 8% 95%;
