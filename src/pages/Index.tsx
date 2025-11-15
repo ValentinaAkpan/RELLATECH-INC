@@ -272,7 +272,7 @@ const Index = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-foreground mb-2">Direct, Personal Partnership</h3>
-                  <p className="text-muted-foreground">No handoffs, no confusion. You work directly with me—one dedicated professional who learns your business inside and out.</p>
+                  <p className="text-muted-foreground">No handoffs, no confusion. You work directly with me - one dedicated professional who learns your business inside and out.</p>
                 </div>
               </div>
 

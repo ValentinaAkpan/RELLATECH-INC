@@ -29,7 +29,7 @@ const Services = () => {
     {
       icon: TrendingUp,
       title: "Scale & Adapt",
-      description: "As your needs change, I adjust. Increase support during busy seasons or scale back when things are calm—no long-term contracts."
+      description: "As your needs change, I adjust. Increase support during busy seasons or scale back when things are calm - no long-term contracts."
     }
   ];
 
