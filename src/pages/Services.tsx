@@ -4,7 +4,7 @@ import FAQ from "@/components/FAQ";
 import ContactForm from "@/components/ContactForm";
 import CTASection from "@/components/CTASection";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import { ServiceCard } from "@/components/ServiceCard";
 import { Calendar, FileText, Megaphone, Settings, Globe, GraduationCap, BookOpen, BarChart, Palette, Presentation, CheckCircle2, MessageCircle, Users, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import valentinaProfile from "@/assets/valentina-profile.png";
@@ -38,61 +38,71 @@ const Services = () => {
       icon: FileText,
       title: "Administrative Support",
       description: "Document management, task coordination, planning, and daily organization",
-      color: "bg-primary"
+      detailedDescription: "Comprehensive administrative support including document management, task coordination, planning, and daily organization to keep your business running smoothly.",
+      colorClass: "bg-primary"
     },
     {
       icon: Calendar,
       title: "Inbox & Calendar Management",
       description: "Email prioritization, scheduling, meeting coordination, and communication",
-      color: "bg-accent"
+      detailedDescription: "Expert email prioritization, intelligent scheduling, meeting coordination, and streamlined communication management to optimize your time.",
+      colorClass: "bg-accent"
     },
     {
       icon: Megaphone,
       title: "Social Media & Marketing",
       description: "Content scheduling, basic SEO, email campaigns, and promotional support",
-      color: "bg-primary"
+      detailedDescription: "Strategic content scheduling, SEO optimization, email campaign management, and promotional support to grow your online presence.",
+      colorClass: "bg-primary"
     },
     {
       icon: Settings,
       title: "CRMs & Automation",
       description: "HubSpot, Keap, Mailchimp, Kartra setup and management",
-      color: "bg-accent"
+      detailedDescription: "Professional setup and management of CRM platforms including HubSpot, Keap, Mailchimp, and Kartra to streamline your business processes.",
+      colorClass: "bg-accent"
     },
     {
       icon: Globe,
       title: "Web Services",
       description: "Website updates, content management, and platform migrations",
-      color: "bg-primary"
+      detailedDescription: "Expert website updates, content management system administration, and seamless platform migrations to keep your web presence current.",
+      colorClass: "bg-primary"
     },
     {
       icon: GraduationCap,
       title: "LMS & Online Courses",
       description: "Kajabi, LearnDash, Kartra, ThriveCart setup and support",
-      color: "bg-accent"
+      detailedDescription: "Complete setup and ongoing support for learning management systems including Kajabi, LearnDash, Kartra, and ThriveCart.",
+      colorClass: "bg-accent"
     },
     {
       icon: BookOpen,
       title: "eBook Design",
       description: "Professional formatting and layout for digital publications",
-      color: "bg-primary"
+      detailedDescription: "Professional eBook design services with expert formatting and layout that makes your digital publications stand out.",
+      colorClass: "bg-primary"
     },
     {
       icon: BarChart,
       title: "Business Reports",
       description: "Clear, visually appealing reports that communicate your success",
-      color: "bg-accent"
+      detailedDescription: "Create clear, visually compelling business reports that effectively communicate your data, insights, and success metrics.",
+      colorClass: "bg-accent"
     },
     {
       icon: Palette,
       title: "Graphic & Print Design",
       description: "Brand visuals, signage, packaging, and marketing materials",
-      color: "bg-primary"
+      detailedDescription: "Custom graphic and print design including brand visuals, signage, packaging, and marketing materials that elevate your brand.",
+      colorClass: "bg-primary"
     },
     {
       icon: Presentation,
       title: "Pitch Decks & Presentations",
       description: "Compelling presentations that showcase your ideas professionally",
-      color: "bg-accent"
+      detailedDescription: "Design compelling pitch decks and presentations that professionally showcase your ideas and captivate your audience.",
+      colorClass: "bg-accent"
     }
   ];
 
@@ -209,22 +219,16 @@ const Services = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {serviceCategories.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <Card key={index} className="p-6 hover-lift border-2 border-border hover:border-primary/40 transition-all bg-background">
-                  <div className="flex items-start gap-4">
-                    <div className={`${service.color} w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md`}>
-                      <Icon className="w-6 h-6 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-foreground mb-2">{service.title}</h3>
-                      <p className="text-muted-foreground leading-relaxed">{service.description}</p>
-                    </div>
-                  </div>
-                </Card>
-              );
-            })}
+            {serviceCategories.map((service, index) => (
+              <ServiceCard
+                key={index}
+                icon={service.icon}
+                title={service.title}
+                description={service.description}
+                detailedDescription={service.detailedDescription}
+                colorClass={service.colorClass}
+              />
+            ))}
           </div>
 
           <div className="text-center mt-12">
