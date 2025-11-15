@@ -182,9 +182,9 @@ const Services = () => {
                   )}
                   
                   <div className="text-center space-y-4">
-                    <div className="w-24 h-24 mx-auto bg-primary rounded-2xl flex items-center justify-center shadow-lg">
-                      <Icon className="w-12 h-12 text-primary-foreground" />
-                    </div>
+              <div className="w-14 h-14 bg-primary-dark rounded-2xl flex items-center justify-center shadow-lg">
+                <Icon className="w-7 h-7 text-primary-foreground" />
+              </div>
                     <h3 className="text-2xl font-bold text-foreground">{step.title}</h3>
                     <p className="text-muted-foreground leading-relaxed">{step.description}</p>
                   </div>

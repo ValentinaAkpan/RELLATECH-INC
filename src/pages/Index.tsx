@@ -157,7 +157,7 @@ const Index = () => {
               </ul>
             </div>
 
-            <div className="bg-primary text-primary-foreground rounded-2xl p-8 relative overflow-hidden group hover-lift">
+            <div className="bg-primary-dark text-primary-foreground rounded-2xl p-8 relative overflow-hidden group hover-lift">
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-accent/20 rounded-full translate-y-16 -translate-x-16"></div>
               <h3 className="text-xl font-bold mb-4 relative z-10">Canadian Based Support</h3>
               <ul className="space-y-2 text-sm relative z-10">
@@ -176,7 +176,7 @@ const Index = () => {
               </ul>
             </div>
 
-            <div className="bg-primary text-primary-foreground rounded-2xl p-8 relative overflow-hidden group hover-lift">
+            <div className="bg-primary-dark text-primary-foreground rounded-2xl p-8 relative overflow-hidden group hover-lift">
               <div className="absolute top-0 left-0 w-24 h-24 bg-accent/20 rounded-full -translate-y-12 -translate-x-12"></div>
               <h3 className="text-xl font-bold mb-4 relative z-10">Flexible Plans</h3>
               <ul className="space-y-2 text-sm relative z-10">
@@ -195,7 +195,7 @@ const Index = () => {
               </ul>
             </div>
 
-            <div className="bg-primary text-primary-foreground rounded-2xl p-8 relative overflow-hidden group hover-lift">
+            <div className="bg-primary-dark text-primary-foreground rounded-2xl p-8 relative overflow-hidden group hover-lift">
               <div className="absolute bottom-0 right-0 w-28 h-28 bg-accent/20 rounded-full translate-y-14 translate-x-14"></div>
               <h3 className="text-xl font-bold mb-4 relative z-10">Personal Attention</h3>
               <ul className="space-y-2 text-sm relative z-10">
@@ -232,16 +232,16 @@ const Index = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => {
               const colors = [
-                'bg-gradient-to-br from-primary to-primary/80',
+                'bg-gradient-to-br from-primary-dark to-primary',
                 'bg-gradient-to-br from-accent to-accent/80',
-                'bg-gradient-to-br from-teal-500 to-teal-600',
-                'bg-gradient-to-br from-primary to-primary/80',
+                'bg-gradient-to-br from-primary-dark to-primary',
                 'bg-gradient-to-br from-accent to-accent/80',
-                'bg-gradient-to-br from-teal-500 to-teal-600',
-                'bg-gradient-to-br from-primary to-primary/80',
+                'bg-gradient-to-br from-primary-dark to-primary',
                 'bg-gradient-to-br from-accent to-accent/80',
-                'bg-gradient-to-br from-teal-500 to-teal-600',
-                'bg-gradient-to-br from-primary to-primary/80'
+                'bg-gradient-to-br from-primary-dark to-primary',
+                'bg-gradient-to-br from-accent to-accent/80',
+                'bg-gradient-to-br from-primary-dark to-primary',
+                'bg-gradient-to-br from-accent to-accent/80'
               ];
               return (
                 <ServiceCard
