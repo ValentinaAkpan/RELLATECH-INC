@@ -8,33 +8,33 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Base Colors - Warm, Professional Palette */
-    --background: 30 8% 97%;
-    --foreground: 215 28% 17%;
+    /* Base Colors - Clean Professional Palette */
+    --background: 0 0% 98%;
+    --foreground: 200 40% 18%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 28% 17%;
+    --card-foreground: 200 40% 18%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 28% 17%;
+    --popover-foreground: 200 40% 18%;
 
-    /* Primary - Deep Teal with Rich Depth */
-    --primary: 186 55% 28%;
+    /* Primary - Deep Teal (VG inspired) */
+    --primary: 195 88% 20%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 186 45% 45%;
-    --primary-lighter: 186 35% 65%;
+    --primary-light: 195 88% 35%;
+    --primary-lighter: 195 70% 50%;
 
-    /* Secondary - Warm Neutral */
-    --secondary: 30 12% 88%;
-    --secondary-foreground: 215 28% 25%;
+    /* Secondary - Light Neutral */
+    --secondary: 200 15% 92%;
+    --secondary-foreground: 200 40% 25%;
 
-    --muted: 30 10% 93%;
-    --muted-foreground: 215 15% 48%;
+    --muted: 200 10% 94%;
+    --muted-foreground: 200 20% 50%;
 
-    /* Accent - Vibrant Amber for CTAs */
-    --accent: 28 85% 52%;
+    /* Accent - Vibrant Orange for CTAs (VG inspired) */
+    --accent: 18 100% 50%;
     --accent-foreground: 0 0% 100%;
-    --accent-light: 28 75% 62%;
+    --accent-light: 18 100% 60%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
@@ -69,29 +69,29 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 215 30% 9%;
-    --foreground: 30 8% 97%;
+    --background: 200 40% 10%;
+    --foreground: 0 0% 98%;
 
-    --card: 215 28% 12%;
-    --card-foreground: 30 8% 97%;
+    --card: 195 35% 15%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 215 28% 12%;
-    --popover-foreground: 30 8% 97%;
+    --popover: 195 35% 15%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 186 60% 45%;
+    --primary: 195 88% 35%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 186 55% 55%;
-    --primary-lighter: 186 50% 65%;
+    --primary-light: 195 88% 45%;
+    --primary-lighter: 195 70% 55%;
 
-    --secondary: 215 20% 18%;
-    --secondary-foreground: 186 50% 75%;
+    --secondary: 200 20% 20%;
+    --secondary-foreground: 195 50% 80%;
 
-    --muted: 215 20% 16%;
-    --muted-foreground: 215 12% 65%;
+    --muted: 200 20% 18%;
+    --muted-foreground: 200 15% 65%;
 
-    --accent: 28 88% 58%;
+    --accent: 18 100% 55%;
     --accent-foreground: 0 0% 100%;
-    --accent-light: 28 78% 68%;
+    --accent-light: 18 100% 65%;
 
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
