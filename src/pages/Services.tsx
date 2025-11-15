@@ -112,7 +112,7 @@ const Services = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative px-4 py-16 md:py-24 overflow-hidden bg-primary">
+      <section className="relative px-4 py-16 md:py-24 overflow-hidden bg-primary-dark">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/10 rounded-full -translate-y-48 translate-x-48"></div>
           <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent/10 rounded-full translate-y-40 -translate-x-40"></div>
