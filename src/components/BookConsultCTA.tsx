@@ -37,7 +37,7 @@ export const BookConsultCTA = () => {
           {/* Left side - Text */}
           <div className="flex-1 text-center lg:text-left">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight">
-              Actually finish work on time? You can do it with a guru.
+              Ready to reclaim your time and focus on what matters most?
             </h2>
           </div>
 
@@ -45,14 +45,14 @@ export const BookConsultCTA = () => {
           <div className="flex-shrink-0">
             <div className="bg-background rounded-3xl p-8 sm:p-12 shadow-2xl max-w-md">
               <h3 className="text-2xl sm:text-3xl font-bold text-foreground text-center mb-8">
-                Find skilled support fast
+                Let&apos;s work together
               </h3>
               <Button 
                 asChild 
                 size="lg" 
-                className="w-full bg-primary hover:bg-primary-light text-primary-foreground text-lg font-bold py-6 h-auto rounded-xl"
+                className="w-full bg-accent hover:bg-accent-light text-accent-foreground text-lg font-bold py-6 h-auto rounded-xl"
               >
-                <Link to="/contact">BOOK A CONSULT</Link>
+                <Link to="/contact">BOOK A CONSULTATION</Link>
               </Button>
             </div>
           </div>
