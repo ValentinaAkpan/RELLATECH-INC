@@ -4,81 +4,95 @@ import FAQ from "@/components/FAQ";
 import ContactForm from "@/components/ContactForm";
 import CTASection from "@/components/CTASection";
 import { Button } from "@/components/ui/button";
-import { Calendar, FileText, Megaphone, Settings, Globe, GraduationCap, BookOpen, BarChart, Palette, Presentation } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { Calendar, FileText, Megaphone, Settings, Globe, GraduationCap, BookOpen, BarChart, Palette, Presentation, CheckCircle2, MessageCircle, Users, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
-import servicesHero from "@/assets/services-hero.jpg";
+import valentinaProfile from "@/assets/valentina-profile.png";
 
 const Services = () => {
-  const services = [
+  const processSteps = [
+    {
+      icon: MessageCircle,
+      title: "Share Your Needs",
+      description: "Tell me what's overwhelming you. I'll listen carefully to understand your workload, priorities, and the support you need most."
+    },
+    {
+      icon: Users,
+      title: "Create Your Plan",
+      description: "I'll design a customized support plan tailored to your business goals, working style, and the areas where you need help."
+    },
+    {
+      icon: CheckCircle2,
+      title: "Get Things Done",
+      description: "I take on the tasks, manage the details, and keep your operations running smoothly while you focus on what matters."
+    },
+    {
+      icon: TrendingUp,
+      title: "Scale & Adapt",
+      description: "As your needs change, I adjust. Increase support during busy seasons or scale back when things are calm—no long-term contracts."
+    }
+  ];
+
+  const serviceCategories = [
     {
       icon: FileText,
       title: "Administrative Support",
-      description: "Reliable help with documents, tasks, planning, and day-to-day organisation.",
-      details: "Professional administrative support that keeps your business running smoothly. From document preparation to task management, planning coordination to daily organizational needs, everything handled with care and attention to detail. Focus on your core work while the administrative foundation stays solid.",
-      color: "from-primary to-primary/80"
+      description: "Document management, task coordination, planning, and daily organization",
+      color: "bg-primary"
     },
     {
       icon: Calendar,
-      title: "Inbox and Calendar Management",
-      description: "Clear scheduling, structured communication, and reminders that keep your day steady.",
-      details: "Transform your inbox from overwhelming to organized. Professional email management with prioritization, timely responses, and follow-ups. Calendar coordination that eliminates double-booking and ensures you never miss important meetings. Your communication systems working seamlessly.",
-      color: "from-accent to-accent/80"
+      title: "Inbox & Calendar Management",
+      description: "Email prioritization, scheduling, meeting coordination, and communication",
+      color: "bg-accent"
     },
     {
       icon: Megaphone,
-      title: "Social Media and Marketing Support",
-      description: "Light content help, posting, basic SEO, email campaigns, and simple promotional guidance.",
-      details: "Keep your online presence active and engaging without the daily burden. Content scheduling, basic SEO optimization, email campaign management, and promotional support that represents your brand professionally. Consistent visibility that grows your reach.",
-      color: "from-teal-500 to-teal-600"
+      title: "Social Media & Marketing",
+      description: "Content scheduling, basic SEO, email campaigns, and promotional support",
+      color: "bg-primary"
     },
     {
       icon: Settings,
-      title: "CRMs and Automation",
-      description: "Support with tools like HubSpot, Keap, Mailchimp, and Kartra to keep your systems clean and easy to follow.",
-      details: "Streamline your business processes with smart automation and CRM management. Expert support for HubSpot, Keap, Mailchimp, and Kartra. Keep your customer relationships organized, your workflows efficient, and your systems running smoothly. Save hours every week with intelligent automation.",
-      color: "from-primary to-primary/80"
+      title: "CRMs & Automation",
+      description: "HubSpot, Keap, Mailchimp, Kartra setup and management",
+      color: "bg-accent"
     },
     {
       icon: Globe,
-      title: "Web Services and Platform Migrations",
-      description: "Updates, transitions, and guidance for websites that need refreshing or moving to a better platform.",
-      details: "Website updates, content management, and platform migrations handled professionally. Whether refreshing your current site or transitioning to a better platform, receive expert guidance and hands-on support. Keep your online presence current and functional without technical stress.",
-      color: "from-accent to-accent/80"
+      title: "Web Services",
+      description: "Website updates, content management, and platform migrations",
+      color: "bg-primary"
     },
     {
       icon: GraduationCap,
-      title: "LMS and Online Courses",
-      description: "Setup and support for Kajabi, LearnDash, Kartra, and ThriveCart to bring your programs to life.",
-      details: "Transform your knowledge into engaging online programs. Professional setup and support for Kajabi, LearnDash, Kartra, and ThriveCart. Course structure, content upload, student management, and technical support. Everything needed to launch and maintain successful online learning programs.",
-      color: "from-teal-500 to-teal-600"
+      title: "LMS & Online Courses",
+      description: "Kajabi, LearnDash, Kartra, ThriveCart setup and support",
+      color: "bg-accent"
     },
     {
       icon: BookOpen,
       title: "eBook Design",
-      description: "Clean formatting and layout so your writing becomes a polished digital book.",
-      details: "Transform your manuscript into a beautifully formatted digital book. Professional layout design, clean formatting, proper structure, and polished presentation. Your expertise deserves professional presentation, from concept to finished eBook ready for publication.",
-      color: "from-primary to-primary/80"
+      description: "Professional formatting and layout for digital publications",
+      color: "bg-primary"
     },
     {
       icon: BarChart,
       title: "Business Reports",
-      description: "Beautiful, clear reports that reflect your achievements and growth.",
-      details: "Data becomes compelling stories with professional business reports. Clean design, clear visualizations, and organized presentation that reflects your achievements and growth. Reports that communicate impact and support strategic decision-making.",
-      color: "from-teal-500 to-teal-600"
+      description: "Clear, visually appealing reports that communicate your success",
+      color: "bg-accent"
     },
     {
       icon: Palette,
-      title: "Graphic and Print Design",
-      description: "Brand visuals, signage, packaging, and creative materials that elevate your presence.",
-      details: "Professional design that elevates your brand presence. From business cards to signage, packaging to promotional materials, creative design that captures your essence and communicates your values. Visual identity that makes lasting impressions.",
-      color: "from-accent to-accent/80"
+      title: "Graphic & Print Design",
+      description: "Brand visuals, signage, packaging, and marketing materials",
+      color: "bg-primary"
     },
     {
       icon: Presentation,
-      title: "Pitch Decks",
-      description: "Compelling, organised presentations that help you communicate your ideas with confidence.",
-      details: "Present your ideas with confidence through professionally designed pitch decks. Compelling visuals, clear messaging, and organized flow that captures attention and communicates your vision effectively. Presentations that open doors and create opportunities.",
-      color: "from-teal-500 to-teal-600"
+      title: "Pitch Decks & Presentations",
+      description: "Compelling presentations that showcase your ideas professionally",
+      color: "bg-accent"
     }
   ];
 
@@ -87,129 +101,158 @@ const Services = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative px-4 py-20 overflow-hidden bg-primary">
+      <section className="relative px-4 py-16 md:py-24 overflow-hidden bg-primary">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-accent/20 rounded-full -translate-y-48 -translate-x-48"></div>
-          <div className="absolute bottom-0 right-0 w-80 h-80 bg-accent/20 rounded-full translate-y-40 translate-x-40"></div>
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/10 rounded-full -translate-y-48 translate-x-48"></div>
+          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent/10 rounded-full translate-y-40 -translate-x-40"></div>
         </div>
         
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="max-w-3xl space-y-6 text-primary-foreground py-16">
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight">
-              Virtual Assistant Services
+        <div className="container mx-auto max-w-7xl relative z-10">
+          <div className="text-center mb-12">
+            <p className="text-accent font-bold text-sm md:text-base uppercase tracking-wider mb-4">
+              VIRTUAL ASSISTANT SERVICES
+            </p>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
+              From solo entrepreneurs to<br className="hidden md:block" /> growing teams, I've got you covered
             </h1>
-            <p className="text-xl md:text-2xl leading-relaxed opacity-95">
-              Support shaped with intention to bring order, flow, and clarity to your work.
-            </p>
-            <p className="text-lg opacity-90">
-              From administrative essentials to creative projects, every service is designed to lighten your workload and bring structure to your business operations.
-            </p>
+          </div>
+
+          {/* Hero Image with Floating Labels */}
+          <div className="relative max-w-4xl mx-auto">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+              <img 
+                src={valentinaProfile}
+                alt="Valentina Rella - Professional Virtual Assistant"
+                className="w-full"
+              />
+              
+              {/* Floating Service Labels */}
+              <div className="absolute top-12 left-4 md:left-12 bg-background/95 backdrop-blur-sm px-4 py-3 rounded-xl shadow-lg border-2 border-primary/20 animate-fade-in">
+                <div className="flex items-center gap-2">
+                  <FileText className="w-5 h-5 text-accent" />
+                  <span className="font-semibold text-sm md:text-base">Administrative Support</span>
+                </div>
+              </div>
+              
+              <div className="absolute top-32 md:top-24 right-4 md:right-12 bg-background/95 backdrop-blur-sm px-4 py-3 rounded-xl shadow-lg border-2 border-primary/20 animate-fade-in">
+                <div className="flex items-center gap-2">
+                  <Calendar className="w-5 h-5 text-accent" />
+                  <span className="font-semibold text-sm md:text-base">Calendar Management</span>
+                </div>
+              </div>
+              
+              <div className="absolute bottom-32 md:bottom-24 left-4 md:left-16 bg-background/95 backdrop-blur-sm px-4 py-3 rounded-xl shadow-lg border-2 border-primary/20 animate-fade-in">
+                <div className="flex items-center gap-2">
+                  <Settings className="w-5 h-5 text-accent" />
+                  <span className="font-semibold text-sm md:text-base">Automation</span>
+                </div>
+              </div>
+              
+              <div className="absolute bottom-12 right-4 md:right-20 bg-primary text-primary-foreground px-6 py-4 rounded-xl shadow-xl animate-fade-in">
+                <p className="font-bold text-lg md:text-xl">Valentina R.</p>
+                <p className="text-sm md:text-base opacity-95">Virtual Assistant</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Services Grid */}
+      {/* How It Works Process */}
       <section className="py-20 px-4 bg-background">
-        <div className="container mx-auto max-w-6xl">
-          <div className="space-y-8">
-            {services.map((service, index) => {
-              const Icon = service.icon;
-              const isEven = index % 2 === 0;
-              const serviceSlug = service.title.toLowerCase().replace(/\s+and\s+/g, '-').replace(/\s+/g, '-');
-              
+        <div className="container mx-auto max-w-7xl">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {processSteps.map((step, index) => {
+              const Icon = step.icon;
               return (
-                <Link 
-                  key={index} 
-                  to={`/services/${serviceSlug}`}
-                  className="grid md:grid-cols-2 gap-8 items-center hover:opacity-80 transition-opacity"
-                >
-                  {/* Icon Card */}
-                  <div className={`${isEven ? '' : 'md:col-start-2'}`}>
-                    <div className={`bg-gradient-to-br ${service.color} text-white rounded-xl p-12 flex items-center justify-center aspect-square`}>
-                      <Icon className="w-24 h-24 md:w-32 md:h-32" />
+                <div key={index} className="relative">
+                  {/* Connector Line */}
+                  {index < processSteps.length - 1 && (
+                    <div className="hidden lg:block absolute top-12 left-full w-full h-0.5 bg-accent/30 -z-10"></div>
+                  )}
+                  
+                  <div className="text-center space-y-4">
+                    <div className="w-24 h-24 mx-auto bg-primary rounded-2xl flex items-center justify-center shadow-lg">
+                      <Icon className="w-12 h-12 text-primary-foreground" />
                     </div>
+                    <h3 className="text-2xl font-bold text-foreground">{step.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{step.description}</p>
                   </div>
-
-                  {/* Content */}
-                  <div className={`space-y-4 ${isEven ? '' : 'md:col-start-1 md:row-start-1'}`}>
-                    <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-                      {service.title}
-                    </h2>
-                    <p className="text-lg text-muted-foreground font-medium">
-                      {service.description}
-                    </p>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {service.details}
-                    </p>
-                    <Button variant="outline" className="mt-4">
-                      Learn More →
-                    </Button>
-                  </div>
-                </Link>
+                </div>
               );
             })}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 bg-gradient-to-br from-primary/10 to-accent/10">
-        <div className="container mx-auto max-w-4xl text-center space-y-6 sm:space-y-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground px-4">
-            Ready to Get Started?
+      {/* Main Intro */}
+      <section className="py-16 px-4 bg-muted/30">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
+            Get the support you need to scale, minus the hiring hassle
           </h2>
-          
-          <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto px-4">
-            Every partnership begins with a conversation. Share what you need, and I'll create a plan that brings calm and clarity to your work.
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+            Professional virtual assistant support tailored to your unique needs. Whether you need ongoing help or project-based assistance, I provide reliable, high-quality service that grows with your business.
           </p>
+        </div>
+      </section>
 
-          <Button size="lg" asChild className="w-full sm:w-auto text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 h-auto mx-4">
-            <Link to="/contact">Book a Consultation</Link>
-          </Button>
+      {/* Service Categories Grid */}
+      <section className="py-20 px-4 bg-background">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
+              Comprehensive Virtual Assistant Services
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+              From administrative essentials to specialized support, I offer flexible services designed to lighten your workload.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {serviceCategories.map((service, index) => {
+              const Icon = service.icon;
+              return (
+                <Card key={index} className="p-6 hover-lift border-2 border-border hover:border-primary/40 transition-all bg-background">
+                  <div className="flex items-start gap-4">
+                    <div className={`${service.color} w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md`}>
+                      <Icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-foreground mb-2">{service.title}</h3>
+                      <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                    </div>
+                  </div>
+                </Card>
+              );
+            })}
+          </div>
+
+          <div className="text-center mt-12">
+            <Button asChild size="lg" className="bg-accent hover:bg-accent-light text-lg px-8 py-6 h-auto">
+              <Link to="/contact">Get Your FREE Consultation</Link>
+            </Button>
+          </div>
         </div>
       </section>
 
       {/* Contact Section */}
       <section className="py-20 px-4 bg-muted/30">
-        <div className="container mx-auto max-w-5xl">
-          <div className="grid md:grid-cols-2 gap-16 items-start">
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
-                  Get In Touch
-                </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                  Fill out the form and I'll get back to you as soon as possible. Or email me directly at:
-                </p>
-                <a 
-                  href="mailto:valentina@rellatech.io" 
-                  className="text-2xl font-semibold text-primary hover:underline"
-                >
-                  valentina@rellatech.io
-                </a>
-              </div>
-
-              <div className="pt-6 border-t border-border">
-                <h3 className="text-xl font-bold mb-3 text-foreground">Based in Canada</h3>
-                <p className="text-muted-foreground">
-                  Serving clients locally and internationally through virtual support.
-                </p>
-              </div>
-            </div>
-
-            <ContactForm />
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">Ready to Lighten Your Workload?</h2>
+            <p className="text-xl text-muted-foreground">Let's discuss how I can support your business</p>
           </div>
+          <ContactForm />
         </div>
       </section>
 
       <CTASection 
-        title="Ready to lighten your workload?"
-        buttonText="Book a Consultation"
-        buttonLink="/contact"
+        title="Still exploring your options?"
+        buttonText="View Testimonials"
+        buttonLink="/testimonials"
       />
 
       <FAQ />
-
       <Footer />
     </div>
   );
