@@ -51,16 +51,19 @@ const Projects = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      {/* Hero Section with Background Image */}
-      <section className="relative min-h-[70vh] px-4 py-20 overflow-hidden" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1920&q=80)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        <div className="absolute inset-0 bg-gradient-to-r from-background/98 via-background/95 to-background/85"></div>
+      {/* Hero Section */}
+      <section className="relative px-4 py-20 overflow-hidden bg-primary">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 right-1/4 w-96 h-96 bg-accent/20 rounded-full -translate-y-48"></div>
+          <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-accent/20 rounded-full translate-y-40"></div>
+        </div>
         
-        <div className="container mx-auto max-w-6xl relative z-10 min-h-[60vh] flex items-center">
-          <div className="max-w-2xl space-y-6 bg-white/70 dark:bg-background/70 backdrop-blur-xl p-10 rounded-2xl shadow-2xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <div className="max-w-3xl space-y-6 text-primary-foreground py-16">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight">
               Recent Projects
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+            <p className="text-xl md:text-2xl leading-relaxed opacity-95">
               Success stories from businesses I've helped streamline and grow
             </p>
           </div>
