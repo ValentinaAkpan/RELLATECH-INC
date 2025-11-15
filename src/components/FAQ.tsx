@@ -59,53 +59,34 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-background">
+    <section className="py-20 px-4 bg-muted/30">
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground tracking-tight">
             Frequently Asked Questions
           </h2>
-          <p className="text-xl text-muted-foreground">
-            Have questions? Find answers to common inquiries below.
+          <p className="text-lg md:text-xl text-muted-foreground">
+            Find answers to common questions about working with Rellatech
           </p>
         </div>
 
-        <Accordion type="single" collapsible className="w-full space-y-3">
-          {faqs.map((faq, index) => {
-            const colors = [
-              'bg-gradient-to-br from-primary to-primary/90',
-              'bg-gradient-to-br from-teal-500 to-teal-600',
-              'bg-gradient-to-br from-accent to-accent/90',
-              'bg-gradient-to-br from-primary to-primary/90',
-              'bg-gradient-to-br from-teal-500 to-teal-600',
-              'bg-gradient-to-br from-accent to-accent/90',
-              'bg-gradient-to-br from-primary to-primary/90',
-              'bg-gradient-to-br from-teal-500 to-teal-600',
-              'bg-gradient-to-br from-accent to-accent/90',
-              'bg-gradient-to-br from-primary to-primary/90',
-              'bg-gradient-to-br from-teal-500 to-teal-600',
-              'bg-gradient-to-br from-accent to-accent/90'
-            ];
-            return (
-              <AccordionItem 
-                key={index} 
-                value={`item-${index}`}
-                className={`${colors[index]} border-0 rounded-lg overflow-hidden`}
-              >
-                <AccordionTrigger className="text-left text-base md:text-lg font-medium hover:no-underline text-white px-4 md:px-6 py-4 gap-3 group">
-                  <div className="flex items-center gap-3 flex-1">
-                    <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
-                      <HelpCircle className="w-4 h-4 md:w-5 md:h-5 text-white" />
-                    </div>
-                    <span className="flex-1">{faq.question}</span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="text-white/95 leading-relaxed px-4 md:px-6 pl-14 md:pl-20">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            );
-          })}
+        <Accordion type="single" collapsible className="space-y-4">
+          {faqs.map((faq, index) => (
+            <AccordionItem 
+              key={index} 
+              value={`item-${index}`}
+              className="bg-background border-2 border-border rounded-xl px-6 hover:border-primary/40 transition-colors"
+            >
+              <AccordionTrigger className="text-left hover:no-underline py-6">
+                <span className="text-lg font-semibold text-foreground pr-4">
+                  {faq.question}
+                </span>
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed pb-6 text-base">
+                {faq.answer}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
         </Accordion>
       </div>
     </section>
