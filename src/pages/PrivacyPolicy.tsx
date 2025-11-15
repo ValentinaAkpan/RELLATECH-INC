@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { BookConsultCTA } from "@/components/BookConsultCTA";
 
 const PrivacyPolicy = () => {
   return (
@@ -200,6 +201,8 @@ const PrivacyPolicy = () => {
           </section>
         </div>
       </main>
+
+      <BookConsultCTA />
 
       <Footer />
     </div>

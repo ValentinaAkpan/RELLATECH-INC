@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import ContactForm from "@/components/ContactForm";
 import CTASection from "@/components/CTASection";
+import { BookConsultCTA } from "@/components/BookConsultCTA";
 import { WorkbookOfferDialog } from "@/components/WorkbookOfferDialog";
 import { Button } from "@/components/ui/button";
 import { ServiceCard } from "@/components/ServiceCard";
@@ -398,6 +399,8 @@ const Index = () => {
 
       {/* FAQ Section */}
       <FAQ />
+
+      <BookConsultCTA />
 
       <Footer />
     </div>

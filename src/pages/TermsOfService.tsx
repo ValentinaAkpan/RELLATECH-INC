@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { BookConsultCTA } from "@/components/BookConsultCTA";
 
 const TermsOfService = () => {
   return (
@@ -154,6 +155,8 @@ const TermsOfService = () => {
           </section>
         </div>
       </main>
+
+      <BookConsultCTA />
 
       <Footer />
     </div>

@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import ContactForm from "@/components/ContactForm";
 import CTASection from "@/components/CTASection";
+import { BookConsultCTA } from "@/components/BookConsultCTA";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "lucide-react";
@@ -127,6 +128,8 @@ const Blog = () => {
       />
 
       <FAQ />
+
+      <BookConsultCTA />
 
       <Footer />
     </div>

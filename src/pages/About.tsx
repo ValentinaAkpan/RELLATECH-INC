@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import ContactForm from "@/components/ContactForm";
 import CTASection from "@/components/CTASection";
+import { BookConsultCTA } from "@/components/BookConsultCTA";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Briefcase, Heart, Handshake, ExternalLink } from "lucide-react";
@@ -283,6 +284,8 @@ const About = () => {
       />
 
       <FAQ />
+
+      <BookConsultCTA />
 
       <Footer />
     </div>

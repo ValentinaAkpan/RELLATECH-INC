@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import FAQComponent from "@/components/FAQ";
 import ContactForm from "@/components/ContactForm";
 import CTASection from "@/components/CTASection";
+import { BookConsultCTA } from "@/components/BookConsultCTA";
 
 const FAQ = () => {
   return (
@@ -46,6 +47,8 @@ const FAQ = () => {
         buttonText="Get In Touch"
         buttonLink="/contact"
       />
+
+      <BookConsultCTA />
 
       <Footer />
     </div>
